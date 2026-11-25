@@ -198,6 +198,111 @@ table.cmds td:first-child code{font-size:12.5px}
 .fwitem input{flex:none;width:18px;height:18px;margin-top:2px;accent-color:var(--ok)}
 .fwitem.d span{color:var(--ink3);text-decoration:line-through}
 
+/* ---------- aba Montar ---------- */
+body.modo-montar main.wrap{max-width:1480px}
+.mtcaps{display:flex;gap:6px;overflow-x:auto;padding-bottom:6px;margin-bottom:12px}
+.mtcap{flex:none;display:flex;align-items:center;gap:8px;border:1px solid var(--line);background:#fff;border-radius:10px;padding:8px 11px;font-size:13.5px;font-weight:600;color:var(--ink2)}
+.mtcap span{width:22px;height:22px;border-radius:50%;display:grid;place-items:center;background:var(--line);font-size:12px;color:var(--ink2)}
+.mtcap small{font:500 11px "IBM Plex Mono",monospace;color:var(--ink3)}
+.mtcap.on{border-color:var(--ink);color:var(--ink)}
+.mtcap.on span{background:var(--ink);color:#fff}
+.mtcap.ok span{background:var(--ok);color:#fff}
+.mt{display:grid;grid-template-columns:minmax(320px,400px) 1fr;gap:16px;align-items:start}
+.mtlado{position:sticky;top:calc(var(--navh,47px) + 10px);max-height:calc(100vh - var(--navh,47px) - 20px);overflow:auto}
+.mtpassos{background:var(--card);border:1px solid var(--line);border-radius:12px;margin-bottom:10px;font-size:14px}
+.mtpassos>summary{cursor:pointer;padding:10px 12px;font-weight:600;color:var(--ink2)}
+.mtpassos ol{margin:0;padding:0 12px 10px 34px}
+.mtpassos li{margin:2px 0}
+.mtpassos li button{border:0;background:none;padding:2px 0;text-align:left;font-size:13.5px;color:var(--ink2)}
+.mtpassos li.on button{color:var(--ink);font-weight:600}
+.mtpassos li.ok button{color:var(--ok)}
+.mtcard h3{font-size:18px;margin:2px 0 8px}
+.mtcard h3 .ok{color:var(--ok)}
+.mtk{font:500 11.5px "IBM Plex Mono",monospace;text-transform:uppercase;letter-spacing:.05em;color:var(--ink3)}
+.mtfazer{margin:0 0 10px;font-size:15px}
+.mtcard details{border-top:1px solid var(--line);padding:8px 0 2px;font-size:14px}
+.mtcard details summary{cursor:pointer;font-weight:600;color:var(--ink2);font-size:13.5px}
+.mtcard details div{margin-top:6px;color:var(--ink2)}
+.mtcard details ul{margin:4px 0;padding-left:18px}
+.mtbtns{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.mthint{font-size:14px;background:var(--accbg);color:#173f5c;border-radius:10px;padding:9px 11px;margin:6px 0}
+.mthint .muted{display:block;margin-top:4px}
+.mtok{font-weight:600;color:var(--ok);margin:6px 0}
+.mtmsg{border-radius:10px;padding:9px 11px;font-size:14px;margin:8px 0}
+.mtmsg.ok{background:var(--okbg);color:#1d5236}
+.mtmsg.erro{background:var(--badbg);color:#7a1a14}
+.mtmsg.info{background:var(--warnbg);color:#6b4310}
+.mtquiz{display:grid;gap:6px;margin:6px 0}
+.mtquiz button{border:1px solid var(--line);background:#fff;border-radius:10px;padding:9px 11px;text-align:left;font-size:14px}
+.mtquiz button.certa{background:var(--okbg);border-color:#9fd0b2}
+.mtquiz button.errada{background:var(--badbg);border-color:#e6b0aa}
+.mtchk label,.mtchk{display:block}
+.mtchk label{display:flex;gap:9px;align-items:flex-start;padding:6px 0;border-top:1px solid var(--line);font-size:14px;cursor:pointer}
+.mtchk input{flex:none;width:18px;height:18px;margin-top:2px;accent-color:var(--ok)}
+.mtchips{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0}
+.mtchips button{border:1px solid var(--line);background:#fff;border-radius:9px;padding:7px 9px;font-size:13px;text-align:left;font-weight:600}
+.mtchips button small{display:block;font-weight:400;color:var(--ink3);font-size:11.5px}
+.mtchips button.on{border-color:var(--acc);background:var(--accbg)}
+.mtchips button.ok{background:var(--okbg);color:var(--ok);border-color:#bfe0cc}
+.mtlista{list-style:none;padding:0;margin:6px 0;font-size:13.5px}
+.mtlista li{padding:4px 0;border-top:1px solid var(--line);display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.mtlista li small{color:var(--ink3);font-family:"IBM Plex Mono",monospace;font-size:11.5px}
+.mtlista li.ok{color:var(--ok)}
+.mtperg{border-top:1px solid var(--line);margin-top:10px;padding-top:8px}
+.lnk{border:0;background:none;color:var(--acc);padding:0;font-size:14px;text-decoration:underline}
+#mtPergForm{display:grid;gap:6px;margin-top:8px}
+#mtPergForm[hidden]{display:none}
+#mtPergForm textarea{font:inherit;font-size:14px;border:1px solid var(--line);border-radius:9px;padding:8px}
+.mtresp{white-space:pre-wrap;background:#f6f4ee;border-radius:10px;padding:10px;font-size:14px;margin-top:8px}
+.mtresumo{margin-top:10px;font-size:13px}
+kbd{font:500 12px "IBM Plex Mono",monospace;border:1px solid var(--line);border-bottom-width:2px;border-radius:5px;padding:0 5px;background:#fff}
+.mtferr{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-bottom:8px}
+.mtferr .btn{padding:6px 11px}
+.mtferr .btn.on,.mtsim .btn.on{background:var(--accbg);border-color:var(--acc);color:var(--acc)}
+.mtquadro{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;user-select:none}
+.mtsvg{display:block;width:100%;height:auto;max-height:72vh;cursor:crosshair}
+.mtsvg.placa{max-height:78vh}
+.mtsvg .peca.apagada{opacity:.45}
+.mtsvg .peca.fantasma,.mtsvg .fio.fantasma{opacity:.38}
+.mtsvg .peca.namao{opacity:.75}
+.mtsvg .peca.nova{filter:drop-shadow(0 0 .25px #1d63d8)}
+.mtsvg .fio.porbaixo{opacity:.28}
+.mtsvg .alvo circle{animation:pisca 1s infinite}
+@keyframes pisca{50%{opacity:.3}}
+.mtfig{display:flex;flex-wrap:wrap;gap:16px;justify-content:center;padding:18px}
+.mtfig figure{margin:0;text-align:center;width:min(230px,44%)}
+.mtfig figcaption{font-size:13.5px;font-weight:600;margin-top:6px}
+.mtfig figcaption small{font-weight:400;color:var(--ink3)}
+.mtfig.texto{display:block;font-size:15px}
+.mtfig.texto .body{padding:0 4px}
+svg.galeria{width:100%;height:auto;background:#faf9f6;border-radius:10px}
+svg.galeria text{font-family:"IBM Plex Sans",sans-serif;fill:#2b2b2b}
+.mtsim{margin-top:10px;padding:12px 14px}
+.mtsimrow{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;margin-bottom:10px}
+.mttog{display:flex;gap:6px;align-items:center;font-weight:600;font-size:14px}
+.mttog input{width:18px;height:18px;accent-color:var(--ok)}
+.mtbat{display:flex;gap:8px;align-items:center;font-size:14px}
+.mtcontrole{display:flex;gap:6px;align-items:center;background:#ecebe6;border-radius:12px;padding:6px 8px}
+.mtcontrole button{width:40px;height:40px;border-radius:50%;border:0;background:#55595f;color:#fff;font-weight:700;font-size:16px;box-shadow:0 2px 0 #33363a}
+.mtcontrole button.on{background:#1d63d8;transform:translateY(1px);box-shadow:none}
+.mtcontrole small{font-size:11.5px;color:var(--ink3);max-width:120px;line-height:1.2}
+.mtmult .mtvisor{background:#1c2a1f;color:#c8f7c5;font:600 22px "IBM Plex Mono",monospace;border-radius:10px;padding:6px 12px;min-width:150px}
+.mtmult .mtvisor .muted{font:400 11px "IBM Plex Sans",sans-serif;color:#9cc39a;max-width:220px}
+.mtmult .pv,.mtmult .pp{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;background:#d4483b;vertical-align:-1px}
+.mtmult .pp{background:#1c1c1a}
+.mtleds{font-size:13.5px;color:var(--ink2);margin:4px 0 8px}
+.mtleds b.ok{color:var(--ok)} .mtleds b.warn{color:var(--warn)}
+.mtserial summary{cursor:pointer;font-weight:600;font-size:13.5px}
+.mtserial pre{background:#14181c;color:#d7e2ea;border-radius:10px;padding:10px;font-size:12px;max-height:180px;overflow:auto;white-space:pre-wrap;margin:6px 0 0}
+.mttreino{padding:14px;max-width:640px;margin:0 auto}
+.mttreino svg{width:100%;height:auto;background:#faf9f6;border-radius:10px;cursor:pointer}
+.mttrbar{display:grid;grid-template-columns:auto 1fr auto 1fr;gap:8px;align-items:center;margin:10px 0;font-size:13px}
+.mttrbar .bar>i{transition:none}
+#mtTrFig svg{max-width:260px;margin:6px auto;display:block}
+@media (max-width:900px){.mt{grid-template-columns:1fr}.mtlado{position:static;max-height:none}}
+
+[hidden]{display:none !important}
+
 #projeto{--bg-top:#f4f5f6; --bg-mid:#e3e7ea; --bg-bottom:#cfd5db;
   --ink:#14181c; --muted:#5a636c; --line:#ccd2d8;
   --panel:rgba(255,255,255,0.86); --accent:#1d63d8; --hv:#e3a000;
@@ -516,11 +621,26 @@ body.sim-on #projeto #lesson{display:none}
 </section>
 
 <section class="tab" id="t-montar">
-  <h2>Montar</h2>
-  <p class="lead">8 etapas, na ordem. Cada uma termina com uma checagem: só passe para a próxima se ela der certo.</p>
-  <div class="note info">Para ver onde cada peça fica e em que cada fio liga, abra a aba <a href="#projeto" data-go="projeto">Projeto 3D</a>. Dá para abrir a tampa e clicar em qualquer peça.</div>
-  <div class="card emobra"><b>A caminho: a bancada simulada.</b> Cada etapa vai ganhar a placa na tela, com as peças nos furos certos, multímetro virtual e o controle para testar. Por enquanto, as etapas em texto abaixo continuam valendo.</div>
-  <div id="steps"></div>
+<h2>Montar</h2>
+<p class="lead">7 capítulos, na ordem. Cada passo mostra o que fazer, deixa você fazer na tela e confere antes de seguir. Depois é só repetir na bancada de verdade.</p>
+<div class="mtcaps" id="mtCaps"></div>
+<div class="mt">
+  <aside class="mtlado">
+    <details class="mtpassos" id="mtPassos"></details>
+    <div class="card mtcard" id="mtCard"></div>
+  </aside>
+  <div class="mtarea">
+    <div class="mtferr" id="mtFerr">
+      <button class="btn ghost" id="mtVirar">Virar a placa</button>
+      <button class="btn ghost" id="mtZoomMenos" aria-label="Diminuir">−</button>
+      <button class="btn ghost" id="mtZoomMais" aria-label="Aumentar">+</button>
+      <button class="btn ghost" id="mtCorrente">Ver corrente</button>
+      <span class="muted">Roda do mouse aproxima · Shift + arrastar move</span>
+    </div>
+    <div class="mtquadro" id="mtQuadro"></div>
+    <div class="card mtsim" id="mtSim" hidden></div>
+  </div>
+</div>
 </section>
 
 <section class="tab" id="t-testar">
@@ -603,6 +723,7 @@ const ITEMS = [
   {id:'lj8',g:'loja',est:1,alt:1,n:'Terminal olhal M4',d:'Prende o fio de alta tensão no parafuso de inox.',q:'2',p:2,pt:'≈ R$ 1 cada',u:ML+'terminal-olhal-azul-pre-isolado-15mm-a-25mm-m4-100-pecas/p/MLB27727822'},
   {id:'lj9',g:'loja',est:1,alt:1,n:'Arruela de borracha M4',d:'Veda o furo dos pinos por fora. Tem em loja de ferragens.',q:'2',p:2,pt:'≈ R$ 1 cada',u:ML+'arruela-vedacao-vedante-pvc-flexivel-14-x-5-x-4mm-10un/up/MLBU1962551645'},
   {id:'lj10',g:'loja',est:1,n:'Pilha A23 de 12 V',d:'Do controle principal, que vem sem pilha. É a pilha de controle de portão: tem em loja de eletrônica, chaveiro e mercado.',q:'1',p:6,pt:'≈ R$ 6',u:''},
+  {id:'lj11',g:'loja',est:1,alt:1,n:'Barra de pinos fêmea 1 × 40 (2,54 mm)',d:'Vira os soquetes do ESP32 e do RXB6 na placa (corte 2 pedaços de 8 e 1 de 4). O ferro não esquenta os módulos e dá para trocar um queimado sem dessoldar.',q:'1',p:4,pt:'≈ R$ 4',u:'https://lista.mercadolivre.com.br/barra-de-pinos-femea-1x40'},
   // casa / selaria
   {id:'cs1',g:'casa',est:1,alt:1,n:'Fita de poliéster 50 mm, 1,5 m',d:'Na selaria ou no armarinho. No Mercado Livre só vem rolo de 10 m.',q:'1,5 m',p:10,pt:'≈ R$ 10',u:ML+'fita-slackline-poliester-cinta-50mm-preta-cadarco-10mts/up/MLBU1441211367'},
   {id:'cs2',g:'casa',est:1,alt:1,n:'Velcro de costura 50 mm, 10 cm',d:'O elo fraco. A selaria que costurar costuma ter.',q:'10 cm',p:3,pt:'≈ R$ 3',u:ML+'velcro-fecho-hook-loop-preto-50mm-1m-costura-nao-adesivo/p/MLB26802684'},
@@ -614,6 +735,7 @@ const ITEMS = [
   {id:'b2',g:'banc',n:'Multímetro digital Exbom MD-180L',d:'Mede tensão, corrente e curto.',q:'1',p:39.90,pt:'R$ 39,90',u:ML+'multimetro-digital-portatil-md-180l-exbom/up/MLBU4092522745'},
   {id:'b3',g:'banc',n:'Protoboard 830 pontos + 40 jumpers',d:'Para montar e testar antes de soldar.',q:'1',p:25.99,pt:'R$ 25,99',u:ML+'protoboard-breadboard-830-pontos-furos-com-jumper-mxf-40-pcs/p/MLB2130976768'},
   {id:'b4',g:'banc',n:'Estanho + pasta de solda Cobix',d:'Você já tem o ferro.',q:'1',p:29.45,pt:'R$ 29,45',u:ML+'kit-de-solda-estanho-cobix-63x37-e-pasta-para-soldar-eletronica/p/MLB27509228'},
+  {id:'b5',g:'banc',est:1,alt:1,n:'Sugador de solda',d:'Para desfazer uma solda errada: esquenta, encosta o sugador e aperta o botão. Ajuda muito quem está começando.',q:'1',p:20,pt:'≈ R$ 20',u:'https://lista.mercadolivre.com.br/sugador-de-solda'},
   // opcionais
   {id:'o1',g:'opt',opt:1,n:'ESP32-C3 no Mercado Livre',d:'Para começar o firmware antes do AliExpress chegar. Comprando este, compre só 1 ESP32 no AliExpress.',q:'1',p:32.49,pt:'R$ 32,49',u:ML+'placa-super-mini-esp32-c3-wifi-e-bluetooth/up/MLBU5819724594'},
   {id:'o2',g:'opt',opt:1,n:'RXB6 no Mercado Livre',d:'Para começar antes do AliExpress chegar, ou como reserva se o do AliExpress queimar.',q:'1',p:29.04,pt:'R$ 29,04',u:ML+'receptor-de-radiofrequencia-rxb6-cristal-433-mhz-gfhgf/p/MLB2087207229'},
@@ -653,7 +775,7 @@ const PECAS = {
     GPIO0:'mede a bateria', GPIO1:'botão de pareamento', GPIO3:'dados do rádio',
     GPIO4:'MOSFET A', GPIO5:'buzzer', GPIO6:'MOSFET B'}},
   cap:   {nome:'Capacitor de 1.000 µF', pinos:{'+':'perna comprida', '-':'perna do lado da faixa branca'}},
-  rx:    {nome:'Receptor RXB6', pinos:{VCC:'alimentação', GND:'negativo', DATA:'dados', ANT:'antena'}},
+  rx:    {nome:'Receptor RXB6', pinos:{VCC:'alimentação', GND:'negativo', DATA:'dados', DATA2:'dados (repetido)', ANT:'antena'}, internas:[['DATA','DATA2']]},
   ant:   {nome:'Antena em mola', pinos:{'1':'ponta soldada'}},
   rga:   {nome:'Resistor de 100 Ω da porta A', valor:100, pinos:{'1':'perna 1', '2':'perna 2'}},
   rpa:   {nome:'Resistor de 10 kΩ da porta A', valor:10000, pinos:{'1':'perna 1', '2':'perna 2'}},
@@ -670,7 +792,16 @@ const PECAS = {
   at:    {nome:'Módulo de alta tensão', pinos:{'IN+':'fio fino vermelho', 'IN-':'fio fino verde', OUT1:'saída grossa 1', OUT2:'saída grossa 2'}},
   p1:    {nome:'Pino de inox 1', pinos:{'1':'parafuso'}},
   p2:    {nome:'Pino de inox 2', pinos:{'1':'parafuso'}},
+  // só na bancada
+  led:   {nome:'LED de teste (no lugar do módulo)', pinos:{A:'perna comprida (+)', K:'perna curta (−)'}},
+  r220:  {nome:'Resistor de 220 Ω do LED de teste', valor:220, pinos:{'1':'perna 1', '2':'perna 2'}},
+  bloco: {nome:'Bateria com carregador e chave', pinos:{'+':'fio vermelho (depois da chave)', '-':'fio preto'}},
+  // só na placa ilhada (não ligam nada sozinhos, só seguram o ESP32 e o RXB6)
+  soqE:  {nome:'Soquete de 8 pinos (lado esquerdo do ESP32)', mecanica:true, pinos:{s0:'',s1:'',s2:'',s3:'',s4:'',s5:'',s6:'',s7:''}},
+  soqD:  {nome:'Soquete de 8 pinos (lado direito do ESP32)', mecanica:true, pinos:{s0:'',s1:'',s2:'',s3:'',s4:'',s5:'',s6:'',s7:''}},
+  soqR:  {nome:'Soquete de 4 pinos (RXB6)', mecanica:true, pinos:{s0:'',s1:'',s2:'',s3:''}},
 };
+Object.assign(PECAS.esp.pinos, {GPIO2:'livre', '21':'livre', '20':'livre', '10':'livre', '9':'livre', '8':'LED da placa', '7':'livre'});
 
 const LIGACOES = [
   {grupo:'Na placa: energia'},
@@ -734,12 +865,256 @@ const REDES = {
   'Alta tensão 2':         ['at.OUT2','p2.1'],
 };
 
-// Onde cada perna entra. A protoboard de 830 pontos tem 63 colunas, linhas
-// a até j e quatro trilhas de + e −. A placa ilhada é medida quando chegar.
-const LAYOUT = {
-  protoboard: {colunas:63, linhas:'abcdefghij', pecas:{}, jumpers:[]},
-  placa:      {colunas:null, linhas:null, pecas:{}, pontes:[], fios:[]},
+// ---------------------------------------------------------------------
+//  FORMAS: onde fica cada perna das peças rígidas, em passos de 2,54 mm,
+//  com a peça na posição "rot 0". rot gira de 90 em 90 graus.
+// ---------------------------------------------------------------------
+const FORMAS = {
+  esp:    {pinos:[['GPIO0',0,0],['GPIO1',1,0],['GPIO2',2,0],['GPIO3',3,0],['GPIO4',4,0],['3V3',5,0],['GND',6,0],['5V',7,0],
+                  ['21',0,6],['20',1,6],['10',2,6],['9',3,6],['8',4,6],['7',5,6],['GPIO6',6,6],['GPIO5',7,6]]},
+  rx:     {pinos:[['VCC',0,0],['DATA',0,1],['DATA2',0,2],['GND',0,3]]},
+  to220:  {pinos:[['G',0,0],['D',1,0],['S',2,0]]},
+  to92:   {pinos:[['C',0,0],['B',1,0],['E',2,0]]},
+  buzzer: {pinos:[['+',0,0],['-',3,0]]},
+  tp:     {pinos:[['B+',0,0],['B-',0,1],['OUT+',0,3],['OUT-',0,4]]},
+  soq8:   {pinos:[0,1,2,3,4,5,6,7].map(i => ['s'+i,0,i])},
+  soq4:   {pinos:[0,1,2,3].map(i => ['s'+i,0,i])},
 };
+const ROT = {0:(x,y)=>[x,y], 90:(x,y)=>[-y,x], 180:(x,y)=>[-x,-y], 270:(x,y)=>[y,-x]};
+
+// Onde cada perna entra. Protoboard de 830 pontos: colunas 1 a 63, linhas
+// a até j e quatro trilhas (T+ e T− em cima, B− e B+ embaixo).
+// Placa ilhada 7 × 9 cm: 24 colunas (0 a 23) por 30 linhas (0 a 29), furo "coluna,linha".
+// A placa ainda precisa ser conferida com as peças reais (medidas dos anúncios).
+const LAYOUT = {
+  protoboard: {
+    tipo:'protoboard', colunas:63,
+    pecas: {
+      bloco: {pernas:{'+':'T+1', '-':'T-1'}, fora:true},
+      esp:   {forma:'esp', ancora:'d5', rot:0},
+      cap:   {pernas:{'+':'b12', '-':'b11'}},
+      rx:    {forma:'rx', ancora:'c20', rot:270, empe:true},
+      bz:    {forma:'buzzer', ancora:'g40', rot:0},
+      q:     {forma:'to92', ancora:'i43', rot:0},
+      rb:    {pernas:{'1':'h48', '2':'h44'}},
+      rd1:   {pernas:{'1':'T+5', '2':'a5'}},
+      rd2:   {pernas:{'1':'c5', '2':'T-3'}},
+      bt:    {pernas:{'1':'a6', '2':'T-7'}},
+      ma:    {forma:'to220', ancora:'c30', rot:0},
+      rga:   {pernas:{'1':'b26', '2':'b30'}},
+      rpa:   {pernas:{'1':'a30', '2':'T-31'}},
+      mb:    {forma:'to220', ancora:'g36', rot:0},
+      rgb:   {pernas:{'1':'h33', '2':'h36'}},
+      rpb:   {pernas:{'1':'j36', '2':'B-35'}},
+      r220:  {pernas:{'1':'T+28', '2':'a28'}},
+      led:   {pernas:{A:'b28', K:'b29'}},
+    },
+    jumpers: [
+      {id:'jT', de:'T-2',  para:'B-2',  cor:'#2b2b2b', nome:'trilha − de cima com a de baixo'},
+      {id:'j5V', de:'a12', para:'T+13', cor:'#d4483b', nome:'5V do ESP32 → trilha +'},
+      {id:'jGND', de:'a11', para:'T-11', cor:'#2b2b2b', nome:'GND do ESP32 → trilha −'},
+      {id:'jRV', de:'a10', para:'a20', cor:'#e58a2b', nome:'3V3 → VCC do RXB6'},
+      {id:'jRD', de:'b8',  para:'b21', cor:'#e2b533', nome:'GPIO 3 → DATA do RXB6'},
+      {id:'jRG', de:'a23', para:'T-23', cor:'#2b2b2b', nome:'GND do RXB6 → trilha −'},
+      {id:'jBZ', de:'b10', para:'f40', cor:'#e58a2b', nome:'3V3 → + do buzzer'},
+      {id:'jQE', de:'j45', para:'B-45', cor:'#2b2b2b', nome:'emissor do BC547 → trilha −'},
+      {id:'jG5', de:'j12', para:'j48', cor:'#3a78c2', nome:'GPIO 5 → resistor de 1 kΩ'},
+      {id:'jG4', de:'c9',  para:'c26', cor:'#3a9a5b', nome:'GPIO 4 → resistor de 100 Ω'},
+      {id:'jG6', de:'j11', para:'j33', cor:'#3a9a5b', nome:'GPIO 6 → resistor de 100 Ω'},
+      {id:'jAB', de:'d32', para:'f37', cor:'#2b2b2b', nome:'fonte do MOSFET A → dreno do B'},
+      {id:'jBS', de:'j38', para:'B-38', cor:'#2b2b2b', nome:'fonte do MOSFET B → trilha −'},
+      {id:'jLD', de:'a29', para:'a31', cor:'#7a3fb0', nome:'LED de teste → dreno do MOSFET A'},
+    ],
+  },
+  placa: {
+    tipo:'placa', colunas:24, linhas:30,
+    pecas: {
+      soqE:  {forma:'soq8', ancora:'2,9', rot:0},
+      soqD:  {forma:'soq8', ancora:'8,9', rot:0},
+      soqR:  {forma:'soq4', ancora:'12,3', rot:0},
+      tp:    {forma:'tp', ancora:'9,23', rot:0},
+      rd2:   {pernas:{'1':'9,8', '2':'12,8'}},
+      rd1:   {pernas:{'1':'13,9', '2':'10,9'}},
+      rb:    {pernas:{'1':'17,10', '2':'21,10'}},
+      bt:    {pernas:{'1':'10,11', '2':'13,11'}},
+      rga:   {pernas:{'1':'11,13', '2':'14,13'}},
+      rpa:   {pernas:{'1':'14,14', '2':'14,17'}},
+      rgb:   {pernas:{'1':'10,19', '2':'13,19'}},
+      rpb:   {pernas:{'1':'14,20', '2':'14,23'}},
+      q:     {forma:'to92', ancora:'20,8', rot:0},
+      cap:   {pernas:{'+':'9,17', '-':'9,15'}},
+      bz:    {forma:'buzzer', ancora:'23,4', rot:180},
+      ma:    {forma:'to220', ancora:'15,13', rot:90, deitado:true},
+      mb:    {forma:'to220', ancora:'15,19', rot:90, deitado:true},
+      esp:   {forma:'esp', ancora:'8,9', rot:90, encaixa:true},
+      rx:    {forma:'rx', ancora:'12,3', rot:0, encaixa:true},
+    },
+    // pontos de referência da tabela de ligações
+    pontos: {'placa.CHAVE':'11,28', 'placa.AT+':'20,28', 'bus.+':'15,28', 'bus.-':'18,26'},
+    // pontes: estanho ou perna de componente por baixo, ligando furos vizinhos
+    pontes: [
+      {id:'pBm', furos:['10,26','11,26','12,26','13,26','14,26','15,26','16,26','17,26','18,26','19,26','20,26','21,26','22,26'], nome:'barramento −', linha:2},
+      {id:'pBp', furos:['11,28','12,28','13,28','14,28','15,28','16,28','17,28','18,28','19,28','20,28'], nome:'barramento + (pads CHAVE e AT+ nas pontas)', linha:1},
+      {id:'pTP', furos:['9,27','10,27','10,26'], nome:'TP4056 OUT− → barramento −', linha:3},
+      {id:'pC1', furos:['8,15','9,15'], nome:'GND do ESP32 → − do capacitor', linha:5},
+      {id:'pC2', furos:['8,16','8,17','9,17'], nome:'5V do ESP32 → + do capacitor', linha:5},
+      {id:'pDV', furos:['8,9','9,9','10,9','9,8'], nome:'GPIO 0 → meio do divisor', linha:12},
+      {id:'pBT', furos:['8,10','9,10','9,11','10,11'], nome:'GPIO 1 → botão', linha:13},
+      {id:'pG4', furos:['8,13','9,13','10,13','11,13'], nome:'GPIO 4 → resistor de 100 Ω', linha:9},
+      {id:'pGA', furos:['15,13','14,13','14,14'], nome:'porta do MOSFET A', linha:9},
+      {id:'pGB', furos:['13,19','14,19','15,19','14,20'], nome:'porta do MOSFET B', linha:10},
+      {id:'pRB', furos:['14,23','14,24','14,25','14,26'], nome:'10 kΩ da porta B → barramento −', linha:10},
+      {id:'pAB', furos:['15,15','16,15','17,15','17,16','17,17','17,18','17,19','17,20','16,20','15,20'], nome:'fonte do A → dreno do B (grossa)', linha:14, grossa:true},
+      {id:'pBS', furos:['15,21','15,22','15,23','15,24','15,25','15,26'], nome:'fonte do B → barramento − (grossa)', linha:15, grossa:true},
+      {id:'pBZ', furos:['20,4','20,5','20,6','20,7','20,8'], nome:'− do buzzer → coletor do BC547', linha:11},
+      {id:'pQB', furos:['21,8','21,9','21,10'], nome:'base do BC547 → resistor de 1 kΩ', linha:11},
+      {id:'pQE', furos:['22,8','22,9'], nome:'emissor do BC547', linha:11},
+    ],
+    // fios encapados por baixo, de um furo a outro
+    fios: [
+      {id:'f5V', de:'9,17', para:'12,28', cor:'#d4483b', nome:'5V do ESP32 → barramento +', linha:4},
+      {id:'fGN', de:'9,15', para:'11,26', cor:'#2b2b2b', nome:'GND do ESP32 → barramento −', linha:4},
+      {id:'fD1', de:'13,9', para:'13,28', cor:'#f2f2f2', nome:'100 kΩ de cima → barramento +', linha:12},
+      {id:'fD2', de:'12,8', para:'12,26', cor:'#2b2b2b', nome:'100 kΩ de baixo → barramento −', linha:12},
+      {id:'fBT', de:'13,11', para:'13,26', cor:'#9a9a9a', nome:'botão → barramento −', linha:13},
+      {id:'fRG', de:'12,6', para:'16,26', cor:'#2b2b2b', nome:'GND do RXB6 → barramento −', linha:7},
+      {id:'fPA', de:'14,17', para:'17,26', cor:'#2b2b2b', nome:'10 kΩ da porta A → barramento −', linha:9},
+      {id:'fQE', de:'22,9', para:'22,26', cor:'#2b2b2b', nome:'emissor do BC547 → barramento −', linha:11},
+      {id:'fRV', de:'8,14', para:'12,3', cor:'#e58a2b', nome:'3V3 → VCC do RXB6', linha:6},
+      {id:'fBZ', de:'12,3', para:'23,4', cor:'#e58a2b', nome:'3V3 → + do buzzer', linha:6},
+      {id:'fRD', de:'8,12', para:'12,4', cor:'#e2b533', nome:'GPIO 3 → DATA do RXB6', linha:7},
+      {id:'fG5', de:'2,16', para:'17,10', cor:'#3a78c2', nome:'GPIO 5 → resistor de 1 kΩ', linha:11},
+      {id:'fG6', de:'2,15', para:'10,19', cor:'#3a9a5b', nome:'GPIO 6 → resistor de 100 Ω', linha:10},
+    ],
+    // fios que saem da placa (os 10 fios soltos)
+    soltos: [
+      ['P:bat.+','H:9,23'], ['P:bat.-','H:9,24'], ['P:usb.+','P:tp.IN+'], ['P:usb.-','P:tp.IN-'],
+      ['H:9,26','P:chave.1'], ['P:chave.2','H:11,28'], ['H:20,28','P:at.IN+'], ['P:at.IN-','P:ma.D'],
+      ['P:at.OUT1','P:p1.1'], ['P:at.OUT2','P:p2.1'], ['P:rx.ANT','P:ant.1'],
+    ],
+  },
+};
+
+// O que a protoboard tem que formar quando estiver completa (com o LED no lugar do módulo).
+const REDES_BANCADA = {
+  'Barramento +':       ['bloco.+','esp.5V','cap.+','rd1.1','r220.1'],
+  'Barramento −':       ['bloco.-','esp.GND','cap.-','rx.GND','rpa.2','rpb.2','q.E','rd2.2','bt.2','mb.S'],
+  '3,3 V':              ['esp.3V3','rx.VCC','bz.+'],
+  'Dados do rádio':     ['rx.DATA','esp.GPIO3'],
+  'GPIO 4':             ['esp.GPIO4','rga.1'],
+  'Porta do MOSFET A':  ['rga.2','ma.G','rpa.1'],
+  'GPIO 6':             ['esp.GPIO6','rgb.1'],
+  'Porta do MOSFET B':  ['rgb.2','mb.G','rpb.1'],
+  'GPIO 5':             ['esp.GPIO5','rb.1'],
+  'Base do BC547':      ['rb.2','q.B'],
+  'Buzzer −':           ['q.C','bz.-'],
+  'Medição da bateria': ['rd1.2','rd2.1','esp.GPIO0'],
+  'Botão':              ['esp.GPIO1','bt.1'],
+  'LED de teste':       ['r220.2','led.A'],
+  'Dreno do MOSFET A':  ['led.K','ma.D'],
+  'Entre os MOSFETs':   ['ma.S','mb.D'],
+};
+
+// ---------------------------------------------------------------------
+//  Geometria dos furos
+// ---------------------------------------------------------------------
+const LINHA_Y = {a:0,b:1,c:2,d:3,e:4,f:7,g:8,h:9,i:10,j:11};
+const TRILHA_Y = {'T-':-3.4,'T+':-2.4,'B-':13.4,'B+':14.4};
+function furoXY(tipo, id) {
+  if (tipo === 'placa') { const [c, r] = id.split(',').map(Number); return [c, r]; }
+  const m = /^([TB][+-])(\d+)$/.exec(id);
+  if (m) return [+m[2], TRILHA_Y[m[1]]];
+  return [+id.slice(1), LINHA_Y[id[0]]];
+}
+function furoValido(tipo, id) {
+  if (tipo === 'placa') { const m = /^(\d+),(\d+)$/.exec(id); return !!m && +m[1] < 24 && +m[2] < 30; }
+  const m = /^([TB][+-])(\d+)$/.exec(id);
+  if (m) return +m[2] >= 1 && +m[2] <= 63 && +m[2] % 6 !== 0;
+  return /^[a-j]([1-9]|[1-5]\d|6[0-3])$/.test(id);
+}
+function todosFuros(tipo) {
+  const f = [];
+  if (tipo === 'placa') { for (let r = 0; r < 30; r++) for (let c = 0; c < 24; c++) f.push(c + ',' + r); return f; }
+  for (let c = 1; c <= 63; c++) { 'abcdefghij'.split('').forEach(l => f.push(l + c)); if (c % 6) ['T-','T+','B-','B+'].forEach(t => f.push(t + c)); }
+  return f;
+}
+// Furo mais perto de um ponto (em passos de 2,54 mm). null se longe demais.
+function furoPerto(tipo, x, y, max = 0.45) {
+  let melhor = null, d = max * max;
+  todosFuros(tipo).forEach(id => { const [fx, fy] = furoXY(tipo, id); const dd = (fx - x) ** 2 + (fy - y) ** 2; if (dd < d) { d = dd; melhor = id; } });
+  return melhor;
+}
+// Tira de ligação interna da protoboard (cada furo de uma tira é ligado aos outros).
+function tiraDoFuro(id) {
+  const m = /^([TB][+-])\d+$/.exec(id);
+  if (m) return 'trilha ' + m[1];
+  const c = id.slice(1);
+  return 'abcde'.includes(id[0]) ? 'coluna ' + c + ' (a-e)' : 'coluna ' + c + ' (f-j)';
+}
+// Pernas de uma peça num layout: {pino: furo}
+function pinosDaPeca(layout, id, ancora, rot) {
+  const p = layout.pecas[id];
+  if (p.pernas) return Object.assign({}, p.pernas);
+  const forma = FORMAS[p.forma];
+  const [ax, ay] = furoXY(layout.tipo, ancora || p.ancora);
+  const r = ROT[rot === undefined ? p.rot : rot];
+  const out = {};
+  forma.pinos.forEach(([nome, ox, oy]) => {
+    const [dx, dy] = r(ox, oy);
+    out[nome] = furoPerto(layout.tipo, ax + dx, ay + dy, 0.2);
+  });
+  return out;
+}
+
+// Junta tudo que fica ligado por fio, ponte, tira da protoboard ou perna no furo.
+// opcoes.pecas: lista de peças que entram (padrão: todas). opcoes.soldados: furos soldados (placa).
+function redeDoLayout(layout, opcoes = {}) {
+  const pai = {};
+  const raiz = x => { if (!(x in pai)) pai[x] = x; while (pai[x] !== x) { pai[x] = pai[pai[x]]; x = pai[x]; } return x; };
+  const une = (a, b) => { pai[raiz(a)] = raiz(b); };
+  const pecas = opcoes.pecas || Object.keys(layout.pecas);
+  const soldado = f => layout.tipo !== 'placa' || !opcoes.soldados || opcoes.soldados.has(f);
+  if (layout.tipo === 'protoboard') todosFuros('protoboard').forEach(f => une('H:' + f, 'T:' + tiraDoFuro(f)));
+  pecas.forEach(id => {
+    if (!layout.pecas[id]) return;
+    const pin = pinosDaPeca(layout, id);
+    Object.entries(pin).forEach(([n, f]) => { raiz('P:' + id + '.' + n); if (f && !layout.pecas[id].fora && soldado(f)) une('P:' + id + '.' + n, 'H:' + f); else if (f && layout.pecas[id].fora) une('P:' + id + '.' + n, 'H:' + f); });
+    ((PECAS[id] && PECAS[id].internas) || []).forEach(([a, b]) => une('P:' + id + '.' + a, 'P:' + id + '.' + b));
+  });
+  (opcoes.jumpers || layout.jumpers || []).forEach(j => une('H:' + j.de, 'H:' + j.para));
+  (opcoes.pontes || layout.pontes || []).forEach(p => p.furos.forEach(f => une('H:' + p.furos[0], 'H:' + f)));
+  (opcoes.fios || layout.fios || []).forEach(j => une('H:' + j.de, 'H:' + j.para));
+  if (!opcoes.semSoltos) (layout.soltos || []).forEach(([a, b]) => une(a, b));
+  Object.entries(layout.pontos || {}).forEach(([p, f]) => une('P:' + p, 'H:' + f));
+  return { raiz, une, pai };
+}
+// Grupos de pernas ligadas (só pernas de peças elétricas, sem soquetes).
+function gruposDePernas(rede) {
+  const g = {};
+  Object.keys(rede.pai).forEach(x => {
+    if (!x.startsWith('P:')) return;
+    const ref = x.slice(2), peca = ref.split('.')[0];
+    if (PECAS[peca] && PECAS[peca].mecanica) return;
+    const r = rede.raiz(x); (g[r] = g[r] || []).push(ref);
+  });
+  return Object.values(g).map(a => a.sort());
+}
+// Confere um layout contra as redes esperadas. Devolve a lista de problemas.
+function conferirLayout(layout, esperado, opcoes) {
+  const prob = [];
+  const expandir = g => { const s = new Set(g); g.forEach(ref => { const [p, n] = ref.split('.'); ((PECAS[p] && PECAS[p].internas) || []).forEach(([a, b]) => { if (n === a) s.add(p + '.' + b); if (n === b) s.add(p + '.' + a); }); }); return [...s].sort(); };
+  const chave = g => g.join(' ');
+  const formados = gruposDePernas(redeDoLayout(layout, opcoes)).filter(g => g.length > 1);
+  const setF = new Set(formados.map(chave));
+  const esp = Object.entries(esperado).map(([n, g]) => [n, expandir(g)]);
+  const setE = new Set(esp.map(([, g]) => chave(g)));
+  esp.forEach(([n, g]) => { if (!setF.has(chave(g))) prob.push('Não forma "' + n + '" do jeito do esquema'); });
+  formados.forEach(g => { if (!setE.has(chave(g))) prob.push('Ligação a mais ou errada: ' + g.join(', ')); });
+  // furo usado por duas peças
+  const uso = {};
+  Object.keys(layout.pecas).forEach(id => { if (PECAS[id] && PECAS[id].mecanica) return; if (layout.pecas[id].encaixa) return; Object.values(pinosDaPeca(layout, id)).forEach(f => { if (!f) prob.push('Peça ' + id + ' com perna fora da placa'); else { if (uso[f]) prob.push('Furo ' + f + ' usado por ' + uso[f] + ' e ' + id); uso[f] = id; } }); });
+  return prob;
+}
 
 // Junta as ligações da tabela e devolve os grupos de pernas que ficam ligadas.
 function redesDasLigacoes(ligacoes = LIGACOES) {
@@ -766,8 +1141,9 @@ function conferirCircuito() {
   return prob;
 }
 
-if (typeof window !== 'undefined') window.CIRCUITO = { PECAS, LIGACOES, REDES, LAYOUT, redesDasLigacoes, conferirCircuito };
-if (typeof module !== 'undefined') module.exports = { PECAS, LIGACOES, REDES, LAYOUT, redesDasLigacoes, conferirCircuito };
+const _CIRC = { PECAS, LIGACOES, REDES, REDES_BANCADA, LAYOUT, FORMAS, ROT, furoXY, furoValido, todosFuros, furoPerto, tiraDoFuro, pinosDaPeca, redeDoLayout, gruposDePernas, conferirLayout, redesDasLigacoes, conferirCircuito };
+if (typeof window !== 'undefined') window.CIRCUITO = _CIRC;
+if (typeof module !== 'undefined') module.exports = _CIRC;
 
 
 /* ===== dados-montagem.js ===== */
@@ -1064,6 +1440,1429 @@ const FW_ROTEIRO = [
 ];
 
 
+/* ===== montagem-sim.js ===== */
+/* =====================================================================
+   montagem-sim.js — o simulador da bancada
+   =====================================================================
+   1. Monta a rede elétrica a partir do layout (circuito.js): o que está
+      ligado por tira da protoboard, perna no furo, ponte, jumper ou fio.
+   2. Calcula tensões e correntes (análise nodal, com LED, transistor e
+      MOSFET como chaves simples). Serve para o multímetro e para os
+      pontinhos de corrente.
+   3. Roda uma cópia em JavaScript das regras do firmware v0.1 (mesmos
+      números do config.h), que liga os GPIO 4, 5 e 6.
+   É simplificado: pega ligação errada e dá valores coerentes, mas a
+   conferência final é sempre com o multímetro de verdade.
+   ===================================================================== */
+(function (raiz) {
+const CI = (typeof module !== 'undefined' && typeof require !== 'undefined' && !raiz.CIRCUITO) ? require('./circuito.js') : raiz.CIRCUITO;
+
+// ---------- números do firmware (iguais ao firmware/coleira/config.h) ----------
+const FWC = {
+  BIPE_SO: 500, BIPE_AVISO: 300, ESPERA: 200,
+  NIVEIS: [{nome:'B (fraco)', dur:500, lig:30, des:70}, {nome:'C (médio)', dur:500, lig:70, des:30}, {nome:'D (forte)', dur:1000, lig:1000, des:0}],
+  FOLGA: 30, PAUSA: 3000, JANELA: 60000, MAX_JANELA: 5000,
+  BAT_BAIXA: 3500, BAT_NO_FIM: 3300, USB: 4400, SOLTOU: 300,
+};
+
+// ---------- firmware ----------
+function novoFirmware() {
+  return { estado:'parado', nivel:-1, desde:0, simulado:false, jaHouve:false, fimUltimo:0, hist:[],
+    bz:false, a:false, b:false, bipes:[], ledAte:0, log:[], bat:'boa', mv:0, contador:{bipes:0, choques:[0,0,0], bloqueios:{pausa:0, limite:0, bateria:0}, simulados:0} };
+}
+function fwLog(fw, t, txt) { fw.log.push({t, txt}); if (fw.log.length > 60) fw.log.shift(); }
+function fwBipar(fw, t, lig, des, n) { fw.bipes = []; let x = t; for (let i = 0; i < n; i++) { fw.bipes.push([x, x + lig]); x += lig + des; } }
+function fwClassifica(mv) { return mv >= FWC.USB ? 'USB ligado' : mv < FWC.BAT_NO_FIM ? 'no fim' : mv < FWC.BAT_BAIXA ? 'baixa' : 'boa'; }
+function fwLigar(fw, t, mv) {
+  Object.assign(fw, novoFirmware(), { contador: fw.contador, log: fw.log });
+  fw.mv = mv; fw.bat = fwClassifica(mv);
+  fw.ledAte = t + 1000;
+  fwBipar(fw, t, 80, 150, fw.bat === 'baixa' ? 2 : fw.bat === 'no fim' ? 3 : 1);
+  fwLog(fw, t, `Coleira v0.1 ligada. Bateria: ${mv} mV (${fw.bat}).`);
+}
+function fwUsado(fw, t) { return fw.hist.filter(h => t - h.fim < FWC.JANELA).reduce((a, h) => a + h.ms, 0); }
+function fwPedir(fw, t, botao) {
+  if (fw.estado !== 'parado') return;
+  if (botao === 0) { fw.estado = 'bipe'; fw.nivel = -1; fw.desde = t; fw.bipes = []; fw.contador.bipes++; fwLog(fw, t, 'Botão A: bipe.'); return; }
+  const n = botao - 1, dur = FWC.NIVEIS[n].dur, L = 'ABCD'[botao];
+  if (fw.bat === 'no fim') { fwBipar(fw, t, 80, 150, 3); fw.contador.bloqueios.bateria++; fwLog(fw, t, `Botão ${L} ignorado: bateria no fim.`); return; }
+  if (fw.jaHouve && t - fw.fimUltimo < FWC.PAUSA) { fw.contador.bloqueios.pausa++; fwLog(fw, t, `Botão ${L} ignorado: pausa de 3 s.`); return; }
+  if (fwUsado(fw, t) + dur > FWC.MAX_JANELA) { fw.contador.bloqueios.limite++; fwLog(fw, t, `Botão ${L} ignorado: limite de 5 s por minuto.`); return; }
+  fw.estado = 'bipe'; fw.nivel = n; fw.desde = t; fw.bipes = [];
+}
+// avança o firmware até o instante t (chamar em passos de até 5 ms)
+function fwPasso(fw, t, mv) {
+  if (fw.estado === 'parado' && (!fw.jaHouve || t - fw.fimUltimo > 2000)) {
+    fw.mv = Math.round(fw.mv ? (fw.mv * 3 + mv) / 4 : mv); if (mv >= FWC.USB) fw.mv = mv;
+    const novo = fwClassifica(fw.mv); if (novo !== fw.bat) { fwLog(fw, t, `Bateria: ${fw.bat} -> ${novo} (${fw.mv} mV)`); fw.bat = novo; }
+  }
+  const p = t - fw.desde;
+  if (fw.estado === 'bipe') {
+    if (fw.nivel < 0) { if (p >= FWC.BIPE_SO) { fw.estado = 'parado'; fw.desde = t; } }
+    else if (p >= FWC.BIPE_AVISO) { fw.estado = 'espera'; fw.desde = t; }
+  } else if (fw.estado === 'espera' && p >= FWC.ESPERA) {
+    fw.estado = 'choque'; fw.desde = t; fw.simulado = fw.bat === 'USB ligado' && !fw.bancada;
+    fwLog(fw, t, `Choque ${FWC.NIVEIS[fw.nivel].nome} começou${fw.simulado ? ' (simulado)' : ''}.`);
+  } else if (fw.estado === 'choque') {
+    const N = FWC.NIVEIS[fw.nivel];
+    if (p >= N.dur) {
+      fw.hist.push({fim:t, ms:N.dur}); fw.jaHouve = true; fw.fimUltimo = t; fw.estado = 'parado'; fw.desde = t;
+      if (fw.simulado) fw.contador.simulados++; else fw.contador.choques[fw.nivel]++;
+      fwLog(fw, t, `Choque ${N.nome}: ${N.dur} ms${fw.simulado ? ' (SIMULADO, USB ligado)' : ''}. Usado no último minuto: ${fwUsado(fw, t)} de 5000 ms.`);
+    }
+  }
+  // saídas
+  const choque = fw.estado === 'choque' && !fw.simulado;
+  const N = fw.nivel >= 0 ? FWC.NIVEIS[fw.nivel] : null;
+  fw.b = choque;
+  fw.a = choque && (N.des === 0 || ((t - fw.desde) % (N.lig + N.des)) < N.lig);
+  fw.bz = fw.estado === 'bipe' || fw.bipes.some(([i, f]) => t >= i && t < f);
+  fw.led = t < fw.ledAte || choque || (fw.bat === 'USB ligado') || (t % 3000) < 60 || ((fw.bat === 'baixa' || fw.bat === 'no fim') && (t % 3000) >= 250 && (t % 3000) < 310);
+}
+
+// ---------- rede elétrica ----------
+// estado: {pecas:[ids], jumpers:[ids], pontes:[ids], fios:[ids], soldados:Set, chave, usb, vbat, botao, defeitos:{}, gpio:{a,b,bz}}
+function montarRede(layout, est) {
+  const opc = { pecas: est.pecas, soldados: est.soldados,
+    jumpers: [], pontes: (layout.pontes || []).filter(p => est.pontes.includes(p.id)), fios: [], semSoltos: true };
+  const rede = CI.redeDoLayout(layout, opc);
+  const no = ref => rede.raiz(ref);
+  const elems = [];
+  const R = (id, a, b, r) => elems.push({ t:'R', id, a: no(a), b: no(b), r });
+  const V = (id, a, b, v, r) => elems.push({ t:'V', id, a: no(a), b: no(b), v, r });
+  const D = (id, a, b, vf, rs) => elems.push({ t:'D', id, a: no(a), b: no(b), vf, rs, on: false });
+  const tem = id => est.pecas.includes(id);
+  const P = (id, n) => 'P:' + id + '.' + n;
+  // fios e jumpers viram resistores pequenos (para medir a corrente neles)
+  (layout.jumpers || []).forEach(j => { if (est.jumpers.includes(j.id)) R('j:' + j.id, 'H:' + j.de, 'H:' + j.para, 0.02); });
+  (layout.fios || []).forEach(f => { if (est.fios.includes(f.id) && (!est.soldados || (est.soldados.has(f.de) && est.soldados.has(f.para)))) R('f:' + f.id, 'H:' + f.de, 'H:' + f.para, 0.02); });
+  if (layout.tipo === 'placa' && est.soltos) (layout.soltos || []).forEach(([a, b], i) => R('s:' + i, a, b, 0.02));
+  const vb = est.vbat;
+  if (tem('bloco') && est.chave) V('bat', P('bloco', '+'), P('bloco', '-'), vb, 0.12);
+  if (layout.tipo === 'placa' && est.soltos) {
+    V('bat', P('bat', '+'), P('bat', '-'), vb, 0.12);
+    R('tp+', P('tp', 'B+'), P('tp', 'OUT+'), 0.05); R('tp-', P('tp', 'B-'), P('tp', 'OUT-'), 0.05);
+    if (est.chave) R('chave', P('chave', '1'), P('chave', '2'), 0.02);
+    R('modulo', P('at', 'IN+'), P('at', 'IN-'), 1.5);
+  }
+  const Rv = { rga:100, rgb:100, rpa:10000, rpb:10000, rb:1000, rd1:100000, rd2:100000, r220:220 };
+  Object.entries(Rv).forEach(([id, r]) => { if (tem(id)) R(id, P(id, '1'), P(id, '2'), r); });
+  if (tem('led')) D('led', P('led', 'A'), P('led', 'K'), 1.9, 15);
+  if (tem('bz')) D('bz', P('bz', '+'), P('bz', '-'), 0.4, 110);
+  if (tem('bt') && est.botao) R('bt', P('bt', '1'), P('bt', '2'), 0.05);
+  if (tem('q')) { D('qbe', P('q', 'B'), P('q', 'E'), 0.65, 30); elems.push({ t:'Q', id:'qce', a: no(P('q', 'C')), b: no(P('q', 'E')), on:false }); }
+  ['ma', 'mb'].forEach(m => { if (tem(m)) elems.push({ t:'M', id:m, d: no(P(m, 'D')), s: no(P(m, 'S')), g: no(P(m, 'G')), irfz: !!(est.defeitos || {}).irfz, curto: !!(est.defeitos || {})['curto' + (m === 'ma' ? 'A' : 'B')], r: 1e9 }); });
+  if (tem('rx')) elems.push({ t:'RX', id:'rx', a: no(P('rx', 'VCC')), b: no(P('rx', 'GND')), r: 800 });
+  let esp = null;
+  if (tem('esp')) {
+    esp = { v5: no(P('esp', '5V')), gnd: no(P('esp', 'GND')), v33: no(P('esp', '3V3')), g0: no(P('esp', 'GPIO0')), g1: no(P('esp', 'GPIO1')), g3: no(P('esp', 'GPIO3')),
+            g4: no(P('esp', 'GPIO4')), g5: no(P('esp', 'GPIO5')), g6: no(P('esp', 'GPIO6')) };
+    if (est.usb) V('usb', P('esp', '5V'), P('esp', 'GND'), 4.9, 0.3);
+    elems.push({ t:'REG', id:'reg', e: esp, v: 0 });
+  }
+  // nó de referência (0 V): negativo da bateria, senão o GND do ESP
+  const ref = tem('bloco') ? no(P('bloco', '-')) : layout.tipo === 'placa' && est.soltos ? no(P('bat', '-')) : esp ? esp.gnd : null;
+  return { rede, elems, esp, ref, no };
+}
+
+function resolver(c, est) {
+  const nos = new Map(); const idx = n => { if (n === c.ref) return -1; if (!nos.has(n)) nos.set(n, nos.size); return nos.get(n); };
+  c.elems.forEach(e => ['a', 'b', 'd', 's', 'g'].forEach(k => { if (e[k] !== undefined) idx(e[k]); }));
+  if (c.esp) Object.values(c.esp).forEach(idx);
+  const N = nos.size; let Vn = new Float64Array(N);
+  const vOf = n => { const i = idx(n); return i < 0 ? 0 : Vn[i]; };
+  let gpioLig = false;
+  for (let it = 0; it < 90; it++) {
+    const G = Array.from({ length: N }, () => new Float64Array(N)), I = new Float64Array(N);
+    const addG = (a, b, g) => { const i = idx(a), j = idx(b); if (i >= 0) G[i][i] += g; if (j >= 0) G[j][j] += g; if (i >= 0 && j >= 0) { G[i][j] -= g; G[j][i] -= g; } };
+    const addI = (a, b, i0) => { const i = idx(a), j = idx(b); if (i >= 0) I[i] += i0; if (j >= 0) I[j] -= i0; }; // corrente entrando em a, saindo de b
+    const fonte = (a, b, v, r) => { addG(a, b, 1 / r); addI(a, b, v / r); };
+    for (let i = 0; i < N; i++) G[i][i] += 1e-9;
+    c.elems.forEach(e => {
+      if (e.t === 'R') addG(e.a, e.b, 1 / e.r);
+      else if (e.t === 'V') fonte(e.a, e.b, e.v, e.r);
+      else if (e.t === 'D') { if (e.on) fonte(e.a, e.b, e.vf, e.rs); else addG(e.a, e.b, 1e-8); }
+      else if (e.t === 'Q') addG(e.a, e.b, e.on ? 1 / 5 : 1e-8);
+      else if (e.t === 'M') addG(e.d, e.s, 1 / (e.curto ? 0.01 : e.r));
+      else if (e.t === 'RX') addG(e.a, e.b, 1 / e.r);
+      else if (e.t === 'REG') {
+        const E = e.e; addG(E.v33, E.gnd, 1 / 120);                 // consumo do ESP32
+        if (e.v > 0) fonte(E.v33, E.gnd, e.v, 0.5);
+        addG(E.g1, E.v33, 1 / 45000);                                 // pull-up do botão
+        if (gpioLig) [['g4', est.gpio.a], ['g6', est.gpio.b], ['g5', est.gpio.bz]].forEach(([k, on]) => fonte(E[k], E.gnd, on ? e.v : 0, 25));
+      }
+    });
+    // resolve G·V = I
+    const A = G.map((row, i) => { const r = Array.from(row); r.push(I[i]); return r; });
+    for (let k = 0; k < N; k++) {
+      let p = k; for (let i = k + 1; i < N; i++) if (Math.abs(A[i][k]) > Math.abs(A[p][k])) p = i;
+      [A[k], A[p]] = [A[p], A[k]];
+      const d = A[k][k] || 1e-12;
+      for (let i = k + 1; i < N; i++) { const f = A[i][k] / d; if (f) for (let j = k; j <= N; j++) A[i][j] -= f * A[k][j]; }
+    }
+    const X = new Float64Array(N);
+    for (let i = N - 1; i >= 0; i--) { let s = A[i][N]; for (let j = i + 1; j < N; j++) s -= A[i][j] * X[j]; X[i] = s / (A[i][i] || 1e-12); }
+    Vn = X;
+    // atualiza as partes que dependem da tensão
+    let mudou = false;
+    c.elems.forEach(e => {
+      if (e.t === 'D') { const on = vOf(e.a) - vOf(e.b) > e.vf + (e.on ? -0.01 : 0.01); if (on !== e.on) { e.on = on; mudou = true; } }
+      else if (e.t === 'Q') { const be = c.elems.find(x => x.id === 'qbe'); const ib = be.on ? (vOf(be.a) - vOf(be.b) - be.vf) / be.rs : 0; const on = ib > 0.0002; if (on !== e.on) { e.on = on; mudou = true; } }
+      else if (e.t === 'M') {
+        const vgs = vOf(e.g) - vOf(e.s), [v0, v1] = e.irfz ? [3.0, 4.5] : [1.5, 2.6];
+        const t = Math.max(0, Math.min(1, (vgs - v0) / (v1 - v0)));
+        const r = vgs <= v0 ? 1e9 : Math.pow(10, Math.log10(2000) * (1 - t) + Math.log10(0.04) * t);
+        // amortecido: MOSFET em cima de outro (o A) muda a própria Vgs quando a corrente passa
+        const lo = Math.log10(e.r), ln = Math.log10(r);
+        if (Math.abs(ln - lo) > 0.01) { e.r = Math.pow(10, lo + (ln - lo) * (it < 4 ? 1 : 0.35)); mudou = true; }
+      } else if (e.t === 'REG') {
+        const v5 = vOf(e.e.v5) - vOf(e.e.gnd);
+        const nv = v5 > 3.5 ? 3.3 : v5 > 2.6 ? v5 - 0.15 : 0;
+        if (Math.abs(nv - e.v) > 0.005) { e.v = nv; mudou = true; }
+        const lig = e.v > 2.8; if (lig !== gpioLig) { gpioLig = lig; mudou = true; }
+      }
+    });
+    if (!mudou && it > 0) break;
+  }
+  const corrente = e => {
+    if (e.t === 'R') return (vOf(e.a) - vOf(e.b)) / e.r;
+    if (e.t === 'V') return (e.v - (vOf(e.a) - vOf(e.b))) / e.r;
+    if (e.t === 'D') return e.on ? (vOf(e.a) - vOf(e.b) - e.vf) / e.rs : 0;
+    if (e.t === 'Q') return e.on ? (vOf(e.a) - vOf(e.b)) / 5 : 0;
+    if (e.t === 'M') return (vOf(e.d) - vOf(e.s)) / (e.curto ? 0.01 : e.r);
+    return 0;
+  };
+  const I = {}; c.elems.forEach(e => { I[e.id] = corrente(e); });
+  const reg = c.elems.find(e => e.t === 'REG');
+  return { v: n => vOf(n), I, espLigado: !!(reg && reg.v > 2.8), v33: reg ? reg.v : 0 };
+}
+
+// ---------- bancada: junta rede + firmware + tempo ----------
+function novaBancada(layout) {
+  return { layout, t: 0, fw: novoFirmware(), espLigadoAntes: false,
+    est: { pecas: [], jumpers: [], pontes: [], fios: [], soldados: layout.tipo === 'placa' ? new Set() : null, soltos: false,
+           chave: false, usb: false, vbat: 3.9, botao: false, defeitos: {}, gpio: { a: false, b: false, bz: false } },
+    apertado: -1, eventos: [], res: null, circ: null, sujo: true };
+}
+function redeCompleta(B) {
+  return CI.redeDoLayout(B.layout, { pecas: B.est.pecas, soldados: B.est.soldados, jumpers: (B.layout.jumpers || []).filter(j => B.est.jumpers.includes(j.id)),
+    pontes: (B.layout.pontes || []).filter(p => B.est.pontes.includes(p.id)),
+    fios: (B.layout.fios || []).filter(f => B.est.fios.includes(f.id) && (!B.est.soldados || (B.est.soldados.has(f.de) && B.est.soldados.has(f.para)))), semSoltos: true });
+}
+function bancadaRecalcular(B) { B.circ = montarRede(B.layout, B.est); B.res = resolver(B.circ, B.est); B.conexao = redeCompleta(B); B.sujo = false; }
+function rfOk(B) {
+  const c = B.circ, r = B.res; if (!c || !c.esp || !B.est.pecas.includes('rx')) return false;
+  const rx = c.elems.find(e => e.t === 'RX'); if (!rx) return false;
+  const k = B.conexao.raiz;
+  return r.v(rx.a) - r.v(rx.b) > 2.5 && k('P:rx.DATA') === k('P:esp.GPIO3') && k('P:rx.GND') === k('P:esp.GND');
+}
+function evento(B, tipo, dados) { B.eventos.push(Object.assign({ tipo, t: B.t }, dados || {})); if (B.eventos.length > 200) B.eventos.shift(); }
+// avança a bancada "ms" milissegundos
+function bancadaAvancar(B, ms) {
+  if (B.sujo || !B.res) bancadaRecalcular(B);
+  const fim = B.t + ms;
+  while (B.t < fim) {
+    const dt = Math.min(5, fim - B.t); B.t += dt;
+    const lig = B.res.espLigado;
+    if (lig && !B.espLigadoAntes) { fwLigar(B.fw, B.t, adcMv(B)); evento(B, 'esp_ligou'); }
+    if (!lig && B.espLigadoAntes) { evento(B, 'esp_desligou'); }
+    B.espLigadoAntes = lig;
+    if (!lig) { B.est.gpio = { a: false, b: false, bz: false }; continue; }
+    const antes = JSON.stringify([B.fw.a, B.fw.b, B.fw.bz]);
+    const estAntes = B.fw.estado;
+    fwPasso(B.fw, B.t, adcMv(B));
+    if (B.fw.estado === 'choque' && estAntes !== 'choque') evento(B, 'choque', { nivel: B.fw.nivel, simulado: B.fw.simulado });
+    const depois = JSON.stringify([B.fw.a, B.fw.b, B.fw.bz]);
+    if (antes !== depois) {
+      B.est.gpio = { a: B.fw.a, b: B.fw.b, bz: B.fw.bz };
+      bancadaRecalcular(B);
+      const r = B.res;
+      if (r.I.bz > 0.005 && B.fw.bz) evento(B, 'bipe');
+      if ((r.I.led || 0) > 0.008) evento(B, 'led_teste', { mA: r.I.led * 1000 });
+      else if ((r.I.led || 0) > 0.0005) evento(B, 'led_fraco', { mA: r.I.led * 1000 });
+    }
+  }
+}
+function adcMv(B) { const c = B.circ; if (!c || !c.esp) return 0; return Math.round((B.res.v(c.esp.g0) - B.res.v(c.esp.gnd)) * 2 * 1000); }
+function bancadaApertar(B, botao) {
+  if (B.sujo || !B.res) bancadaRecalcular(B);
+  B.apertado = botao;
+  const ok = rfOk(B);
+  evento(B, 'aperto', { botao, chegou: ok && B.res.espLigado });
+  if (ok && B.res.espLigado) { fwLog(B.fw, B.t, `Recebido: 0x5A5A5${[1, 2, 4, 8][botao]} (botão ${'ABCD'[botao]})`); fwPedir(B.fw, B.t, botao); }
+}
+function bancadaSoltar(B) { B.apertado = -1; }
+function bancadaMudar(B, f) { f(B.est); B.sujo = true; bancadaRecalcular(B); }
+
+// ---------- multímetro ----------
+// pontas: furos (ou "P:peca.pino"). modo: 'V' ou 'cont'
+function multimetro(B, modo, vermelha, preta) {
+  if (!vermelha || !preta) return { txt: '- - -', obs: 'Encoste as duas pontas.' };
+  if (B.sujo || !B.res) bancadaRecalcular(B);
+  const ref = x => x.startsWith('P:') ? x : 'H:' + x;
+  const c = B.circ;
+  if (modo === 'V') {
+    const v = B.res.v(c.no(ref(vermelha))) - B.res.v(c.no(ref(preta)));
+    return { v, txt: (Math.abs(v) < 0.005 ? 0 : v).toFixed(2).replace('.', ',') + ' V' };
+  }
+  const ligada = B.est.chave || B.est.usb;
+  if (ligada) return { txt: 'Desligue', obs: 'Continuidade só com tudo desligado: desligue a chave e tire o USB.' };
+  // continuidade: só caminhos de menos de 1 Ω (fio, jumper, ponte)
+  const rede = B.conexao;
+  const bipa = rede.raiz(ref(vermelha)) === rede.raiz(ref(preta));
+  return { bipa, txt: bipa ? '0,0 Ω' : '1', obs: bipa ? 'Bipou: os dois pontos estão ligados.' : 'Não bipou: os dois pontos não estão ligados direto.' };
+}
+
+const API = { FWC, novoFirmware, fwLigar, fwPasso, fwPedir, montarRede, resolver, novaBancada, bancadaAvancar, bancadaApertar, bancadaSoltar, bancadaMudar, bancadaRecalcular, multimetro, adcMv, rfOk };
+if (typeof module !== 'undefined') module.exports = API;
+raiz.SIM = API;
+})(typeof window !== 'undefined' ? window : globalThis);
+
+
+/* ===== montagem-pecas.js ===== */
+/* =====================================================================
+   montagem-pecas.js — desenho das peças, da protoboard e da placa (SVG)
+   =====================================================================
+   Tudo em "passos" de 2,54 mm (a distância entre dois furos). O desenho
+   da placa vira uma imagem por cima da qual o usuário trabalha.
+   ===================================================================== */
+const DES = (() => {
+  const CIR = window.CIRCUITO;
+  const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  // cores das faixas dos resistores
+  const FAIXA = {0:'#1b1b1b', 1:'#7a4a21', 2:'#c62a1e', 3:'#e5821c', 4:'#e8c51e'};
+  const FAIXAS = {100:[1,0,1], 220:[2,2,1], 1000:[1,0,2], 10000:[1,0,3], 100000:[1,0,4]};
+  const NOME_COR = {0:'preto', 1:'marrom', 2:'vermelho', 3:'laranja', 4:'amarelo'};
+  const coresDoResistor = v => (FAIXAS[v] || [0,0,0]).map(i => NOME_COR[i]).join(', ');
+
+  // ---------- peças rígidas, desenhadas no "rot 0" da FORMA ----------
+  const RIGIDAS = {
+    esp(p) {
+      let s = `<rect x="-0.75" y="-0.75" width="9.6" height="7.5" rx="0.5" fill="#17181b" stroke="#000" stroke-width="0.06"/>`;
+      s += `<rect x="7.9" y="1.9" width="1.4" height="2.2" rx="0.35" fill="#c9ccd0" stroke="#8e9297" stroke-width="0.08"/>`;
+      s += `<rect x="2.6" y="1.9" width="2.2" height="2.2" fill="#2b2d31"/><text x="3.7" y="3.25" font-size="0.6" fill="#ddd" text-anchor="middle">ESP32-C3</text>`;
+      s += `<circle cx="6.6" cy="1.5" r="0.32" class="espled" fill="#1d4fd0" opacity="0.25"/>`;
+      CIR.FORMAS.esp.pinos.forEach(([n, x, y]) => {
+        s += `<rect x="${x - 0.28}" y="${y - 0.28}" width="0.56" height="0.56" fill="#d9b45a"/>`;
+        s += `<text x="${x}" y="${y === 0 ? 1.0 : 5.35}" font-size="0.42" fill="#e9e9e9" text-anchor="middle">${esc(n.replace('GPIO', ''))}</text>`;
+      });
+      return s;
+    },
+    rx(p, lay) {
+      if (lay && lay.empe) {
+        let s = `<rect x="-1.1" y="-0.7" width="0.75" height="4.4" rx="0.1" fill="#1f6b3a"/><text x="-0.72" y="1.5" font-size="0.42" fill="#fff" text-anchor="middle" transform="rotate(-90 -0.72 1.5)">RXB6</text>`;
+        CIR.FORMAS.rx.pinos.forEach(([n, x, y]) => { s += `<rect x="${x - 0.22}" y="${y - 0.22}" width="0.44" height="0.44" fill="#d9b45a"/>`; });
+        return s;
+      }
+      let s = `<rect x="-11.2" y="-0.8" width="11.8" height="4.6" rx="0.25" fill="#1f6b3a" stroke="#0c3d1f" stroke-width="0.06"/>`;
+      s += `<rect x="-7" y="0.3" width="3" height="1.4" rx="0.6" fill="#c9ccd0"/><rect x="-3.5" y="0.4" width="1.8" height="1.6" fill="#16171a"/>`;
+      s += `<circle cx="-10.4" cy="1.5" r="0.35" fill="#d9b45a"/><text x="-9.8" y="1.65" font-size="0.45" fill="#fff">ANT</text>`;
+      s += `<text x="-5" y="3.3" font-size="0.6" fill="#fff" text-anchor="middle">RXB6 433 MHz</text>`;
+      CIR.FORMAS.rx.pinos.forEach(([n, x, y]) => { s += `<rect x="${x - 0.25}" y="${y - 0.25}" width="0.5" height="0.5" fill="#d9b45a"/><text x="-0.5" y="${y + 0.15}" font-size="0.38" fill="#fff" text-anchor="end">${n === 'DATA2' ? 'DATA' : n}</text>`; });
+      return s;
+    },
+    to220(p, lay) {
+      const nomes = { ma: 'A', mb: 'B' };
+      if (lay && lay.deitado) {
+        let s = '';
+        [0, 1, 2].forEach(i => { s += `<line x1="${i}" y1="0" x2="${i}" y2="-1.4" stroke="#b9bdc2" stroke-width="0.3"/>`; });
+        s += `<rect x="-0.6" y="-5.4" width="3.2" height="4.1" rx="0.15" fill="#16171a"/>`;
+        s += `<rect x="-0.6" y="-7.4" width="3.2" height="2.1" fill="#c9ccd0"/><circle cx="1" cy="-6.4" r="0.55" fill="#5a4126"/>`;
+        s += `<text x="1" y="-3.6" font-size="0.55" fill="#ddd" text-anchor="middle">IRLZ44N</text><text x="1" y="-2.3" font-size="1" fill="#fff" text-anchor="middle" font-weight="700">${nomes[p] || ''}</text>`;
+        return s;
+      }
+      return `<rect x="-0.65" y="-1.3" width="3.3" height="0.45" fill="#c9ccd0"/><rect x="-0.65" y="-0.85" width="3.3" height="1.4" rx="0.1" fill="#16171a"/>` +
+        `<text x="1" y="0.05" font-size="0.48" fill="#ddd" text-anchor="middle">IRLZ44N ${nomes[p] || ''}</text>`;
+    },
+    to92() {
+      return `<path d="M-0.5 0.45 L2.5 0.45 L2.5 -0.2 Q1 -1.4 -0.5 -0.2 Z" fill="#141416"/><text x="1" y="0.25" font-size="0.42" fill="#ddd" text-anchor="middle">BC547</text>`;
+    },
+    buzzer() {
+      return `<circle cx="1.5" cy="0" r="2.35" fill="#141416" stroke="#000" stroke-width="0.08"/><circle cx="1.5" cy="0" r="0.45" fill="#2b2d31"/>` +
+        `<text x="0" y="-1.0" font-size="0.9" fill="#fff" text-anchor="middle" font-weight="700">+</text><circle cx="1.5" cy="0" r="2.35" class="bzonda" fill="none" stroke="#e3a000" stroke-width="0.15" opacity="0"/>`;
+    },
+    tp() {
+      let s = `<rect x="-9.6" y="-1.2" width="10.4" height="6.4" rx="0.2" fill="#1d4fa3" stroke="#103066" stroke-width="0.06"/>`;
+      s += `<rect x="-10" y="1" width="2.4" height="2" rx="0.3" fill="#c9ccd0"/><rect x="-5.5" y="0.6" width="2" height="1.6" fill="#16171a"/>`;
+      s += `<text x="-4.2" y="4.2" font-size="0.7" fill="#fff" text-anchor="middle">TP4056</text>`;
+      CIR.FORMAS.tp.pinos.forEach(([n, x, y]) => { s += `<rect x="${x - 0.3}" y="${y - 0.3}" width="0.6" height="0.6" fill="#d9b45a"/><text x="-0.6" y="${y + 0.15}" font-size="0.42" fill="#fff" text-anchor="end">${n}</text>`; });
+      return s;
+    },
+    soq8() { return `<rect x="-0.48" y="-0.5" width="0.96" height="8" rx="0.1" fill="#202124"/>` + [0,1,2,3,4,5,6,7].map(i => `<rect x="-0.17" y="${i - 0.17}" width="0.34" height="0.34" fill="#000"/>`).join(''); },
+    soq4() { return `<rect x="-0.48" y="-0.5" width="0.96" height="4" rx="0.1" fill="#202124"/>` + [0,1,2,3].map(i => `<rect x="-0.17" y="${i - 0.17}" width="0.34" height="0.34" fill="#000"/>`).join(''); },
+  };
+
+  // ---------- peças de duas pernas, desenhadas entre os dois furos ----------
+  function duasPernas(id, a, b) {
+    const [x1, y1] = a, [x2, y2] = b, mx = (x1 + x2) / 2, my = (y1 + y2) / 2;
+    const ang = Math.atan2(y2 - y1, x2 - x1) * 180 / Math.PI, L = Math.hypot(x2 - x1, y2 - y1);
+    const perna = `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="#b9bdc2" stroke-width="0.14" stroke-linecap="round"/>`;
+    const P = CIR.PECAS[id] || {};
+    const t = (inner) => `<g transform="translate(${mx} ${my}) rotate(${ang})">${inner}</g>`;
+    if (/^r/.test(id) && P.valor) {
+      const bl = Math.min(2.3, L * 0.62), f = FAIXAS[P.valor] || [0,0,0];
+      let s = `<rect x="${-bl / 2}" y="-0.36" width="${bl}" height="0.72" rx="0.3" fill="#e2cfa3" stroke="#b49b68" stroke-width="0.05"/>`;
+      f.forEach((c, i) => { s += `<rect x="${-bl / 2 + bl * (0.18 + i * 0.17)}" y="-0.36" width="${bl * 0.09}" height="0.72" fill="${FAIXA[c]}"/>`; });
+      s += `<rect x="${bl / 2 - bl * 0.2}" y="-0.36" width="${bl * 0.08}" height="0.72" fill="#c59a2b"/>`;
+      return perna + t(s);
+    }
+    if (id === 'led') return perna + t(`<circle r="0.75" class="ledteste" fill="#d23a2e" stroke="#7a1a14" stroke-width="0.06"/><line x1="0.55" y1="-0.55" x2="0.55" y2="0.55" stroke="#7a1a14" stroke-width="0.12"/>`) +
+      `<circle cx="${mx}" cy="${my}" r="1.6" class="ledbrilho" fill="#ff5a3c" opacity="0"/>`;
+    if (id === 'cap') return perna + t(`<circle r="1.65" fill="#1c2a52" stroke="#0d1530" stroke-width="0.08"/><path d="M0.95 -1.35 A1.65 1.65 0 0 1 0.95 1.35 Z" fill="#c9ccd4"/><text x="1.15" y="0.2" font-size="0.6" fill="#1c2a52" text-anchor="middle">−</text>`);
+    if (id === 'bt') return perna + t(`<rect x="-1" y="-1" width="2" height="2" rx="0.15" fill="#2b2d31"/><circle r="0.55" fill="#111214"/>`);
+    if (id === 'bloco') return perna;
+    return perna + t(`<rect x="-0.6" y="-0.35" width="1.2" height="0.7" fill="#888"/>`);
+  }
+
+  // ---------- protoboard ----------
+  function protoboard(S) {
+    let s = `<rect x="${0.2}" y="-4.6" width="64.3" height="20.2" rx="0.6" fill="#f3f1ea" stroke="#d6d2c6" stroke-width="0.08"/>`;
+    s += `<rect x="0.6" y="5.0" width="63.6" height="1.0" fill="#e4e0d4"/>`;
+    [['T-', -3.4, '#3a6fd6'], ['T+', -2.4, '#d4483b'], ['B-', 13.4, '#3a6fd6'], ['B+', 14.4, '#d4483b']].forEach(([n, y, c]) => {
+      const off = n.endsWith('+') ? (y < 0 ? 0.55 : 0.55) : -0.55;
+      s += `<line x1="1" y1="${y + off}" x2="63.8" y2="${y + off}" stroke="${c}" stroke-width="0.07"/>`;
+      s += `<text x="0.55" y="${y + 0.18}" font-size="0.55" fill="${c}" text-anchor="middle">${n[1] === '+' ? '+' : '−'}</text>`;
+    });
+    'abcdefghij'.split('').forEach(l => { const y = CIR.furoXY('protoboard', l + '1')[1]; s += `<text x="0.5" y="${y + 0.18}" font-size="0.5" fill="#8a877f" text-anchor="middle">${l}</text>`; });
+    for (let c = 1; c <= 63; c++) if (c === 1 || c % 5 === 0) s += `<text x="${c}" y="-0.75" font-size="0.45" fill="#8a877f" text-anchor="middle">${c}</text>`;
+    CIR.todosFuros('protoboard').forEach(f => { const [x, y] = CIR.furoXY('protoboard', f); s += `<rect class="furo" data-f="${f}" x="${x - 0.2}" y="${y - 0.2}" width="0.4" height="0.4" rx="0.06" fill="#4a463e"/>`; });
+    return s;
+  }
+
+  // ---------- placa ilhada (de cima ou de baixo) ----------
+  // De baixo, a placa é espelhada da esquerda para a direita (como quando você vira a placa na mão).
+  const espelha = (embaixo, x) => embaixo ? 23 - x : x;
+  function placa(embaixo) {
+    let s = `<rect x="-1.3" y="-1.3" width="25.6" height="31.6" rx="0.5" fill="#c9a46a" stroke="#a9834a" stroke-width="0.08"/>`;
+    for (let r = 0; r < 30; r++) for (let c = 0; c < 24; c++) {
+      const x = espelha(embaixo, c);
+      s += `<circle class="furo" data-f="${c},${r}" cx="${x}" cy="${r}" r="0.38" fill="#d9b45a"/><circle cx="${x}" cy="${r}" r="0.16" fill="#2a2016" pointer-events="none"/>`;
+    }
+    for (let c = 0; c < 24; c += 4) s += `<text x="${espelha(embaixo, c)}" y="-0.65" font-size="0.48" fill="#5a4126" text-anchor="middle">${c}</text>`;
+    for (let r = 0; r < 30; r += 4) s += `<text x="${embaixo ? 24 : -0.85}" y="${r + 0.17}" font-size="0.48" fill="#5a4126" text-anchor="middle">${r}</text>`;
+    s += `<text x="11.5" y="30.05" font-size="0.6" fill="#5a4126" text-anchor="middle">${embaixo ? 'LADO DE BAIXO (soldas)' : 'LADO DE CIMA (peças)'}</text>`;
+    return s;
+  }
+
+  // posição de um furo no desenho (já espelhada se for de baixo)
+  function pos(tipo, f, embaixo) { const [x, y] = CIR.furoXY(tipo, f); return [tipo === 'placa' ? espelha(embaixo, x) : x, y]; }
+
+  // desenha uma peça já colocada. estilo: '' | 'apagada' | 'nova' | 'fantasma' | 'errada'
+  function peca(layout, id, opc = {}) {
+    const lay = layout.pecas[id]; if (!lay) return '';
+    const cls = 'peca ' + (opc.estilo || '');
+    if (lay.pernas || opc.pernas) {
+      const pp = opc.pernas || lay.pernas; const ks = Object.keys(pp);
+      if (id === 'bloco') return blocoBateria(layout, pp, cls);
+      const a = pos(layout.tipo, pp[ks[0]], opc.embaixo), b = pos(layout.tipo, pp[ks[1]], opc.embaixo);
+      if (opc.embaixo) return `<g class="${cls}" data-p="${id}">${[a, b].map(([x, y]) => `<circle cx="${x}" cy="${y}" r="0.2" fill="#b9bdc2"/>`).join('')}</g>`;
+      return `<g class="${cls}" data-p="${id}">${duasPernas(id, a, b)}</g>`;
+    }
+    const anc = opc.ancora || lay.ancora, rot = opc.rot === undefined ? lay.rot : opc.rot;
+    if (opc.embaixo) {
+      const pins = CIR.pinosDaPeca(layout, id, anc, rot);
+      return `<g class="${cls}" data-p="${id}">` + Object.entries(pins).filter(([, f]) => f).map(([n, f]) => { const [x, y] = pos(layout.tipo, f, true); return `<circle cx="${x}" cy="${y}" r="0.2" fill="#b9bdc2"/><text x="${x}" y="${y - 0.45}" font-size="0.36" fill="#3b2a17" text-anchor="middle">${esc(n.replace('GPIO', 'G'))}</text>`; }).join('') + `</g>`;
+    }
+    const [ax, ay] = pos(layout.tipo, anc, false);
+    return `<g class="${cls}" data-p="${id}" transform="translate(${ax} ${ay}) rotate(${rot})">${RIGIDAS[lay.forma](id, lay)}</g>`;
+  }
+
+  function blocoBateria(layout, pp, cls) {
+    const a = pos(layout.tipo, pp['+']), b = pos(layout.tipo, pp['-']);
+    let s = `<g class="${cls}" data-p="bloco"><rect x="-10.4" y="1" width="8.6" height="9" rx="0.5" fill="#26282c"/>`;
+    s += `<rect x="-9.8" y="2" width="7.4" height="3.2" rx="1.4" fill="#2e7a4d"/><text x="-6.1" y="4" font-size="0.7" fill="#fff" text-anchor="middle">18650</text>`;
+    s += `<rect x="-9.8" y="6" width="4" height="3" rx="0.2" fill="#1d4fa3"/><text x="-7.8" y="7.8" font-size="0.5" fill="#fff" text-anchor="middle">TP4056</text>`;
+    s += `<rect x="-5.2" y="6.4" width="2.6" height="2.2" rx="0.3" fill="#111" class="chavevis"/><text x="-3.9" y="9.6" font-size="0.5" fill="#bbb" text-anchor="middle">chave</text>`;
+    s += `<path d="M-1.8 3 C 0 3, ${a[0] - 1.5} ${a[1]}, ${a[0]} ${a[1]}" stroke="#d4483b" stroke-width="0.22" fill="none"/>`;
+    s += `<path d="M-1.8 4.2 C 0 4.2, ${b[0] - 1.5} ${b[1]}, ${b[0]} ${b[1]}" stroke="#2b2b2b" stroke-width="0.22" fill="none"/>`;
+    return s + `</g>`;
+  }
+
+  // jumper (protoboard) ou fio (placa). por baixo = fio encapado
+  function fio(tipo, de, para, cor, opc = {}) {
+    const a = pos(tipo, de, opc.embaixo), b = pos(tipo, para, opc.embaixo);
+    const dx = b[0] - a[0], dy = b[1] - a[1], L = Math.hypot(dx, dy) || 1;
+    const k = Math.min(3, 0.18 * L + 0.6), nx = -dy / L * k, ny = dx / L * k;
+    const d = `M${a[0]} ${a[1]} Q ${(a[0] + b[0]) / 2 + nx} ${(a[1] + b[1]) / 2 + ny} ${b[0]} ${b[1]}`;
+    const w = opc.grossa ? 0.42 : 0.26;
+    return `<g class="fio ${opc.estilo || ''}" data-j="${opc.id || ''}"><path d="${d}" stroke="#000" stroke-opacity="0.35" stroke-width="${w + 0.1}" fill="none" stroke-linecap="round"/>` +
+      `<path d="${d}" stroke="${cor}" stroke-width="${w}" fill="none" stroke-linecap="round"/>` +
+      `<path class="corrente" d="${d}" stroke="#ffe26a" stroke-width="${w * 0.5}" fill="none" stroke-dasharray="0.25 1.1" stroke-linecap="round" opacity="0"/>` +
+      `<circle cx="${a[0]}" cy="${a[1]}" r="0.2" fill="#9a9a9a"/><circle cx="${b[0]}" cy="${b[1]}" r="0.2" fill="#9a9a9a"/></g>`;
+  }
+
+  // ponte de estanho por baixo
+  function ponte(p, opc = {}) {
+    const pts = p.furos.map(f => pos('placa', f, true));
+    let s = `<g class="ponte ${opc.estilo || ''}">`;
+    for (let i = 1; i < pts.length; i++) {
+      // liga cada furo ao vizinho mais próximo já desenhado (as pontes podem ter galhos)
+      let melhor = pts[0], d = 1e9; for (let j = 0; j < i; j++) { const dd = (pts[j][0] - pts[i][0]) ** 2 + (pts[j][1] - pts[i][1]) ** 2; if (dd < d) { d = dd; melhor = pts[j]; } }
+      s += `<line x1="${melhor[0]}" y1="${melhor[1]}" x2="${pts[i][0]}" y2="${pts[i][1]}" stroke="#d6d9dd" stroke-width="${p.grossa ? 0.55 : 0.36}" stroke-linecap="round"/>`;
+    }
+    return s + pts.map(([x, y]) => `<circle cx="${x}" cy="${y}" r="0.34" fill="#e3e6ea"/>`).join('') + `</g>`;
+  }
+  function solda(f) { const [x, y] = pos('placa', f, true); return `<g class="solda"><circle cx="${x}" cy="${y}" r="0.42" fill="#cfd3d8"/><circle cx="${x - 0.1}" cy="${y - 0.12}" r="0.14" fill="#fff" opacity="0.8"/></g>`; }
+
+  // ---------- desenhos avulsos (galeria de peças e de soldas) ----------
+  function galeriaPeca(tipo, extra = {}) {
+    const W = { resistor: [6, 2], led: [4, 4], cap: [5, 5], mosfet: [5, 4], bc547: [5, 3], esp: [12, 9], rx: [14, 6], buzzer: [7, 6], tp: [12, 8] }[tipo] || [6, 4];
+    let corpo = '';
+    if (tipo === 'resistor') { const v = extra.valor;
+      const f = FAIXAS[v]; corpo = `<line x1="-2.6" y1="0" x2="2.6" y2="0" stroke="#b9bdc2" stroke-width="0.14"/><rect x="-1.2" y="-0.42" width="2.4" height="0.84" rx="0.35" fill="#e2cfa3" stroke="#b49b68" stroke-width="0.05"/>` +
+        f.map((c, i) => `<rect x="${-1.2 + 2.4 * (0.18 + i * 0.17)}" y="-0.42" width="0.24" height="0.84" fill="${FAIXA[c]}"/>`).join('') + `<rect x="0.75" y="-0.42" width="0.2" height="0.84" fill="#c59a2b"/>`; }
+    if (tipo === 'led') corpo = `<line x1="-0.6" y1="0.2" x2="-0.6" y2="2.2" stroke="#b9bdc2" stroke-width="0.14"/><line x1="0.6" y1="0.2" x2="0.6" y2="1.6" stroke="#b9bdc2" stroke-width="0.14"/><path d="M-1 0.3 L-1 -0.8 A1 1 0 0 1 1 -0.8 L1 0.3 Z" fill="#d23a2e"/><text x="-0.6" y="2.9" font-size="0.5" text-anchor="middle">+ comprida</text><text x="0.9" y="2.3" font-size="0.5" text-anchor="start">− curta</text>`;
+    if (tipo === 'cap') corpo = `<rect x="-1.6" y="-2" width="3.2" height="3.4" rx="0.3" fill="#1c2a52"/><rect x="0.6" y="-2" width="0.8" height="3.4" fill="#c9ccd4"/><text x="1" y="0" font-size="0.7" fill="#1c2a52" text-anchor="middle">−</text><line x1="-0.7" y1="1.4" x2="-0.7" y2="2.4" stroke="#b9bdc2" stroke-width="0.14"/><line x1="0.7" y1="1.4" x2="0.7" y2="2.1" stroke="#b9bdc2" stroke-width="0.14"/>`;
+    if (tipo === 'mosfet') corpo = `<rect x="-1.6" y="-2.6" width="3.2" height="0.9" fill="#c9ccd0"/><circle cx="0" cy="-2.15" r="0.3" fill="#888"/><rect x="-1.6" y="-1.7" width="3.2" height="2.2" fill="#16171a"/><text x="0" y="-0.5" font-size="0.48" fill="#ddd" text-anchor="middle">IRLZ44N</text>` +
+      [-1, 0, 1].map((x, i) => `<line x1="${x}" y1="0.5" x2="${x}" y2="1.7" stroke="#b9bdc2" stroke-width="0.16"/><text x="${x}" y="2.3" font-size="0.5" text-anchor="middle">${'GDS'[i]}</text>`).join('');
+    if (tipo === 'bc547') corpo = `<path d="M-1.2 0.4 L1.2 0.4 L1.2 -0.4 Q0 -1.6 -1.2 -0.4 Z" fill="#141416"/><text x="0" y="0.2" font-size="0.4" fill="#ddd" text-anchor="middle">BC547</text>` +
+      [-0.9, 0, 0.9].map((x, i) => `<line x1="${x}" y1="0.4" x2="${x}" y2="1.2" stroke="#b9bdc2" stroke-width="0.14"/><text x="${x}" y="1.8" font-size="0.48" text-anchor="middle">${'CBE'[i]}</text>`).join('');
+    if (tipo === 'esp') corpo = `<g transform="translate(-4 -3)">${RIGIDAS.esp('esp')}</g>`;
+    if (tipo === 'rx') corpo = `<g transform="translate(5.6 -1.5)">${RIGIDAS.rx('rx')}</g>`;
+    if (tipo === 'buzzer') corpo = `<g transform="translate(-1.5 0)">${RIGIDAS.buzzer()}</g><text x="-1.5" y="2.9" font-size="0.5" text-anchor="middle">+ (comprida)</text><text x="1.5" y="2.9" font-size="0.5" text-anchor="middle">−</text>`;
+    if (tipo === 'tp') corpo = `<g transform="translate(4.4 -2)">${RIGIDAS.tp()}</g>`;
+    return `<svg viewBox="${-W[0] / 2} ${-W[1] / 2} ${W[0]} ${W[1]}" class="galeria" role="img">${corpo}</svg>`;
+  }
+
+  // solda vista de lado (corte): tipo = boa | fria | pouca | demais | ponte | queimada
+  function soldaDeLado(tipo) {
+    const placa = `<rect x="-5" y="1" width="10" height="1" fill="#c9a46a"/><rect x="-1.6" y="0.8" width="3.2" height="0.25" fill="#d9b45a"/>`;
+    const perna = `<rect x="-0.18" y="-3" width="0.36" height="5" fill="#b9bdc2"/>`;
+    const forma = {
+      boa: `<path d="M-1.6 0.85 Q-0.4 0.6 -0.2 -1.6 L0.2 -1.6 Q0.4 0.6 1.6 0.85 Z" fill="#d6d9dd"/>`,
+      fria: `<ellipse cx="0" cy="-0.1" rx="1.0" ry="0.9" fill="#a4a7ab"/><circle cx="-0.4" cy="-0.3" r="0.15" fill="#8a8d91"/>`,
+      pouca: `<path d="M-0.6 0.85 Q-0.25 0.6 -0.2 0.2 L0.2 0.2 Q0.25 0.6 0.6 0.85 Z" fill="#d6d9dd"/>`,
+      demais: `<ellipse cx="0" cy="-0.3" rx="1.9" ry="1.6" fill="#d6d9dd"/>`,
+      ponte: `<path d="M-1.6 0.85 Q-0.4 0.6 -0.2 -1.4 L0.2 -1.4 Q0.4 0.6 1.6 0.85 Z" fill="#d6d9dd"/><rect x="1.5" y="0.3" width="3" height="0.55" rx="0.25" fill="#d6d9dd"/><rect x="3.2" y="-3" width="0.36" height="5" fill="#b9bdc2"/>`,
+      queimada: `<path d="M-1.6 0.85 Q-0.4 0.6 -0.2 -1.4 L0.2 -1.4 Q0.4 0.6 1.6 0.85 Z" fill="#6b5f4f"/><rect x="-1.6" y="0.55" width="3.2" height="0.3" fill="#4a3a28"/>`,
+    }[tipo];
+    return `<svg viewBox="-5 -3.2 10 5.4" class="galeria solda-lado" role="img">${placa}${perna}${forma}</svg>`;
+  }
+
+  return { esc, coresDoResistor, protoboard, placa, peca, fio, ponte, solda, pos, galeriaPeca, soldaDeLado, FAIXAS };
+})();
+
+
+/* ===== montagem-passos.js ===== */
+/* =====================================================================
+   montagem-passos.js — os capítulos e os passos da aba Montar
+   =====================================================================
+   Cada passo tem:
+     t        título
+     tipo     ver | explorar | quiz | colocar | pernas | jumper | medir |
+              testar | soldar | ponte | fio | encaixar | checklist | treino | ver3d
+     fazer    o que fazer (sempre aparece)
+     porque   por que é assim (para aprender)
+     conferir como saber se ficou certo
+     erros    erros comuns
+   O que cada passo põe na placa sai do LAYOUT de circuito.js.
+   ===================================================================== */
+const G = (t, extra) => (typeof DES !== 'undefined' ? DES.galeriaPeca(t, extra) : '');
+const CAPITULOS = [
+{ id:'c0', t:'Antes de começar', s:'Ferramentas, segurança e como a protoboard funciona', quadro:'protoboard', passos:[
+  { id:'c0.1', t:'Ferramentas e segurança', tipo:'checklist',
+    fazer:'Separe as ferramentas e arrume a mesa. Marque cada item quando estiver pronto.',
+    itens:['Ferro de solda no suporte, longe da borda da mesa','Estanho e pasta de solda','Alicate de corte e alicate de bico','Multímetro com bateria','Protoboard e jumpers','Sugador de solda (ou malha dessoldadora)','Janela aberta ou ventilador puxando a fumaça para longe do rosto'],
+    porque:'A fumaça da solda vem da pasta (fluxo) e irrita os olhos e o nariz. O ferro passa de 300 °C e queima em menos de 1 segundo.',
+    erros:['Pegar o ferro pela ponta para ver se esquentou. Olhe se o estanho derrete encostando nele.','Comer ou mexer no rosto depois de soldar sem lavar as mãos: o estanho comum tem chumbo.'] },
+  { id:'c0.2', t:'Como a protoboard é ligada por dentro', tipo:'explorar', n:3,
+    fazer:'Passe o mouse pelos furos da protoboard ao lado. Os furos que acendem juntos estão ligados por dentro. Clique em 3 lugares diferentes: uma coluna de cima, uma de baixo e uma trilha da borda.',
+    porque:'Por baixo de cada coluna de 5 furos tem uma lâmina de metal. Tudo que entra na mesma coluna fica ligado. As trilhas compridas da borda servem para levar o + e o − da bateria até qualquer ponto. O canal do meio separa a metade de cima da de baixo.',
+    conferir:'Clicando em a10, acendem a10 até e10. f10 até j10 é outra ligação.',
+    erros:['Achar que a linha (a, b, c...) é que liga. Quem liga é a coluna de 5 furos.'] },
+  { id:'c0.3', t:'Como os furos são chamados', tipo:'ver',
+    fazer:'Nos passos, cada furo tem um nome: a letra da linha e o número da coluna. "d5" é a linha d, coluna 5. As trilhas são T+ e T− (em cima) e B− e B+ (embaixo), também com o número da coluna.',
+    porque:'É o mesmo jeito que as protoboards vêm marcadas. Na sua, as letras e os números estão impressos na borda.',
+    conferir:'Ache na sua protoboard real o furo j30 e a trilha T+ na coluna 1.' },
+]},
+{ id:'c1', t:'Conhecer as peças', s:'Para não ligar nada invertido', quadro:'galeria', passos:[
+  { id:'c1.1', t:'Resistores: o código de cores', tipo:'quiz',
+    figura:()=>[100,220,1000,10000,100000].map(v=>`<figure>${G('resistor',{valor:v})}<figcaption>${v>=1000?(v/1000)+' kΩ':v+' Ω'}<br><small>${DES.coresDoResistor(v)}</small></figcaption></figure>`).join(''),
+    fazer:'Cada resistor tem faixas coloridas que dizem o valor. Leia a partir do lado das faixas juntas: as duas primeiras são os dígitos e a terceira diz quantos zeros pôr depois. A faixa dourada (tolerância) fica do outro lado.',
+    porque:'Preto 0, marrom 1, vermelho 2, laranja 3, amarelo 4. Marrom, preto, laranja = 1, 0 e mais três zeros = 10.000 Ω = 10 kΩ. O resistor não tem lado: tanto faz qual perna vai em cada furo.',
+    pergunta:'Qual é o de 10 kΩ?', opcoes:['Marrom, preto, marrom','Marrom, preto, laranja','Vermelho, vermelho, marrom','Marrom, preto, amarelo'], certa:1,
+    explica:'1 e 0 com três zeros: 10.000 Ω. Na dúvida, confira com o multímetro na escala de Ω.' },
+  { id:'c1.2', t:'LED e capacitor: as peças que têm lado', tipo:'quiz',
+    figura:()=>`<figure>${G('led')}<figcaption>LED</figcaption></figure><figure>${G('cap')}<figcaption>Capacitor de 1.000 µF</figcaption></figure>`,
+    fazer:'O LED e o capacitor eletrolítico só funcionam num sentido. A perna mais comprida é o +. No capacitor, a faixa clara do lado marca o −.',
+    porque:'O LED só deixa a corrente passar do + para o −. O capacitor eletrolítico invertido esquenta, estufa e pode estourar.',
+    pergunta:'No capacitor, a faixa clara marca qual perna?', opcoes:['A positiva (+)','A negativa (−)','Tanto faz'], certa:1,
+    explica:'A faixa fica do lado da perna negativa, que também é a mais curta.' },
+  { id:'c1.3', t:'MOSFET IRLZ44N: porta, dreno e fonte', tipo:'quiz',
+    figura:()=>`<figure>${G('mosfet')}<figcaption>Olhando o lado escrito, pernas para baixo</figcaption></figure>`,
+    fazer:'Olhando o lado escrito, com as pernas para baixo: porta (G), dreno (D) e fonte (S), da esquerda para a direita. A aba de metal também é o dreno.',
+    porque:'A porta é a "torneira": com 3,3 V nela o MOSFET deixa a corrente passar do dreno para a fonte. Por isso precisa ser o IRLZ44N (com L), que abre direito com 3,3 V.',
+    pergunta:'Olhando o lado escrito, pernas para baixo, qual perna é a porta?', opcoes:['A da esquerda','A do meio','A da direita'], certa:0,
+    explica:'G, D, S da esquerda para a direita.' },
+  { id:'c1.4', t:'Transistor BC547', tipo:'quiz',
+    figura:()=>`<figure>${G('bc547')}<figcaption>Lado reto virado para você</figcaption></figure>`,
+    fazer:'Com o lado reto (o que tem o nome) virado para você e as pernas para baixo: coletor (C), base (B) e emissor (E).',
+    porque:'O ESP32 sozinho não aguenta a corrente do buzzer. O BC547 é uma chave pequena: um pouquinho de corrente na base liga o caminho do coletor para o emissor.',
+    pergunta:'Lado reto virado para você: qual perna é a base?', opcoes:['A da esquerda','A do meio','A da direita'], certa:1,
+    explica:'C, B, E: a base fica no meio.' },
+  { id:'c1.5', t:'ESP32-C3 SuperMini', tipo:'quiz',
+    figura:()=>`<figure>${G('esp')}<figcaption>Visto de cima, USB à direita</figcaption></figure>`,
+    fazer:'São 16 pinos, 8 de cada lado. Os que a gente usa: 5V e GND (energia), 3V3 (saída de 3,3 V), GPIO 0 (bateria), 1 (botão), 3 (rádio), 4 e 6 (MOSFETs) e 5 (buzzer).',
+    porque:'GPIO é um pino que o programa pode ler ou ligar. O número de cada um está impresso na placa, do lado do pino.',
+    pergunta:'Em que pino entra o fio de dados do receptor de rádio?', opcoes:['GPIO 1','GPIO 3','GPIO 5','5V'], certa:1,
+    explica:'O firmware escuta o rádio no GPIO 3.' },
+  { id:'c1.6', t:'Receptor, buzzer e carregador', tipo:'quiz',
+    figura:()=>`<figure>${G('rx')}<figcaption>RXB6</figcaption></figure><figure>${G('buzzer')}<figcaption>Buzzer ativo</figcaption></figure><figure>${G('tp')}<figcaption>TP4056</figcaption></figure>`,
+    fazer:'No RXB6, os nomes VCC, DATA e GND estão escritos do lado dos pinos (os dois DATA são o mesmo sinal). O buzzer tem a perna + mais comprida e um + no topo. No TP4056, B+ e B− vão na bateria e OUT+ e OUT− alimentam o resto.',
+    porque:'Conferir pelo nome escrito na placa evita trocar pino. Se a sua peça tiver os pinos em outra ordem, siga o que está escrito nela e me avise.',
+    pergunta:'A perna comprida do buzzer vai onde?', opcoes:['No 3,3 V (+)','No GND (−)','No GPIO 5'], certa:0,
+    explica:'O + do buzzer vai no 3,3 V. O − vai no coletor do BC547, que liga e desliga.' },
+]},
+{ id:'c2', t:'Protoboard, uma parte de cada vez', s:'Monta e testa cada parte antes de seguir', quadro:'protoboard', sim:true, passos:[
+  { id:'c2.1', t:'Bateria nas trilhas', tipo:'pernas', pecas:['bloco'],
+    fazer:'Com a chave desligada, ligue o fio vermelho da bateria (que sai da chave) na trilha T+ e o preto na trilha T−, na coluna 1.',
+    porque:'A bateria, o carregador e a chave ficam fora da protoboard. As duas trilhas de cima levam o + e o − para todo lado.',
+    erros:['Ligar com a chave ligada: qualquer fio que encostar errado faz faísca.'] },
+  { id:'c2.2', t:'Medir a bateria', tipo:'medir', modo:'V', vermelha:'T+1', preta:'T-1', min:3.5, max:4.25, chave:true,
+    fazer:'Ligue a chave. No multímetro, escolha tensão contínua (V com traço reto). Ponta vermelha em qualquer furo da trilha T+, ponta preta na T−.',
+    porque:'Antes de ligar qualquer peça, confira se a energia chega e se a bateria está carregada.',
+    conferir:'Entre 3,6 e 4,2 V. Na tela, mexa na barra "Bateria" para ver o valor mudar.',
+    erros:['Ponta na posição de corrente (A) do multímetro: dá curto na bateria. Use sempre V para medir tensão.'] },
+  { id:'c2.3', t:'Encaixar o ESP32', tipo:'colocar', peca:'esp',
+    fazer:'Desligue a chave. Encaixe o ESP32 por cima do canal do meio, com os pinos nas linhas d e h, do 5 ao 12, e o USB virado para a direita.',
+    porque:'O canal do meio separa os dois lados do ESP32. Se ele ficasse todo na mesma metade, os pinos de cada coluna ficariam ligados entre si.',
+    conferir:'O pino GPIO 0 fica no d5 e o 5V no d12.' },
+  { id:'c2.4', t:'Energia do ESP32', tipo:'jumper', jumpers:['j5V','jGND'],
+    fazer:'Dois jumpers: do a12 (coluna do 5V) até a trilha T+, e do a11 (coluna do GND) até a trilha T−.',
+    porque:'O pino 5V aceita de 3,5 a 5,5 V e o ESP32 tem um regulador que transforma em 3,3 V. Por isso ele funciona direto na bateria.',
+    erros:['Trocar as colunas: 5V no − queima o regulador do ESP32.'] },
+  { id:'c2.5', t:'Ligar pela primeira vez', tipo:'testar', cond:'esp_ligou', chave:true,
+    fazer:'Ligue a chave. O LED azul do ESP32 acende por 1 segundo e depois dá uma piscadinha a cada 3 segundos.',
+    porque:'É o firmware v0.1 avisando que ligou. Na placa de verdade, grave o firmware antes (aba Firmware).' },
+  { id:'c2.6', t:'Capacitor de 1.000 µF', tipo:'pernas', pecas:['cap'],
+    fazer:'Chave desligada. Capacitor com a perna comprida (+) no b12 (coluna do 5V) e a faixa (−) no b11 (coluna do GND).',
+    porque:'Quando o módulo de alta tensão puxa 3 A, a tensão da bateria cai um pouco. O capacitor guarda energia perto do ESP32 e segura essa queda, para ele não reiniciar.',
+    erros:['Capacitor invertido esquenta e estufa.'] },
+  { id:'c2.7', t:'Medir o 3,3 V', tipo:'medir', modo:'V', vermelha:'a10', preta:'T-1', min:3.2, max:3.4, chave:true,
+    fazer:'Chave ligada. Ponta vermelha na coluna 10 de cima (a10, pino 3V3), ponta preta na trilha T−.',
+    porque:'O 3,3 V alimenta o receptor e o buzzer. Se ele não aparecer, o resto não vai funcionar.',
+    conferir:'Entre 3,2 e 3,4 V.' },
+  { id:'c2.8', t:'Receptor RXB6', tipo:'colocar', peca:'rx',
+    fazer:'Chave desligada. Encaixe o RXB6 na linha c, colunas 20 a 23: VCC no c20, DATA no c21 e c22, GND no c23.',
+    porque:'Ele fica em pé na protoboard. Confira os nomes escritos na placa dele antes de encaixar.' },
+  { id:'c2.9', t:'Fios do receptor', tipo:'jumper', jumpers:['jRV','jRD','jRG'],
+    fazer:'Três jumpers: a10 → a20 (3V3 no VCC), b8 → b21 (GPIO 3 no DATA) e a23 → trilha T− (GND).',
+    porque:'O RXB6 funciona com 3,3 V e entrega o sinal do controle no DATA. O firmware escuta esse sinal no GPIO 3.',
+    erros:['DATA no pino errado: o controle não funciona e o resto parece normal.'] },
+  { id:'c2.10', t:'Testar o controle', tipo:'testar', cond:'rf', chave:true,
+    fazer:'Ligue a chave e aperte qualquer botão do controle na tela. No Monitor Serial aparece o código recebido.',
+    porque:'No real, ligue o USB com a chave desligada e digite "ouvir" no Monitor Serial (roteiro da aba Firmware, Etapa C).' },
+  { id:'c2.11', t:'Buzzer', tipo:'colocar', peca:'bz',
+    fazer:'Chave desligada. Buzzer com a perna comprida (+) no g40 e a outra no g43.',
+    porque:'O + do buzzer vai no 3,3 V. O − vai para o BC547, que liga e desliga.' },
+  { id:'c2.12', t:'Transistor BC547', tipo:'colocar', peca:'q',
+    fazer:'BC547 na linha i, colunas 43 a 45, com o lado reto virado para baixo (para a linha j): coletor no i43, base no i44, emissor no i45.',
+    porque:'O coletor fica na mesma coluna do − do buzzer (43), então eles já ficam ligados sem fio.',
+    erros:['BC547 virado: coletor e emissor trocados, o buzzer fica fraco ou não toca.'] },
+  { id:'c2.13', t:'Resistor de 1 kΩ', tipo:'pernas', pecas:['rb'],
+    fazer:'Resistor de 1 kΩ (marrom, preto, vermelho) entre o h44 (coluna da base) e o h48.',
+    porque:'Ele limita a corrente que sai do GPIO 5 para a base do BC547. Sem ele, a base puxa corrente demais e pode queimar o pino do ESP32.' },
+  { id:'c2.14', t:'Fios do buzzer', tipo:'jumper', jumpers:['jBZ','jT','jQE','jG5'],
+    fazer:'Quatro jumpers: b10 → f40 (3V3 no + do buzzer), trilha T− da coluna 2 → trilha B− da coluna 2 (junta os dois −), j45 → trilha B− (emissor) e j12 → j48 (GPIO 5 no resistor).',
+    porque:'A trilha B− embaixo vira um segundo −, para as peças da metade de baixo.' },
+  { id:'c2.15', t:'Testar o bipe', tipo:'testar', cond:'bipeA', chave:true,
+    fazer:'Chave ligada. Aperte o A do controle: o buzzer apita meio segundo.',
+    porque:'O A é só bipe. O firmware liga o GPIO 5, o BC547 conduz e o buzzer toca.' },
+  { id:'c2.16', t:'Divisor que mede a bateria', tipo:'pernas', pecas:['rd1','rd2'],
+    fazer:'Dois resistores de 100 kΩ (marrom, preto, amarelo): um da trilha T+ (coluna 5) até o a5, outro do c5 até a trilha T− (coluna 3).',
+    porque:'A bateria chega a 4,2 V e o ESP32 só aguenta 3,3 V num pino. Dois resistores iguais dividem a tensão no meio: o GPIO 0 recebe metade, e o firmware multiplica por 2.' },
+  { id:'c2.17', t:'Medir o meio do divisor', tipo:'medir', modo:'V', vermelha:'a5', preta:'T-1', min:1.7, max:2.15, chave:true,
+    fazer:'Chave ligada. Ponta vermelha na coluna 5 de cima (GPIO 0), preta na trilha T−.',
+    conferir:'Metade do que você mediu na bateria.',
+    porque:'É assim que o firmware sabe se a bateria está boa, baixa ou no fim, e se o USB está ligado.' },
+  { id:'c2.18', t:'Botão de pareamento', tipo:'pernas', pecas:['bt'],
+    fazer:'Chave desligada. Botão entre o a6 (coluna do GPIO 1) e a trilha T− (coluna 7).',
+    porque:'Segurando o botão ao ligar, o firmware entra no pareamento. O GPIO 1 tem um resistor interno que deixa o pino em 3,3 V; apertando, o botão leva ele para 0 V.',
+    conferir:'Na tela o controle já está pareado. No real, siga a Etapa D do roteiro na aba Firmware.' },
+]},
+{ id:'c3', t:'Choque com LED de teste', s:'Os dois MOSFETs e as regras, sem alta tensão', quadro:'protoboard', sim:true, passos:[
+  { id:'c3.1', t:'MOSFET A', tipo:'colocar', peca:'ma',
+    fazer:'Chave desligada. MOSFET A em pé na linha c, colunas 30 a 32, com o lado escrito virado para baixo (linha d): porta no c30, dreno no c31, fonte no c32.',
+    porque:'Ele faz os pulsos do choque.' },
+  { id:'c3.2', t:'Resistores da porta A', tipo:'pernas', pecas:['rga','rpa'],
+    fazer:'100 Ω (marrom, preto, marrom) entre o b26 e o b30. 10 kΩ (marrom, preto, laranja) entre o a30 e a trilha T− (coluna 31).',
+    porque:'O de 100 Ω protege o pino do ESP32 do pico de corrente quando a porta liga. O de 10 kΩ puxa a porta para 0 V quando o ESP32 está desligado ou reiniciando: sem ele, o MOSFET poderia ligar sozinho.' },
+  { id:'c3.3', t:'GPIO 4 até o MOSFET A', tipo:'jumper', jumpers:['jG4'],
+    fazer:'Jumper do c9 (coluna do GPIO 4) até o c26.' },
+  { id:'c3.4', t:'MOSFET B', tipo:'colocar', peca:'mb',
+    fazer:'MOSFET B em pé na linha g, colunas 36 a 38, lado escrito para baixo: porta no g36, dreno no g37, fonte no g38.',
+    porque:'Ele abre a janela do choque inteiro. Os dois ficam em série: a corrente só passa com os dois ligados.' },
+  { id:'c3.5', t:'Resistores da porta B', tipo:'pernas', pecas:['rgb','rpb'],
+    fazer:'100 Ω entre o h33 e o h36. 10 kΩ entre o j36 e a trilha B− (coluna 35).' },
+  { id:'c3.6', t:'Fios dos MOSFETs', tipo:'jumper', jumpers:['jG6','jAB','jBS'],
+    fazer:'Três jumpers: j11 → j33 (GPIO 6 no resistor da porta B), d32 → f37 (fonte do A no dreno do B) e j38 → trilha B− (fonte do B no −).',
+    porque:'O caminho do choque fica: + → carga → dreno do A → fonte do A → dreno do B → fonte do B → −.',
+    erros:['Ligar a fonte dos dois no −: eles ficam lado a lado em vez de em série, e a proteção dupla some.'] },
+  { id:'c3.7', t:'LED de teste no lugar do módulo', tipo:'pernas', pecas:['r220','led'],
+    fazer:'Resistor de 220 Ω (vermelho, vermelho, marrom) da trilha T+ (coluna 28) até o a28. LED com a perna comprida no b28 e a curta no b29.',
+    porque:'O LED faz o papel do módulo de alta tensão: acende quando o choque sairia. O resistor limita a corrente do LED.' },
+  { id:'c3.8', t:'LED até o dreno do A', tipo:'jumper', jumpers:['jLD'],
+    fazer:'Jumper do a29 (perna curta do LED) até o a31 (dreno do MOSFET A).' },
+  { id:'c3.9', t:'Testar o B', tipo:'testar', cond:'choqueB', chave:true,
+    fazer:'Chave ligada. Aperte o B: bipe, uma pausa curta, e o LED pisca rápido por meio segundo.',
+    porque:'São 5 pulsos de 30 ms ligado e 70 ms desligado. Ligue "Ver corrente" para ver a corrente passando pelos jumpers.' },
+  { id:'c3.10', t:'Segurar o D por 10 s', tipo:'testar', cond:'segurarD', chave:true,
+    fazer:'Segure o D por uns 5 segundos. O LED acende direto por 1 segundo e apaga, mesmo com o botão apertado.',
+    porque:'Segurar vale como um aperto só. Nenhum choque passa de 1 segundo.' },
+  { id:'c3.11', t:'Apertar várias vezes', tipo:'testar', cond:'pausa', chave:true,
+    fazer:'Aperte o B várias vezes seguidas. O LED só acende de novo 3 segundos depois do último choque. O Monitor Serial mostra os apertos ignorados.',
+    porque:'A pausa de 3 s e o limite de 5 s por minuto protegem o boi e o módulo.' },
+  { id:'c3.12', t:'Teste da ponte no MOSFET A', tipo:'testar', cond:'curto', defeito:'curtoA', chave:true,
+    fazer:'Na tela, o MOSFET A está com um fio ligando dreno e fonte, como se tivesse queimado em curto. Espere 3 segundos (o LED não acende) e depois aperte o B.',
+    porque:'Com o A em curto, o B ainda segura: o LED só acende quando o ESP32 manda. Faça o mesmo na protoboard real com um pedaço de fio.',
+    conferir:'Parado: LED apagado. Com o B: LED aceso a janela inteira, sem piscar.' },
+  { id:'c3.13', t:'Teste da ponte no MOSFET B', tipo:'testar', cond:'curto', defeito:'curtoB', chave:true,
+    fazer:'Agora o curto está no MOSFET B. Espere 3 segundos e aperte o B.',
+    porque:'Um MOSFET queimado sozinho não dá choque. Os dois só ligam juntos quando o firmware manda.' },
+  { id:'c3.14', t:'Com USB, o choque é só simulado', tipo:'testar', cond:'usb',
+    fazer:'Desligue a chave e ligue o USB. Aperte o C: bipa, o Monitor Serial mostra "SIMULADO" e o LED não acende.',
+    porque:'Com USB, o firmware vê mais de 4,4 V no divisor e não liga os MOSFETs. Isso protege o computador e evita testar o módulo pelo USB.',
+    erros:['USB com a chave ligada: o computador empurra 5 V para dentro da bateria. Sempre desligue a chave antes de ligar o USB.'] },
+  { id:'c3.15', t:'O erro do IRFZ44N', tipo:'testar', cond:'irfz', defeito:'irfz', chave:true,
+    fazer:'Na tela, os MOSFETs viraram IRFZ44N (com F). Aperte o D e veja o LED quase apagado.',
+    porque:'O IRFZ44N precisa de uns 10 V na porta para abrir direito. Com os 3,3 V do ESP32 ele abre pouco: na coleira, o choque ficaria fraco. Confira o L no nome antes de montar.' },
+  { id:'c3.16', t:'Trocar o LED pelo módulo (na tábua de pregos)', tipo:'checklist',
+    fazer:'Na bancada real, com tudo desligado:',
+    itens:['Troque o LED e o resistor de 220 Ω pelo módulo de alta tensão: fio vermelho fino na trilha T+, verde fino no dreno do MOSFET A','Saídas grossas do módulo presas nos pregos da tábua, longe da mesa','Chave ligada, sem USB, mãos longe: A, B, C e D funcionam como com o LED','Faísca máxima: B pula menos que C, e C menos que D'],
+    porque:'Se B e C ficarem iguais, os pulsos podem ser ajustados no config.h do firmware (aba Firmware, Etapa G).',
+    erros:['Encostar nas saídas do módulo ou nos pregos com a chave ligada.'] },
+]},
+{ id:'c4', t:'Solda', s:'Aula, treino na tela e treino de verdade', quadro:'solda', passos:[
+  { id:'c4.1', t:'O ferro e o estanho', tipo:'ver',
+    fazer:'Ligue o ferro e espere 3 minutos. Com estanho comum (com chumbo, 60/40 ou 63/37), use de 330 a 350 °C. Sem chumbo, uns 370 °C. Passe a ponta na esponja úmida e derreta um pouco de estanho nela: a ponta fica prateada. Isso é "estanhar a ponta".',
+    porque:'A ponta estanhada passa o calor muito melhor. Ponta preta e oxidada não esquenta a solda direito, e aí sai solda fria.',
+    erros:['Ferro sem controle de temperatura: espere esquentar e limpe a ponta toda hora.','Esponja seca queima e suja a ponta.'] },
+  { id:'c4.2', t:'Como é uma solda boa', tipo:'quiz',
+    figura:()=>[['boa','Boa'],['fria','Fria'],['pouca','Pouca'],['demais','Demais'],['ponte','Ponte'],['queimada','Queimada']].map(([k,n])=>`<figure>${DES.soldaDeLado(k)}<figcaption>${n}</figcaption></figure>`).join(''),
+    fazer:'A solda boa é brilhante, tem forma de cone (como um vulcão) e cobre o pad todo, abraçando a perna. A fria é fosca e em bolinha. A ponte encosta no furo do lado.',
+    porque:'Na solda boa o estanho "molhou" o pad e a perna: os dois estavam quentes. Na fria, o estanho derreteu só no ferro e não grudou no metal.',
+    pergunta:'Qual é a solda boa?', opcoes:['Bolinha fosca em cima do furo','Cone brilhante cobrindo o pad e abraçando a perna','Uma gota grande que encosta no furo do lado'], certa:1,
+    explica:'Brilho e forma de cone mostram que o estanho grudou nos dois metais.' },
+  { id:'c4.3', t:'Treino na tela', tipo:'treino', n:3,
+    fazer:'Segure o mouse em cima do pad para encostar o ferro. Com o ferro encostado, segure a barra de espaço (ou o botão "Estanho") para pôr estanho. Solte o estanho, depois o ferro. Faça 3 soldas boas.',
+    porque:'A ordem é sempre: ferro no pad e na perna juntos (2 segundos), estanho no outro lado da perna (não no ferro), tira o estanho, tira o ferro. Tudo em 3 a 4 segundos.',
+    erros:['Pôr o estanho antes de esquentar: solda fria.','Ficar muito tempo: queima a placa e o pad descola.'] },
+  { id:'c4.4', t:'Treino de verdade', tipo:'checklist',
+    fazer:'Na outra placa ilhada (a lista compra 2), treine antes de mexer na placa da coleira:',
+    itens:['Solde 10 pernas de resistor ou fios em furos separados','Olhe com a câmera do celular: brilhante e em cone','Faça uma ponte de propósito entre dois furos vizinhos (é assim que se fazem as trilhas)','Desfaça uma solda com o sugador: esquente, encoste o sugador e aperte o botão','Corte as sobras das pernas com o alicate de corte, rente à solda'],
+    porque:'Os primeiros 10 a 20 pontos são os piores. Melhor errar na placa de treino.' },
+  { id:'c4.5', t:'Segurança e limpeza', tipo:'ver',
+    fazer:'Ferro sempre no suporte. Nunca deixe ligado sem ninguém olhando. Lave as mãos depois. Corte as pernas com a placa virada para baixo, para a sobra não voar no olho.',
+    porque:'A sobra de perna cortada voa longe e é pontuda.' },
+]},
+{ id:'c5', t:'Placa ilhada', s:'A placa da coleira, soldada, com conferência a cada grupo', quadro:'placa', passos:[
+  { id:'c5.1', t:'Conferir as peças com o desenho', tipo:'checklist',
+    fazer:'O desenho da placa foi feito com as medidas dos anúncios. Antes de soldar, confira com as peças reais:',
+    itens:['A placa tem 24 furos por 30 (conte uma linha e uma coluna)','Os pinos do ESP32 ficam 6 furos um do outro (de uma fileira à outra)','O GPIO 0 e o 5V ficam na mesma fileira, nas pontas, como no desenho','Os pinos do RXB6 estão na ordem VCC, DATA, DATA, GND'],
+    porque:'Se alguma coisa não bater, pare e mande uma foto no chat: o desenho é ajustado antes de soldar.' },
+  { id:'c5.2', t:'Soquete do lado direito do ESP32', tipo:'colocar', peca:'soqD',
+    fazer:'Barra de pinos fêmea de 8 na coluna 8, linhas 9 a 16. Os pinos passam pela placa e ficam para baixo.',
+    porque:'O ESP32 encaixa no soquete. Assim o ferro não esquenta o ESP32, e se ele queimar você troca sem dessoldar. Para gravar, tire o ESP32 do soquete e grave pelo USB.' },
+  { id:'c5.3', t:'Soquete do lado esquerdo', tipo:'colocar', peca:'soqE',
+    fazer:'Outra barra de 8 na coluna 2, linhas 9 a 16.' },
+  { id:'c5.4', t:'Soquete do RXB6', tipo:'colocar', peca:'soqR',
+    fazer:'Barra fêmea de 4 na coluna 12, linhas 3 a 6.' },
+  { id:'c5.5', t:'Soldar os soquetes', tipo:'soldar', pecas:['soqD','soqE','soqR'],
+    fazer:'Vire a placa (botão "Virar a placa"). Solde os 20 pinos. Dica: solde um pino de cada ponta primeiro, confira se o soquete ficou reto, e só depois o resto.',
+    porque:'Soquete torto fica torto para sempre depois da última solda. Com só 2 pinos soldados, ainda dá para esquentar e endireitar.' },
+  { id:'c5.6', t:'Carregador TP4056', tipo:'colocar', peca:'tp',
+    fazer:'Solde um pedaço de perna de resistor em cada pad B+, B−, OUT+ e OUT− do TP4056, para baixo. Encaixe na coluna 9: B+ na linha 23, B− na 24, OUT+ na 26 e OUT− na 27.',
+    porque:'Os pads do TP4056 não ficam no espaçamento da placa. As pernas fazem a ponte. O USB do módulo fica para a esquerda e não é usado: a carga entra pelo conector USB-C da caixa.' },
+  { id:'c5.7', t:'Soldar o TP4056', tipo:'soldar', pecas:['tp'],
+    fazer:'Vire a placa e solde as 4 pernas do TP4056.' },
+  { id:'c5.8', t:'Resistores', tipo:'pernas', pecas:['rd2','rd1','rb','rga','rpa','rgb','rpb'],
+    fazer:'Sete resistores, deitados na placa, com as pernas dobradas. Escolha cada um na lista e clique nos dois furos. A tela mostra o valor e as cores de cada um.',
+    porque:'Comece pelas peças mais baixas: com a placa virada para soldar, elas ficam presas pela mesa.' },
+  { id:'c5.9', t:'Soldar os resistores', tipo:'soldar', pecas:['rd2','rd1','rb','rga','rpa','rgb','rpb'],
+    fazer:'Vire a placa, dobre as pernas um pouco para os lados (seguram a peça) e solde as 14 pernas. Corte as sobras depois.' },
+  { id:'c5.10', t:'BC547', tipo:'colocar', peca:'q',
+    fazer:'BC547 na linha 8: coletor na coluna 20, base na 21, emissor na 22. Lado reto virado para cima (para a linha 7).' },
+  { id:'c5.11', t:'Capacitor e botão', tipo:'pernas', pecas:['cap','bt'],
+    fazer:'Capacitor com o + (perna comprida) no 9,17 e o − (faixa) no 9,15. Botão entre 10,11 e 13,11.',
+    erros:['Capacitor invertido: estufa.'] },
+  { id:'c5.12', t:'Buzzer', tipo:'colocar', peca:'bz',
+    fazer:'Buzzer com o + (perna comprida) no 23,4 e o − no 20,4.' },
+  { id:'c5.13', t:'Soldar BC547, capacitor, botão e buzzer', tipo:'soldar', pecas:['q','cap','bt','bz'],
+    fazer:'Vire a placa e solde as 9 pernas. No BC547, seja rápido (2 segundos por perna): ele é pequeno e esquenta.' },
+  { id:'c5.14', t:'MOSFET A deitado', tipo:'colocar', peca:'ma',
+    fazer:'Dobre as 3 pernas do MOSFET A em 90° perto do corpo, com o lado escrito para cima. Pernas na coluna 15, linhas 13 (porta), 14 (dreno) e 15 (fonte), corpo para a direita.',
+    porque:'Deitado ele fica mais baixo e a aba de metal fica livre para o terminal olhal do fio do módulo.' },
+  { id:'c5.15', t:'MOSFET B deitado', tipo:'colocar', peca:'mb',
+    fazer:'Igual, na coluna 15, linhas 19 (porta), 20 (dreno) e 21 (fonte).',
+    erros:['As abas de metal dos dois não podem encostar uma na outra.'] },
+  { id:'c5.16', t:'Soldar os MOSFETs', tipo:'soldar', pecas:['ma','mb'],
+    fazer:'Vire a placa e solde as 6 pernas.' },
+  { id:'c5.17', t:'Pontes dos barramentos', tipo:'ponte', pontes:['pBm','pBp','pTP'],
+    fazer:'Por baixo, faça as pontes clicando em cada furo delas: barramento − (linha 26, colunas 10 a 22), barramento + (linha 28, colunas 11 a 20) e a ligação do OUT− do TP4056.',
+    porque:'Ponte é uma trilha de estanho ligando furos vizinhos. Para trilhas compridas, deite um pedaço de perna de resistor por cima dos furos e solde em cada um: fica mais forte e mais fácil.' },
+  { id:'c5.18', t:'Pontes do ESP32', tipo:'ponte', pontes:['pC1','pC2','pDV','pBT','pG4'],
+    fazer:'Pontes curtas perto do ESP32: capacitor, divisor, botão e GPIO 4.',
+    erros:['Os furos 9,9 e 9,10 ficam um do lado do outro mas são de pontes diferentes: não deixe o estanho encostar.'] },
+  { id:'c5.19', t:'Pontes dos MOSFETs', tipo:'ponte', pontes:['pGA','pGB','pRB','pAB','pBS'],
+    fazer:'Portas dos MOSFETs e as duas trilhas grossas do choque (fonte do A até o dreno do B, e fonte do B até o barramento −).',
+    porque:'As trilhas do choque passam até 3 A: use um pedaço de fio grosso ou perna de resistor dobrada, com bastante estanho.' },
+  { id:'c5.20', t:'Pontes do buzzer e do BC547', tipo:'ponte', pontes:['pBZ','pQB','pQE'],
+    fazer:'Três pontes na parte de cima à direita.' },
+  { id:'c5.21', t:'Fios de energia por baixo', tipo:'fio', fios:['f5V','fGN','fD1','fD2','fBT','fRG','fPA','fQE'],
+    fazer:'Fios encapados por baixo da placa, de um furo a outro. Clique na ponta de saída e depois na de chegada. Corte do tamanho certo, descasque 3 mm de cada ponta e solde no pad junto com a perna que já está lá.',
+    porque:'Fio encapado pode cruzar com outro sem dar curto. Por isso as ligações compridas são de fio, e só as curtas são pontes.' },
+  { id:'c5.22', t:'Fios de sinal por baixo', tipo:'fio', fios:['fRV','fBZ','fRD','fG5','fG6'],
+    fazer:'Os últimos 5 fios: 3,3 V do receptor e do buzzer, dados do rádio, GPIO 5 e GPIO 6.' },
+  { id:'c5.23', t:'Conferir: sem curto entre + e −', tipo:'medir', modo:'cont', vermelha:'15,28', preta:'18,26', bipa:false, placa:true,
+    fazer:'Multímetro no bipe (continuidade). Uma ponta no barramento + (linha 28), outra no barramento − (linha 26). Não pode bipar.',
+    porque:'Se bipar, tem um curto: uma ponte de estanho encostando onde não devia. Ligar a bateria assim esquenta tudo. Procure com lupa antes de seguir.' },
+  { id:'c5.24', t:'Conferir: GND do ESP32 chega no −', tipo:'medir', modo:'cont', vermelha:'8,15', preta:'18,26', bipa:true, placa:true,
+    fazer:'Uma ponta no pino GND do soquete do ESP32 (8,15), outra no barramento −. Tem que bipar.',
+    porque:'Confere se o fio e as pontes estão bem soldados. Faça o mesmo na sua placa para cada linha da tabela de ligações.' },
+  { id:'c5.25', t:'Inspeção', tipo:'checklist',
+    fazer:'Antes de ligar, com a câmera do celular ou uma lupa:',
+    itens:['Nenhuma ponte de estanho onde não devia (principalmente entre 9,9 e 9,10, e perto das portas dos MOSFETs)','Todas as soldas brilhantes e em cone','Sobras de perna cortadas, nenhuma solta embaixo da placa','Capacitor e buzzer com o + no lugar certo'] },
+  { id:'c5.26', t:'Encaixar o ESP32 e o RXB6', tipo:'encaixar', pecas:['esp','rx'],
+    fazer:'Encaixe o ESP32 nos soquetes (USB para baixo, para o lado do TP4056) e o RXB6 no soquete dele, com o corpo para a esquerda. A antena em mola vai soldada no pad ANT do próprio RXB6.',
+    porque:'Encaixados por último, eles não pegam calor nenhum.' },
+  { id:'c5.27', t:'Fios soltos', tipo:'ver', tabela:true,
+    fazer:'Os 10 fios que saem da placa ficam para a montagem na caixa: USB-C, bateria, chave e módulo de alta tensão. A tabela completa das ligações está abaixo, com as linhas que você já pode marcar.',
+    porque:'Os fios da bateria e da chave levam corrente alta: use fio mais grosso (o vermelho e o preto da lista).' },
+  { id:'c5.28', t:'Primeiro liga', tipo:'medir', modo:'V', vermelha:'8,14', preta:'8,15', min:3.2, max:3.4, chave:true, placa:true,
+    fazer:'Com os fios soltos ligados (na tela já estão), ligue a chave e meça o 3,3 V: ponta vermelha no pino 3V3 do soquete (8,14), preta no GND (8,15).',
+    porque:'Se der 3,3 V, o ESP32 está alimentado. Siga para os testes com a caixa aberta (próximo capítulo).' },
+]},
+{ id:'c6', t:'Caixa e coleira', s:'Montagem final, com o 3D mostrando cada parte', quadro:'3d', passos:[
+  { id:'c6.1', t:'Imprimir as peças 3D', tipo:'ver3d', etapa:2, a:{ f:['bandeja','protetor'], dir:'iso', lid:1 } },
+  { id:'c6.2', t:'Preparar a caixa', tipo:'ver3d', etapa:3, a:{ f:['caixa','usbc','chave','pinos'], dir:'iso', lid:0 } },
+  { id:'c6.3', t:'Primeiro teste com a caixa aberta', tipo:'ver3d', etapa:5, a:{ f:['placa','esp32','moduloAT'], dir:'top', lid:1 } },
+  { id:'c6.4', t:'Fixar, isolar e fechar', tipo:'ver3d', etapa:6, a:{ f:['caixa','tampa'], dir:'iso', lid:0 } },
+  { id:'c6.5', t:'Coleira e posição no pescoço', tipo:'ver3d', etapa:7, a:{ f:['fita','fivela','elo'], dir:'front' } },
+]},
+];
+
+
+/* ===== montagem-ui.js ===== */
+/* =====================================================================
+   montagem-ui.js — a aba Montar: passos guiados, bancada na tela,
+   simulador, multímetro, treino de solda e "Não entendi"
+   ===================================================================== */
+const MT = (() => {
+  const CIR = window.CIRCUITO, SIMU = window.SIM, L = CIR.LAYOUT;
+  const q$ = s => document.querySelector(s);
+  const esc = DES.esc;
+  const st = () => { if (!S.mt) S.mt = {}; const m = S.mt; m.feitos = m.feitos || {}; m.chk = m.chk || {}; m.cap = m.cap || 'c0'; return m; };
+
+  // ---------- passos ----------
+  const PASSOS = [];
+  CAPITULOS.forEach(c => c.passos.forEach(p => { p.cap = c; PASSOS.push(p); }));
+  const feito = p => !!st().feitos[p.id];
+  const cap = () => CAPITULOS.find(c => c.id === st().cap) || CAPITULOS[0];
+  function passoAtual() {
+    const c = cap(); const id = st().passo;
+    return c.passos.find(p => p.id === id) || c.passos.find(p => !feito(p)) || c.passos[c.passos.length - 1];
+  }
+  const totais = () => ({ n: PASSOS.filter(feito).length, t: PASSOS.length });
+  const proximoGeral = () => PASSOS.find(p => !feito(p));
+
+  // ---------- o que está na placa ----------
+  let prog = null;               // progresso do passo atual (não fica salvo)
+  function novoProg(p) { return { id: p.id, pecas: [], jumpers: [], pontes: [], fios: [], soldados: [], cliques: new Set(), tiras: new Set(), selecionada: null, perna1: null, inicio: 0, quizErro: false, boas: 0 }; }
+  function conteudo(quadro, incluirProg = true) {
+    const c = { pecas: [], jumpers: [], pontes: [], fios: [], soldados: new Set() };
+    const lay = L[quadro];
+    const add = p => {
+      if (p.tipo === 'colocar') c.pecas.push(p.peca);
+      if (p.tipo === 'pernas' || p.tipo === 'encaixar') c.pecas.push(...p.pecas);
+      if (p.tipo === 'jumper') c.jumpers.push(...p.jumpers);
+      if (p.tipo === 'soldar') p.pecas.forEach(id => Object.values(CIR.pinosDaPeca(lay, id)).forEach(f => c.soldados.add(f)));
+      if (p.tipo === 'ponte') p.pontes.forEach(id => { c.pontes.push(id); lay.pontes.find(x => x.id === id).furos.forEach(f => c.soldados.add(f)); });
+      if (p.tipo === 'fio') p.fios.forEach(id => { c.fios.push(id); const f = lay.fios.find(x => x.id === id); c.soldados.add(f.de); c.soldados.add(f.para); });
+    };
+    CAPITULOS.filter(k => k.quadro === quadro).forEach(k => k.passos.forEach(p => { if (feito(p)) add(p); }));
+    if (incluirProg && prog) { c.pecas.push(...prog.pecas); c.jumpers.push(...prog.jumpers); c.pontes.push(...prog.pontes); c.fios.push(...prog.fios); prog.soldados.forEach(f => c.soldados.add(f));
+      prog.pontes.forEach(id => lay.pontes.find(x => x.id === id).furos.forEach(f => c.soldados.add(f))); prog.fios.forEach(id => { const f = lay.fios.find(x => x.id === id); c.soldados.add(f.de); c.soldados.add(f.para); }); }
+    return c;
+  }
+
+  // ---------- simulador ----------
+  const bancadas = {};
+  const ctrl = { chave: false, usb: false, vbat: 3.9 };
+  function bancada(quadro) {
+    if (!bancadas[quadro]) bancadas[quadro] = SIMU.novaBancada(L[quadro]);
+    return bancadas[quadro];
+  }
+  function sincronizar() {
+    const k = cap(); if (k.quadro !== 'protoboard' && k.quadro !== 'placa') return null;
+    const B = bancada(k.quadro), c = conteudo(k.quadro), p = passoAtual();
+    SIMU.bancadaMudar(B, e => {
+      e.pecas = c.pecas; e.jumpers = c.jumpers; e.pontes = c.pontes; e.fios = c.fios;
+      if (k.quadro === 'placa') { e.soldados = c.soldados; e.soltos = !!(p && (p.id === 'c5.28' || feito(PASSOS.find(x => x.id === 'c5.27')))); }
+      e.chave = ctrl.chave; e.usb = ctrl.usb && c.pecas.includes('esp'); e.vbat = ctrl.vbat; e.defeitos = (p && p.defeito && !feito(p)) ? { [p.defeito]: true } : {};
+    });
+    return B;
+  }
+
+  // ---------- áudio do buzzer ----------
+  let audio = null, osc = null;
+  function som(ligado) {
+    try {
+      if (ligado && !osc) { audio = audio || new (window.AudioContext || window.webkitAudioContext)(); osc = audio.createOscillator(); const g = audio.createGain(); g.gain.value = 0.04; osc.frequency.value = 2600; osc.type = 'square'; osc.connect(g).connect(audio.destination); osc.start(); }
+      if (!ligado && osc) { osc.stop(); osc = null; }
+    } catch (e) {}
+  }
+
+  // ---------- desenho ----------
+  let vista = 'cima', zoom = 1, verCorrente = false, mao = null, hover = null, mostrarAlvo = false, msg = null;
+  const pontas = { vermelha: null, preta: null, modo: 'V', escolhendo: null };
+  function viewBox(q) {
+    const base = q === 'protoboard' ? [-11, -5, 76, 21] : [-2, -2, 28, 33];
+    const [x, y, w, h] = base, cx = x + w / 2, cy = y + h / 2, W = w / zoom, H = h / zoom;
+    return `${cx - W / 2 + pan[0]} ${cy - H / 2 + pan[1]} ${W} ${H}`;
+  }
+  let pan = [0, 0];
+  function desenhar() {
+    sincronizar();
+    const k = cap(), q = k.quadro, area = q$('#mtQuadro');
+    q$('#mtFerr').hidden = !(q === 'protoboard' || q === 'placa');
+    q$('#mtVirar').hidden = q !== 'placa';
+    q$('#mtSim').hidden = !(k.sim || (q === 'placa' && passoAtual().tipo === 'medir'));
+    if (q === 'galeria' || q === 'solda' || q === '3d') { desenharFigura(k, area); return; }
+    const lay = L[q], c = conteudo(q), p = passoAtual(), emb = q === 'placa' && vista === 'baixo';
+    let s = `<svg id="mtSvg" viewBox="${viewBox(q)}" class="mtsvg ${q}">`;
+    s += q === 'protoboard' ? DES.protoboard() : DES.placa(emb);
+    s += `<g id="mtRealce"></g>`;
+    const novas = new Set(prog ? [...prog.pecas] : []);
+    const apagar = id => !novas.has(id) && p && (p.tipo === 'colocar' || p.tipo === 'pernas') && !feito(p);
+    // peças (de cima) ou pernas (de baixo)
+    const ordem = Object.keys(lay.pecas).filter(id => c.pecas.includes(id));
+    if (emb) {
+      (lay.fios || []).filter(f => c.fios.includes(f.id)).forEach(f => { s += DES.fio('placa', f.de, f.para, f.cor, { embaixo: true, id: 'f:' + f.id }); });
+      (lay.pontes || []).filter(x => c.pontes.includes(x.id)).forEach(x => { s += DES.ponte(x, { estilo: x.grossa ? 'grossa' : '' }); });
+      ordem.forEach(id => { s += DES.peca(lay, id, { embaixo: true }); });
+      c.soldados.forEach(f => { s += DES.solda(f); });
+    } else {
+      if (q === 'placa') (lay.fios || []).filter(f => c.fios.includes(f.id)).forEach(f => { s += DES.fio('placa', f.de, f.para, f.cor, { estilo: 'porbaixo', id: 'f:' + f.id }); });
+      ordem.forEach(id => { s += DES.peca(lay, id, { estilo: apagar(id) ? 'apagada' : novas.has(id) ? 'nova' : '' }); });
+      (lay.jumpers || []).filter(j => c.jumpers.includes(j.id)).forEach(j => { s += DES.fio(q, j.de, j.para, j.cor, { id: 'j:' + j.id, estilo: prog && prog.jumpers.includes(j.id) ? 'nova' : '' }); });
+    }
+    // alvo (mostrar onde)
+    if (p && !feito(p) && mostrarAlvo) s += alvo(p, lay, emb);
+    // peça na mão
+    if (mao && hover) s += DES.peca(lay, mao.peca, { ancora: hover, rot: mao.rot, estilo: 'namao' });
+    if (prog && prog.perna1 && hover) { const a = DES.pos(q, prog.perna1, emb), b = DES.pos(q, hover, emb); s += `<line x1="${a[0]}" y1="${a[1]}" x2="${b[0]}" y2="${b[1]}" stroke="#1d63d8" stroke-width="0.2" stroke-dasharray="0.4 0.3"/><circle cx="${a[0]}" cy="${a[1]}" r="0.4" fill="none" stroke="#1d63d8" stroke-width="0.12"/>`; }
+    if (prog && p.tipo === 'ponte') prog.cliques.forEach(f => { const [x, y] = DES.pos('placa', f, true); s += `<circle cx="${x}" cy="${y}" r="0.42" fill="#e3e6ea" stroke="#1d63d8" stroke-width="0.08"/>`; });
+    // pontas do multímetro
+    [['vermelha', '#d4483b'], ['preta', '#1c1c1a']].forEach(([n, cor]) => { const f = pontas[n]; if (!f) return; const [x, y] = DES.pos(q, f, emb); s += `<g class="ponta"><line x1="${x}" y1="${y}" x2="${x + 0.9}" y2="${y - 2.4}" stroke="${cor}" stroke-width="0.35" stroke-linecap="round"/><circle cx="${x}" cy="${y}" r="0.3" fill="${cor}"/></g>`; });
+    s += `</svg>`;
+    area.innerHTML = s;
+    animarEstado();
+  }
+  function alvo(p, lay, emb) {
+    let s = '<g class="alvo">';
+    const marca = f => { const [x, y] = DES.pos(lay.tipo, f, emb); return `<circle cx="${x}" cy="${y}" r="0.55" fill="none" stroke="#1d63d8" stroke-width="0.14"/>`; };
+    if (p.tipo === 'colocar') s += DES.peca(lay, p.peca, { estilo: 'fantasma' });
+    if (p.tipo === 'pernas') p.pecas.filter(id => !prog.pecas.includes(id)).forEach(id => { s += DES.peca(lay, id, { estilo: 'fantasma' }); });
+    if (p.tipo === 'jumper') p.jumpers.filter(id => !prog.jumpers.includes(id)).forEach(id => { const j = lay.jumpers.find(x => x.id === id); s += DES.fio(lay.tipo, j.de, j.para, j.cor, { estilo: 'fantasma' }); });
+    if (p.tipo === 'fio') p.fios.filter(id => !prog.fios.includes(id)).forEach(id => { const j = lay.fios.find(x => x.id === id); s += DES.fio('placa', j.de, j.para, j.cor, { estilo: 'fantasma', embaixo: emb }); });
+    if (p.tipo === 'soldar') furosASoldar(p).filter(f => !prog.soldados.includes(f)).forEach(f => { s += marca(f); });
+    if (p.tipo === 'ponte') p.pontes.filter(id => !prog.pontes.includes(id)).forEach(id => lay.pontes.find(x => x.id === id).furos.filter(f => !prog.cliques.has(f)).forEach(f => { s += marca(f); }));
+    if (p.tipo === 'medir') [p.vermelha, p.preta].forEach(f => { s += marca(f); });
+    return s + '</g>';
+  }
+  function furosASoldar(p) { const lay = L.placa; const out = []; p.pecas.forEach(id => Object.values(CIR.pinosDaPeca(lay, id)).forEach(f => out.push(f))); return out; }
+
+  // realce da tira da protoboard ao passar o mouse
+  function realcar(f) {
+    const g = q$('#mtRealce'); if (!g) return;
+    const k = cap(); if (!f) { g.innerHTML = ''; return; }
+    const emb = k.quadro === 'placa' && vista === 'baixo';
+    const furos = k.quadro === 'protoboard' ? CIR.todosFuros('protoboard').filter(x => CIR.tiraDoFuro(x) === CIR.tiraDoFuro(f)) : [f];
+    g.innerHTML = furos.map(x => { const [px, py] = DES.pos(k.quadro, x, emb); return `<circle cx="${px}" cy="${py}" r="0.36" fill="#2e7a4d" opacity="0.55"/>`; }).join('');
+    const info = q$('#mtFuro'); if (info) info.textContent = k.quadro === 'protoboard' ? `${f} · ${CIR.tiraDoFuro(f)}` : `furo ${f}`;
+  }
+
+  function desenharFigura(k, area) {
+    const p = passoAtual();
+    if (p.tipo === 'treino') { area.innerHTML = treinoHTML(); treinoIniciar(); return; }
+    if (p.tipo === 'ver3d') {
+      area.innerHTML = `<div class="mtfig texto"><div class="body">${STEPS[p.etapa].html}</div></div>`;
+      return;
+    }
+    const fig = p.figura ? p.figura() : k.quadro === 'solda' ? `<figure>${DES.soldaDeLado('boa')}<figcaption>Solda boa: brilhante, em cone</figcaption></figure>` : '';
+    area.innerHTML = `<div class="mtfig">${fig}</div>`;
+  }
+
+  // ---------- animação (LED, buzzer, corrente) ----------
+  let ultimoLog = '';
+  function animarEstado() {
+    const k = cap(); const B = bancadas[k.quadro]; const svg = q$('#mtSvg');
+    if (!B || !B.res || !svg) return;
+    const r = B.res, I = r.I;
+    const led = I.led || 0;
+    svg.querySelectorAll('.ledbrilho').forEach(e => e.setAttribute('opacity', Math.min(0.9, led * 60).toFixed(2)));
+    svg.querySelectorAll('.ledteste').forEach(e => e.setAttribute('fill', led > 0.0005 ? '#ff6a4a' : '#d23a2e'));
+    const bz = (I.bz || 0) > 0.005 && B.fw.bz;
+    svg.querySelectorAll('.bzonda').forEach(e => e.setAttribute('opacity', bz ? 0.9 : 0));
+    som(bz && document.body.classList.contains('modo-montar'));
+    svg.querySelectorAll('.espled').forEach(e => e.setAttribute('opacity', r.espLigado && B.fw.led ? 1 : 0.18));
+    svg.querySelectorAll('.chavevis').forEach(e => e.setAttribute('fill', ctrl.chave ? '#2e7a4d' : '#111'));
+    svg.querySelectorAll('.fio').forEach(g => {
+      const id = g.dataset.j; const c = g.querySelector('.corrente'); if (!c) return;
+      const i = id ? (I[id] || 0) : 0;
+      c.setAttribute('opacity', verCorrente && Math.abs(i) > 0.002 ? 1 : 0);
+      c.dataset.v = i;
+    });
+    // painel
+    const v = q$('#mtLeds'); if (v) v.innerHTML = `ESP32 ${r.espLigado ? '<b class="ok">ligado</b>' : 'desligado'} · Buzzer ${bz ? '<b class="ok">apitando</b>' : 'quieto'} · ${k.quadro === 'protoboard' ? 'LED de teste ' + (led > 0.008 ? '<b class="ok">aceso</b>' : led > 0.0005 ? '<b class="warn">fraco</b>' : 'apagado') : 'Módulo ' + ((I.modulo || 0) > 0.5 ? '<b class="warn">soltando faísca</b>' : 'parado')}`;
+    const logTxt = B.fw.log.slice(-14).map(l => `[${(l.t / 1000).toFixed(1)} s] ${l.txt}`).join('\n');
+    const lg = q$('#mtLog'); if (lg && logTxt !== ultimoLog) { lg.textContent = logTxt || '(nada ainda)'; lg.scrollTop = lg.scrollHeight; ultimoLog = logTxt; }
+    medirAtualizar();
+  }
+  let fase = 0;
+  function laco() {
+    const ativo = document.body.classList.contains('modo-montar');
+    const k = cap();
+    if (ativo && (k.quadro === 'protoboard' || k.quadro === 'placa')) {
+      const B = bancadas[k.quadro];
+      if (B) { SIMU.bancadaAvancar(B, 33); animarEstado(); conferirTeste(); }
+      fase = (fase + 0.06) % 100;
+      if (verCorrente) document.querySelectorAll('#mtSvg .corrente').forEach(c => { const i = +c.dataset.v || 0; if (Math.abs(i) > 0.002) c.setAttribute('stroke-dashoffset', (-fase * Math.sign(i) * (2 + Math.min(6, Math.log10(Math.abs(i) * 1000 + 1) * 3))).toFixed(2)); });
+    } else som(false);
+  }
+
+  // ---------- painel do passo ----------
+  function render() {
+    const k = cap(), p = passoAtual();
+    if (!prog || prog.id !== p.id) { prog = novoProg(p); mao = null; mostrarAlvo = false; msg = null; pontas.vermelha = pontas.preta = null; pontas.escolhendo = null; if (p.modo) pontas.modo = p.modo === 'cont' ? 'cont' : 'V'; prog.inicio = (bancadas[k.quadro] || {}).t || 0; aoEntrar(p); }
+    // capítulos
+    q$('#mtCaps').innerHTML = CAPITULOS.map((c, i) => { const n = c.passos.filter(feito).length; return `<button class="mtcap ${c.id === k.id ? 'on' : ''} ${n === c.passos.length ? 'ok' : ''}" data-cap="${c.id}"><span>${i}</span>${esc(c.t)}<small>${n}/${c.passos.length}</small></button>`; }).join('');
+    const i = k.passos.indexOf(p);
+    q$('#mtPassos').innerHTML = `<summary>Passo ${i + 1} de ${k.passos.length} · ${esc(k.s)}</summary><ol>` + k.passos.map(x => `<li class="${feito(x) ? 'ok' : ''} ${x === p ? 'on' : ''}"><button data-passo="${x.id}">${feito(x) ? '✓ ' : ''}${esc(x.t)}</button></li>`).join('') + `</ol>`;
+    const resumo = !!st().resumo;
+    const det = (t, h, aberto) => h ? `<details ${aberto ? 'open' : ''}><summary>${t}</summary><div>${h}</div></details>` : '';
+    const lista = a => a && a.length ? `<ul>${a.map(x => `<li>${x}</li>`).join('')}</ul>` : '';
+    q$('#mtCard').innerHTML = `
+      <div class="mtk">Capítulo ${CAPITULOS.indexOf(k)} · passo ${i + 1}</div>
+      <h3>${feito(p) ? '<span class="ok">✓</span> ' : ''}${esc(p.t)}</h3>
+      <p class="mtfazer">${p.fazer}</p>
+      <div id="mtAcao">${acaoHTML(p)}</div>
+      <div id="mtMsg" class="mtmsg ${msg ? msg.tipo : ''}" ${msg ? '' : 'hidden'}>${msg ? msg.txt : ''}</div>
+      ${det('Por que é assim', p.porque, !resumo)}
+      ${det('Como conferir', p.conferir, !resumo)}
+      ${det('Erros comuns', lista(p.erros), false)}
+      <div class="mtbtns">
+        ${i > 0 ? `<button class="btn ghost" data-nav="-1">← Voltar</button>` : ''}
+        ${feito(p) ? `<button class="btn ghost" data-refazer>Refazer</button>` : ''}
+        ${feito(p) && (i < k.passos.length - 1 || CAPITULOS.indexOf(k) < CAPITULOS.length - 1) ? `<button class="btn" data-nav="1">Próximo passo →</button>` : ''}
+        ${!feito(p) && (p.tipo === 'colocar' || p.tipo === 'pernas' || p.tipo === 'jumper' || p.tipo === 'fio' || p.tipo === 'soldar' || p.tipo === 'ponte' || p.tipo === 'medir') ? `<button class="btn ghost" data-alvo>${mostrarAlvo ? 'Esconder onde' : 'Mostrar onde'}</button>` : ''}
+      </div>
+      <div class="mtperg"><button class="lnk" data-perg>Não entendi este passo</button><form id="mtPergForm" hidden><textarea id="mtPergTxt" rows="2" placeholder="O que ficou confuso?" maxlength="500"></textarea><button class="btn" type="submit">Perguntar ao Claude</button></form><div id="mtResp" class="mtresp" hidden></div></div>
+      <label class="toggle mtresumo"><input type="checkbox" id="mtResumo" ${resumo ? 'checked' : ''}> Já sei o básico: esconder as explicações</label>`;
+    if (p.tipo === 'pernas' && !prog.selecionada) prog.selecionada = p.pecas.find(id => !prog.pecas.includes(id)) || null;
+    if (p.tipo === 'colocar' || p.tipo === 'pernas') vista = 'cima';
+    if (p.tipo === 'soldar' || p.tipo === 'ponte' || p.tipo === 'fio') vista = 'baixo';
+    if (p.tipo === 'medir' && k.quadro === 'placa') vista = 'baixo';
+    const wt = q$('#wireTable'); if (wt && typeof wireTable === 'function') wt.innerHTML = wireTable();
+    desenhar(); simPainel();
+  }
+  function acaoHTML(p) {
+    if (p.tipo === 'ver3d') return `<div class="mtbtns"><button class="btn ghost" data-3d>Ver no 3D</button>${feito(p) ? '' : '<button class="btn" data-ok>Feito</button>'}</div><p class="muted">O passo a passo completo está ao lado.</p>`;
+    if (feito(p) && !['quiz', 'checklist'].includes(p.tipo)) return `<div class="mtok">Feito.</div>`;
+    const lay = L[p.cap.quadro];
+    switch (p.tipo) {
+      case 'ver': return `${p.tabela ? '<div id="wireTable"></div>' : ''}<button class="btn" data-ok>Entendi</button>`;
+      case 'explorar': return `<div class="mthint">Tiras clicadas: <b>${prog.tiras.size}</b> de ${p.n} <span id="mtFuro" class="muted"></span></div>`;
+      case 'quiz': return `<div class="mtquiz"><b>${esc(p.pergunta)}</b>${p.opcoes.map((o, i) => `<button data-quiz="${i}" class="${feito(p) && i === p.certa ? 'certa' : ''}">${esc(o)}</button>`).join('')}${feito(p) ? `<p class="mthint">${esc(p.explica)}</p>` : ''}</div>`;
+      case 'checklist': { const c = st().chk[p.id] || {}; return `<div class="mtchk">${p.itens.map((t, i) => `<label><input type="checkbox" data-chk="${i}" ${c[i] ? 'checked' : ''}> <span>${t}</span></label>`).join('')}</div>`; }
+      case 'colocar': { const P = CIR.PECAS[p.peca]; return `<div class="mthint">Peça: <b>${esc(P.nome)}</b>. Clique em "Pegar", leve até o lugar e clique para soltar. <kbd>R</kbd> gira.</div><div class="mtbtns"><button class="btn" data-pegar>${mao ? 'Soltar da mão' : 'Pegar a peça'}</button>${mao ? `<button class="btn ghost" data-girar>Girar ↻</button>` : ''}</div>`; }
+      case 'pernas': return `<div class="mtchips">${p.pecas.map(id => { const P = CIR.PECAS[id]; const ok = prog.pecas.includes(id); return `<button data-sel="${id}" class="${prog.selecionada === id ? 'on' : ''} ${ok ? 'ok' : ''}" ${ok ? 'disabled' : ''}>${ok ? '✓ ' : ''}${esc(P.nome)}${P.valor ? `<small>${DES.coresDoResistor(P.valor)}</small>` : ''}</button>`; }).join('')}</div>` +
+          (prog.selecionada ? `<div class="mthint">${pernaInstrucao(p, prog.selecionada)}</div>` : '');
+      case 'jumper': case 'fio': { const lista = p.tipo === 'jumper' ? p.jumpers.map(id => lay.jumpers.find(j => j.id === id)) : p.fios.map(id => lay.fios.find(j => j.id === id)); const feitos = p.tipo === 'jumper' ? prog.jumpers : prog.fios;
+        return `<div class="mthint">Clique no furo de uma ponta e depois no da outra.${p.tipo === 'fio' ? ' A placa está virada (de baixo).' : ''}</div><ul class="mtlista">${lista.map(j => `<li class="${feitos.includes(j.id) ? 'ok' : ''}"><span class="sw" style="background:${j.cor}"></span>${feitos.includes(j.id) ? '✓ ' : ''}${esc(j.nome)} <small>${j.de} → ${j.para}</small></li>`).join('')}</ul>`; }
+      case 'soldar': { const f = furosASoldar(p); return `<div class="mthint">A placa está virada. Clique em cada perna para soldar: <b>${prog.soldados.length}</b> de ${f.length}.</div>`; }
+      case 'ponte': return `<div class="mthint">A placa está virada. Clique em cada furo das pontes.</div><ul class="mtlista">${p.pontes.map(id => { const x = lay.pontes.find(y => y.id === id); const n = x.furos.filter(f => prog.cliques.has(f)).length; return `<li class="${prog.pontes.includes(id) ? 'ok' : ''}">${prog.pontes.includes(id) ? '✓ ' : ''}${esc(x.nome)} <small>${n}/${x.furos.length} furos</small></li>`; }).join('')}</ul>`;
+      case 'medir': return `<div class="mthint">Use o multímetro abaixo da placa: escolha ${p.modo === 'V' ? '<b>V⎓</b> (tensão)' : '<b>bipe</b> (continuidade)'}, clique em "Ponta vermelha" e num furo, depois em "Ponta preta" e noutro furo.${p.chave ? ' A chave precisa estar ligada.' : ' Chave desligada e sem USB.'}</div>`;
+      case 'testar': return `<div class="mthint">Use os controles abaixo da placa (chave, USB e o controle A, B, C, D).${p.defeito ? ' <b>Defeito ligado só neste passo.</b>' : ''}</div>`;
+      case 'treino': return `<div class="mthint">Soldas boas: <b id="mtBoas">${prog.boas}</b> de ${p.n}.</div>`;
+      case 'encaixar': return `<button class="btn" data-encaixar>Encaixar</button>`;
+      case 'ver3d': return `<div class="mtbtns"><button class="btn ghost" data-3d>Ver no 3D</button><button class="btn" data-ok>Feito</button></div><p class="muted">O passo a passo completo está ao lado.</p>`;
+    }
+    return '';
+  }
+  function pernaInstrucao(p, id) {
+    const lay = L[p.cap.quadro], alvoP = lay.pecas[id].pernas, ks = Object.keys(alvoP);
+    const nomes = CIR.PECAS[id].pinos;
+    if (prog.perna1) return `Agora clique no furo da outra perna (<b>${esc(nomes[ks[1]])}</b>).`;
+    const polar = id === 'led' || id === 'cap' || id === 'bloco';
+    return polar ? `Clique primeiro no furo da <b>${esc(nomes[ks[0]])}</b> (${alvoP[ks[0]]}).` : `Clique no furo de uma perna e depois no da outra (${alvoP[ks[0]]} e ${alvoP[ks[1]]}).`;
+  }
+
+  // ---------- quando entra num passo ----------
+  function aoEntrar(p) {
+    const k = p.cap;
+    if (p.chave === false) ctrl.chave = false;
+    if (p.tipo === 'colocar' || p.tipo === 'pernas' || p.tipo === 'jumper') { if (ctrl.chave) { ctrl.chave = false; } }
+    if (k.quadro === 'placa' && p.tipo === 'medir' && p.modo === 'cont') { ctrl.chave = false; ctrl.usb = false; }
+    if (p.cond === 'usb') ctrl.chave = false;
+    prog.ledAntesAperto = false; prog.apertos = 0; prog.choquesNoInicio = 0;
+    const B = bancadas[k.quadro]; if (B) { prog.inicio = B.t; prog.pausas = B.fw.contador.bloqueios.pausa; }
+  }
+  function concluir(texto) {
+    const p = passoAtual(); st().feitos[p.id] = 1; st().passo = p.id; save();
+    msg = { tipo: 'ok', txt: texto || 'Certo!' }; mao = null; mostrarAlvo = false;
+    if (p.defeito) msg.txt += ' O defeito foi tirado.';
+    if (typeof renderTop === 'function') { renderTop(); renderHome(); }
+    render();
+  }
+  function erro(texto) { msg = { tipo: 'erro', txt: texto }; const m = q$('#mtMsg'); if (m) { m.className = 'mtmsg erro'; m.innerHTML = texto; m.hidden = false; } }
+  function aviso(texto) { msg = { tipo: 'info', txt: texto }; const m = q$('#mtMsg'); if (m) { m.className = 'mtmsg info'; m.innerHTML = texto; m.hidden = false; } }
+
+  // ---------- cliques na placa ----------
+  function furoDoEvento(ev) {
+    const svg = q$('#mtSvg'); if (!svg) return null;
+    const pt = svg.createSVGPoint(); pt.x = ev.clientX; pt.y = ev.clientY;
+    const m = svg.getScreenCTM(); if (!m) return null;
+    const loc = pt.matrixTransform(m.inverse());
+    const k = cap(); let x = loc.x;
+    if (k.quadro === 'placa' && vista === 'baixo') x = 23 - x;
+    return CIR.furoPerto(k.quadro, x, loc.y, 0.55);
+  }
+  function aoMover(ev) {
+    const f = furoDoEvento(ev);
+    if (f === hover) return;
+    hover = f;
+    const p = passoAtual();
+    if (mao || (prog && prog.perna1)) desenhar(); else realcar(f);
+    if (p.tipo === 'explorar') realcar(f);
+  }
+  function aoClicar(ev) {
+    const f = furoDoEvento(ev); if (!f) return;
+    const k = cap(), p = passoAtual(), lay = L[k.quadro];
+    if (pontas.escolhendo) { pontas[pontas.escolhendo] = f; pontas.escolhendo = null; simPainel(); desenhar(); return; }
+    if (feito(p)) return;
+    if (p.tipo === 'explorar') { prog.tiras.add(CIR.tiraDoFuro(f)); if (prog.tiras.size >= p.n) concluir('Isso: cada coluna de 5 furos é uma ligação, e as trilhas da borda vão de ponta a ponta.'); else render(); return; }
+    if (p.tipo === 'colocar' && mao) { colocar(f); return; }
+    if (p.tipo === 'pernas') { pernas(f); return; }
+    if (p.tipo === 'jumper' || p.tipo === 'fio') { ligar(f); return; }
+    if (p.tipo === 'soldar') { soldar(f); return; }
+    if (p.tipo === 'ponte') { pontear(f); return; }
+  }
+  function colocar(anc) {
+    const p = passoAtual(), lay = L[p.cap.quadro], id = p.peca;
+    const certo = CIR.pinosDaPeca(lay, id), meu = CIR.pinosDaPeca(lay, id, anc, mao.rot);
+    const igual = Object.keys(certo).every(n => certo[n] === meu[n]);
+    if (igual) { prog.pecas.push(id); mao = null; concluir(`${CIR.PECAS[id].nome} no lugar.`); return; }
+    if (Object.values(meu).some(f => !f)) { erro('Alguma perna ficou fora da placa. Tente de novo mais para dentro.'); return; }
+    const mesmosFuros = Object.values(certo).sort().join() === Object.values(meu).sort().join();
+    const errado = Object.keys(certo).find(n => certo[n] !== meu[n]);
+    erro(mesmosFuros ? `Está virada: a perna <b>${esc(errado)}</b> caiu no ${meu[errado]}, mas vai no ${certo[errado]}. Aperte R (ou "Girar") e tente de novo.`
+      : `Quase: a perna <b>${esc(errado)}</b> caiu no ${meu[errado]}, mas vai no ${certo[errado]}.${mao.rot !== lay.pecas[id].rot ? ' Ela também está girada.' : ''}`);
+  }
+  function pernas(f) {
+    const p = passoAtual(), lay = L[p.cap.quadro], id = prog.selecionada; if (!id) return;
+    if (!prog.perna1) { prog.perna1 = f; desenhar(); q$('#mtAcao').innerHTML = acaoHTML(p); return; }
+    const a = prog.perna1, b = f; prog.perna1 = null;
+    const alvoP = lay.pecas[id].pernas, ks = Object.keys(alvoP);
+    const polar = id === 'led' || id === 'cap' || id === 'bloco';
+    const ok = (a === alvoP[ks[0]] && b === alvoP[ks[1]]) || (!polar && a === alvoP[ks[1]] && b === alvoP[ks[0]]);
+    if (ok) {
+      prog.pecas.push(id); prog.selecionada = p.pecas.find(x => !prog.pecas.includes(x)) || null;
+      if (p.pecas.every(x => prog.pecas.includes(x))) { concluir('Tudo no lugar.'); return; }
+      msg = { tipo: 'ok', txt: `${CIR.PECAS[id].nome} no lugar.` }; render(); return;
+    }
+    const nomes = CIR.PECAS[id].pinos;
+    if (polar && a === alvoP[ks[1]] && b === alvoP[ks[0]]) { erro(`Está invertido: a <b>${esc(nomes[ks[0]])}</b> vai no ${alvoP[ks[0]]}.${id === 'cap' ? ' Capacitor invertido estufa.' : id === 'led' ? ' LED invertido não acende.' : ''}`); desenhar(); return; }
+    const qual = [a, b].find(x => !Object.values(alvoP).includes(x));
+    erro(`O furo ${qual} não é desse passo. As pernas vão no ${alvoP[ks[0]]} e no ${alvoP[ks[1]]}.`); desenhar();
+  }
+  function ligar(f) {
+    const p = passoAtual(), lay = L[p.cap.quadro];
+    if (!prog.perna1) { prog.perna1 = f; desenhar(); return; }
+    const a = prog.perna1, b = f; prog.perna1 = null;
+    const lista = p.tipo === 'jumper' ? p.jumpers.filter(id => !prog.jumpers.includes(id)).map(id => lay.jumpers.find(j => j.id === id)) : p.fios.filter(id => !prog.fios.includes(id)).map(id => lay.fios.find(j => j.id === id));
+    const igual = (x, y) => lay.tipo === 'protoboard' ? CIR.tiraDoFuro(x) === CIR.tiraDoFuro(y) : x === y;
+    const achou = lista.find(j => (igual(a, j.de) && igual(b, j.para)) || (igual(a, j.para) && igual(b, j.de)));
+    if (!achou) {
+      erro(lay.tipo === 'protoboard' ? `Esse jumper liga a ${CIR.tiraDoFuro(a)} com a ${CIR.tiraDoFuro(b)}, e nenhum fio deste passo faz isso. Veja a lista acima.` : `Nenhum fio deste passo vai do ${a} ao ${b}. Veja a lista acima.`);
+      desenhar(); return;
+    }
+    (p.tipo === 'jumper' ? prog.jumpers : prog.fios).push(achou.id);
+    const todos = p.tipo === 'jumper' ? p.jumpers.every(id => prog.jumpers.includes(id)) : p.fios.every(id => prog.fios.includes(id));
+    if (todos) { concluir('Todos ligados.'); return; }
+    msg = { tipo: 'ok', txt: `Ligado: ${achou.nome}.` }; render();
+  }
+  function soldar(f) {
+    const p = passoAtual(), alvo = furosASoldar(p);
+    if (vista !== 'baixo') { erro('Vire a placa para soldar.'); return; }
+    if (!alvo.includes(f)) { erro(`O furo ${f} não tem perna deste passo. As pernas a soldar estão marcadas com "Mostrar onde".`); return; }
+    if (!prog.soldados.includes(f)) prog.soldados.push(f);
+    if (alvo.every(x => prog.soldados.includes(x))) { concluir('Tudo soldado. Na real, confira cada uma: brilhante e em cone.'); return; }
+    msg = null; render();
+  }
+  function pontear(f) {
+    const p = passoAtual(), lay = L.placa;
+    const pon = p.pontes.map(id => lay.pontes.find(x => x.id === id)).filter(x => !prog.pontes.includes(x.id) && x.furos.includes(f));
+    if (!pon.length) { erro(`O furo ${f} não faz parte das pontes que faltam neste passo.`); return; }
+    prog.cliques.add(f);
+    pon.forEach(x => { if (x.furos.every(y => prog.cliques.has(y))) prog.pontes.push(x.id); });
+    if (p.pontes.every(id => prog.pontes.includes(id))) { concluir('Pontes prontas. Na real, confira se nenhuma encostou na vizinha.'); return; }
+    msg = null; render();
+  }
+
+  // ---------- testes do simulador ----------
+  let apertoInicio = 0, apertoBotao = -1;
+  function conferirTeste() {
+    const p = passoAtual(); if (!p || feito(p)) return;
+    const B = bancadas[p.cap.quadro]; if (!B) return;
+    const ev = (tipo, f) => B.eventos.filter(e => e.tipo === tipo && e.t >= prog.inicio && (!f || f(e)));
+    if (p.tipo === 'medir') return;
+    if (p.tipo !== 'testar') return;
+    const c = p.cond;
+    if (c !== 'pausa' && B.fw.contador.bloqueios.pausa > (prog.pausasAvisadas ?? prog.pausas ?? 0)) {
+      prog.pausasAvisadas = B.fw.contador.bloqueios.pausa;
+      aviso('O firmware ignorou esse aperto: ainda não tinham passado 3 segundos desde o último choque. Espere um pouco e aperte de novo.');
+    }
+    if (c === 'esp_ligou' && ev('esp_ligou').length) concluir('O ESP32 ligou. O LED azul pisca a cada 3 segundos: é o sinal de "tudo certo".');
+    if (c === 'rf' && ev('aperto', e => e.chegou).length) concluir('O código chegou no ESP32. O rádio está funcionando.');
+    if (c === 'rf' && ev('aperto', e => !e.chegou).length && !prog.avisouRf) { prog.avisouRf = true; aviso(B.res.espLigado ? 'O aperto não chegou: confira os 3 fios do receptor.' : 'Ligue a chave primeiro.'); }
+    if (c === 'bipeA' && ev('aperto', e => e.chegou && e.botao === 0).length && ev('bipe').length) concluir('Bipou. O BC547 está ligando o buzzer.');
+    if (c === 'choqueB' && ev('choque', e => e.nivel === 0 && !e.simulado).length && ev('led_teste').length && B.fw.estado === 'parado') concluir('5 pulsos rápidos no LED: é o choque fraco.');
+    if (c === 'segurarD' && prog.segurouD) concluir('Um choque só, de 1 segundo, mesmo segurando.');
+    if (c === 'pausa' && B.fw.contador.bloqueios.pausa > prog.pausas && ev('choque').length) concluir('O firmware ignorou os apertos dentro dos 3 segundos.');
+    if (c === 'curto') {
+      if (!prog.curtoParado && B.t - prog.inicio > 2500 && !ev('led_teste').length && B.res.espLigado) { prog.curtoParado = true; aviso('Passaram 3 segundos e o LED não acendeu, mesmo com o curto. Agora aperte o B.'); }
+      if (prog.curtoParado && ev('choque', e => !e.simulado).length && ev('led_teste').length && B.fw.estado === 'parado') concluir('Só acendeu quando o ESP32 mandou. Um MOSFET queimado sozinho não dá choque.');
+    }
+    if (c === 'usb' && ev('choque', e => e.simulado).length && B.fw.estado === 'parado') concluir('Choque simulado: o firmware viu o USB e não ligou os MOSFETs.');
+    if (c === 'irfz' && ev('led_fraco').length && B.fw.estado === 'parado') concluir('Com o IRFZ44N o LED quase não acende. Na coleira, o choque sairia fraco.');
+  }
+  function medirAtualizar() {
+    const k = cap(); const B = bancadas[k.quadro]; const tela = q$('#mtVisor'); if (!B || !tela) return;
+    const r = SIMU.multimetro(B, pontas.modo, pontas.vermelha, pontas.preta);
+    tela.textContent = r.txt; q$('#mtVisorObs').textContent = r.obs || '';
+    const p = passoAtual();
+    if (p.tipo !== 'medir' || feito(p)) return;
+    if (!pontas.vermelha || !pontas.preta) return;
+    const kk = B.conexao.raiz, H = f => 'H:' + f;
+    const certas = kk(H(pontas.vermelha)) === kk(H(p.vermelha)) && kk(H(pontas.preta)) === kk(H(p.preta));
+    const trocadas = kk(H(pontas.vermelha)) === kk(H(p.preta)) && kk(H(pontas.preta)) === kk(H(p.vermelha));
+    if (pontas.modo !== (p.modo === 'cont' ? 'cont' : 'V')) return;
+    if (p.modo === 'V') {
+      if (trocadas && r.v < 0) { if (!prog.avisouTroca) { prog.avisouTroca = true; aviso('Deu negativo: as pontas estão trocadas. A vermelha vai no ponto de tensão mais alta.'); } return; }
+      if (certas && r.v >= p.min && r.v <= p.max) concluir(`Mediu ${r.txt}. Está certo.`);
+      else if (certas && p.chave && !ctrl.chave && !prog.avisouChave) { prog.avisouChave = true; aviso('As pontas estão no lugar. Agora ligue a chave.'); }
+    } else if ((certas || trocadas) && r.bipa === p.bipa && r.txt !== 'Desligue') concluir(p.bipa ? 'Bipou: está ligado.' : 'Não bipou: não tem curto.');
+  }
+
+  // ---------- painel do simulador ----------
+  function simPainel() {
+    const box = q$('#mtSim'); if (box.hidden) return;
+    const k = cap();
+    box.innerHTML = `
+      <div class="mtsimrow">
+        <label class="mttog"><input type="checkbox" id="mtChave" ${ctrl.chave ? 'checked' : ''}> Chave</label>
+        ${k.quadro === 'protoboard' ? `<label class="mttog"><input type="checkbox" id="mtUsb" ${ctrl.usb ? 'checked' : ''}> USB no ESP32</label>` : ''}
+        <label class="mtbat">Bateria <input type="range" id="mtVbat" min="3.0" max="4.2" step="0.05" value="${ctrl.vbat}"> <b id="mtVbatV">${ctrl.vbat.toFixed(2).replace('.', ',')} V</b></label>
+      </div>
+      <div class="mtsimrow">
+        <div class="mtcontrole" aria-label="Controle">${['A', 'B', 'C', 'D'].map((b, i) => `<button data-bt="${i}">${b}</button>`).join('')}<small>controle (segure para manter apertado)</small></div>
+        <button class="btn ghost mtpar" data-botao>Botão de pareamento</button>
+      </div>
+      <div class="mtsimrow mtmult">
+        <div class="mtvisor"><div id="mtVisor">- - -</div><div id="mtVisorObs" class="muted"></div></div>
+        <div class="seg" role="group" aria-label="Escala">${[['V', 'V⎓ 20'], ['cont', '🔊 bipe']].map(([m, t]) => `<button data-modo="${m}" class="${pontas.modo === m ? 'on' : ''}">${t}</button>`).join('')}</div>
+        <button class="btn ghost ${pontas.escolhendo === 'vermelha' ? 'on' : ''}" data-ponta="vermelha"><span class="pv"></span>Ponta vermelha${pontas.vermelha ? ': ' + pontas.vermelha : ''}</button>
+        <button class="btn ghost ${pontas.escolhendo === 'preta' ? 'on' : ''}" data-ponta="preta"><span class="pp"></span>Ponta preta${pontas.preta ? ': ' + pontas.preta : ''}</button>
+      </div>
+      <div id="mtLeds" class="mtleds"></div>
+      <details class="mtserial" ${ctrl.usb ? 'open' : ''}><summary>Monitor Serial</summary><pre id="mtLog">(nada ainda)</pre></details>`;
+    ultimoLog = '';
+    animarEstado();
+  }
+
+  // ---------- treino de solda ----------
+  let tr = null;
+  function treinoHTML() {
+    return `<div class="mttreino"><svg id="mtTrSvg" viewBox="-6 -5 12 8"><rect x="-6" y="1" width="12" height="1.2" fill="#c9a46a"/><rect x="-1.7" y="0.8" width="3.4" height="0.28" fill="#d9b45a"/><rect x="-0.18" y="-4" width="0.36" height="6" fill="#b9bdc2"/>
+      <path id="mtTrSolda" d="" fill="#d6d9dd"/><g id="mtTrFerro" opacity="0.25"><path d="M2.4 -0.2 L5.8 -3.6 L6.4 -3 L3 0.4 Z" fill="#7a7f86"/><circle cx="2.5" cy="0.1" r="0.3" fill="#e05a2b" id="mtTrPonta"/></g>
+      <g id="mtTrFio" opacity="0.25"><path d="M-2.4 -0.1 L-6 -3.2" stroke="#cfd3d8" stroke-width="0.3"/></g><rect x="-3" y="-4.5" width="6" height="5.6" fill="transparent" id="mtTrPad"/></svg>
+      <div class="mttrbar"><span>Calor</span><div class="bar"><i id="mtTrCalor"></i></div><span>Estanho</span><div class="bar"><i id="mtTrQtd" style="background:#9aa0a6"></i></div></div>
+      <div class="mtbtns"><button class="btn ghost" id="mtTrEstanho">Estanho (segure, ou barra de espaço)</button><button class="btn ghost" id="mtTrNova">Nova solda</button></div>
+      <div id="mtTrRes" class="mtmsg" hidden></div><div id="mtTrFig"></div></div>`;
+  }
+  function treinoIniciar() {
+    tr = { ferro: false, estanho: false, calor: 0, qtd: 0, tempo: 0, calorNoEstanho: null, fim: false, t0: performance.now() };
+    const pad = q$('#mtTrPad');
+    const liga = v => { if (tr.fim) return; tr.ferro = v; if (!v && tr.tempo > 0.2) treinoFim(); };
+    pad.addEventListener('mousedown', e => { e.preventDefault(); liga(true); });
+    pad.addEventListener('touchstart', e => { e.preventDefault(); liga(true); }, { passive: false });
+    window.addEventListener('mouseup', () => { if (tr && tr.ferro) liga(false); });
+    window.addEventListener('touchend', () => { if (tr && tr.ferro) liga(false); });
+    const b = q$('#mtTrEstanho');
+    b.addEventListener('mousedown', () => { tr.estanho = true; }); b.addEventListener('mouseup', () => { tr.estanho = false; }); b.addEventListener('mouseleave', () => { tr.estanho = false; });
+    q$('#mtTrNova').addEventListener('click', () => { const r = q$('#mtTrRes'); r.hidden = true; q$('#mtTrFig').innerHTML = ''; treinoIniciar2(); });
+    treinoIniciar2();
+  }
+  function treinoIniciar2() { Object.assign(tr, { ferro: false, estanho: false, calor: 0, qtd: 0, tempo: 0, calorNoEstanho: null, fim: false }); treinoDesenhar(); }
+  function treinoPasso(dt) {
+    if (!tr || tr.fim || !q$('#mtTrSvg')) return;
+    if (tr.ferro) { tr.tempo += dt; tr.calor = Math.min(1.3, tr.calor + dt / 2.2); } else tr.calor = Math.max(0, tr.calor - dt / 1.5);
+    if (tr.estanho && tr.ferro) { if (tr.calorNoEstanho === null) tr.calorNoEstanho = tr.calor; tr.qtd = Math.min(1.4, tr.qtd + dt * 0.45); }
+    treinoDesenhar();
+  }
+  function treinoDesenhar() {
+    const c = q$('#mtTrCalor'); if (!c) return;
+    c.style.width = Math.min(100, tr.calor / 1.3 * 100) + '%'; c.style.background = tr.calor > 1.05 ? '#b3261e' : tr.calor > 0.4 ? '#2e7a4d' : '#a8661a';
+    q$('#mtTrQtd').style.width = Math.min(100, tr.qtd / 1.4 * 100) + '%';
+    q$('#mtTrFerro').setAttribute('opacity', tr.ferro ? 1 : 0.25);
+    q$('#mtTrFio').setAttribute('opacity', tr.estanho ? 1 : 0.25);
+    const fria = tr.calorNoEstanho !== null && tr.calorNoEstanho < 0.4, h = Math.min(2.6, tr.qtd * 2.2);
+    q$('#mtTrSolda').setAttribute('d', tr.qtd <= 0 ? '' : fria ? `M-${0.5 + h * 0.3} 0.8 A${0.5 + h * 0.3} ${0.4 + h * 0.35} 0 1 1 ${0.5 + h * 0.3} 0.8 Z` : `M-${0.5 + h * 0.45} 0.85 Q-0.4 0.6 -0.2 ${0.6 - h} L0.2 ${0.6 - h} Q0.4 0.6 ${0.5 + h * 0.45} 0.85 Z`);
+    q$('#mtTrSolda').setAttribute('fill', tr.tempo > 6 ? '#6b5f4f' : fria ? '#a4a7ab' : '#d6d9dd');
+  }
+  function treinoFim() {
+    tr.fim = true;
+    let tipo = 'boa';
+    if (tr.qtd < 0.25) tipo = 'pouca';
+    else if (tr.calorNoEstanho !== null && tr.calorNoEstanho < 0.4) tipo = 'fria';
+    else if (tr.tempo > 6) tipo = 'queimada';
+    else if (tr.qtd > 1.15) tipo = 'ponte';
+    else if (tr.qtd > 0.8) tipo = 'demais';
+    const texto = { boa: 'Solda boa: brilhante e em cone.', pouca: 'Pouco estanho: segure o estanho um pouco mais.', fria: 'Solda fria: você pôs o estanho antes de esquentar. Espere a barra de calor ficar verde.', queimada: 'Ficou tempo demais: o pad pode descolar. Tudo em 3 a 4 segundos.', ponte: 'Estanho demais: escorreu para o furo vizinho (ponte).', demais: 'Estanho demais: virou uma bola. Pare antes.' }[tipo];
+    const r = q$('#mtTrRes'); r.hidden = false; r.className = 'mtmsg ' + (tipo === 'boa' ? 'ok' : 'erro'); r.textContent = texto;
+    q$('#mtTrFig').innerHTML = DES.soldaDeLado(tipo);
+    if (tipo === 'boa' && prog) { prog.boas++; const p = passoAtual(); const el = q$('#mtBoas'); if (el) el.textContent = prog.boas; if (prog.boas >= p.n && !feito(p)) concluir('Três soldas boas. Agora treine na placa de verdade.'); }
+  }
+
+  // ---------- Pergunte ao Claude ----------
+  let sample = null;
+  if (window.claude && typeof window.claude.use === 'function') window.claude.use('sample').then(s => { sample = s; }).catch(() => {});
+  async function perguntar(txt) {
+    const p = passoAtual(), box = q$('#mtResp'); box.hidden = false;
+    if (!sample) { box.textContent = 'O "Perguntar ao Claude" só funciona dentro do Claude. Copie a dúvida e mande no chat.'; return; }
+    const k = p.cap, c = (k.quadro === 'protoboard' || k.quadro === 'placa') ? conteudo(k.quadro) : null;
+    const contexto = [
+      `Projeto: coleira de choque remoto para boi (ESP32-C3, receptor RXB6, 2 MOSFETs IRLZ44N em série, módulo de alta tensão, bateria 18650).`,
+      `Capítulo: ${k.t}. Passo: ${p.t}.`, `O que o passo pede: ${String(p.fazer).replace(/<[^>]+>/g, '')}`,
+      p.porque ? `Explicação do passo: ${String(p.porque).replace(/<[^>]+>/g, '')}` : '',
+      c ? `Já está na ${k.quadro}: ${c.pecas.map(id => CIR.PECAS[id].nome).join(', ') || 'nada'}.` : '',
+      msg && msg.tipo === 'erro' ? `Último erro mostrado: ${String(msg.txt).replace(/<[^>]+>/g, '')}` : '',
+    ].filter(Boolean).join('\n');
+    const instr = 'Você ajuda um estudante que nunca montou eletrônica. Responda em português do Brasil, em frases simples e diretas, no máximo 6 frases. Explique o porquê com uma comparação do dia a dia quando ajudar. Não use frases de efeito nem construções do tipo "não é X, é Y". Nunca sugira testar choque em pessoa. Se a dúvida não tiver a ver com o passo, responda mesmo assim, curto.';
+    box.textContent = 'Pensando...';
+    try {
+      const r = await sample(`${instr}\n\nContexto:\n${contexto}\n\nDúvida do estudante: ${txt}`, { onText: ({ text }) => { box.textContent = text.replace(/\*\*/g, ''); }, modelTier: 'quick' });
+      box.textContent = (r.text || '').replace(/\*\*/g, '');
+    } catch (e) { box.textContent = e && e.code === 'rate_limited' ? 'Muitas perguntas seguidas. Espere um pouco.' : 'Não consegui responder agora.'; }
+  }
+
+  // ---------- eventos ----------
+  function ligarEventos() {
+    const raiz = q$('#t-montar');
+    raiz.addEventListener('click', e => {
+      const t = e.target.closest('button, [data-cap]'); if (!t) return;
+      const p = passoAtual();
+      if (t.dataset.cap) { st().cap = t.dataset.cap; st().passo = null; save(); render(); return; }
+      if (t.dataset.passo) { st().passo = t.dataset.passo; save(); render(); return; }
+      if (t.dataset.nav) { navegar(+t.dataset.nav); return; }
+      if ('refazer' in t.dataset) { delete st().feitos[p.id]; save(); prog = null; render(); renderTop(); renderHome(); return; }
+      if ('alvo' in t.dataset) { mostrarAlvo = !mostrarAlvo; render(); return; }
+      if ('ok' in t.dataset) { concluir('Feito.'); return; }
+      if ('pegar' in t.dataset) { mao = mao ? null : { peca: p.peca, rot: rotInicial(p) }; render(); return; }
+      if ('girar' in t.dataset) { girar(); return; }
+      if (t.dataset.sel) { prog.selecionada = t.dataset.sel; prog.perna1 = null; render(); return; }
+      if (t.dataset.quiz !== undefined) { const i = +t.dataset.quiz; if (i === p.certa) concluir(p.explica); else { t.classList.add('errada'); erro('Não é essa. Leia de novo o texto acima e tente outra.'); } return; }
+      if ('encaixar' in t.dataset) { prog.pecas.push(...p.pecas); concluir('Encaixados.'); return; }
+      if ('3d' in t.dataset) { go('projeto'); setTimeout(() => window.Projeto3D && window.Projeto3D.mostrar && window.Projeto3D.mostrar(p.a), 50); return; }
+      if ('perg' in t.dataset) { q$('#mtPergForm').hidden = !q$('#mtPergForm').hidden; if (!q$('#mtPergForm').hidden) q$('#mtPergTxt').focus(); return; }
+      if (t.dataset.modo) { pontas.modo = t.dataset.modo; simPainel(); return; }
+      if (t.dataset.ponta) { pontas.escolhendo = pontas.escolhendo === t.dataset.ponta ? null : t.dataset.ponta; simPainel(); aviso(pontas.escolhendo ? `Agora clique no furo onde vai a ponta ${pontas.escolhendo}.` : ''); return; }
+      if (t.id === 'mtVirar') { vista = vista === 'cima' ? 'baixo' : 'cima'; desenhar(); return; }
+      if (t.id === 'mtZoomMais') { zoom = Math.min(4, zoom * 1.3); desenhar(); return; }
+      if (t.id === 'mtZoomMenos') { zoom = Math.max(1, zoom / 1.3); if (zoom === 1) pan = [0, 0]; desenhar(); return; }
+      if (t.id === 'mtCorrente') { verCorrente = !verCorrente; t.classList.toggle('on', verCorrente); animarEstado(); return; }
+    });
+    raiz.addEventListener('submit', e => { if (e.target.id === 'mtPergForm') { e.preventDefault(); const t = q$('#mtPergTxt').value.trim(); if (t) perguntar(t); } });
+    raiz.addEventListener('change', e => {
+      const t = e.target, p = passoAtual();
+      if (t.id === 'mtResumo') { st().resumo = t.checked; save(); render(); return; }
+      if (t.dataset.chk !== undefined) { const c = st().chk[p.id] = st().chk[p.id] || {}; if (t.checked) c[t.dataset.chk] = 1; else delete c[t.dataset.chk]; save();
+        if (p.itens.every((_, i) => c[i])) { if (!feito(p)) concluir('Tudo pronto.'); } else if (feito(p)) { delete st().feitos[p.id]; save(); render(); } return; }
+      if (t.id === 'mtChave') { ctrl.chave = t.checked; if (ctrl.chave && ctrl.usb) aviso('Cuidado: USB e chave ligados juntos. No real, o computador empurra 5 V para a bateria. Desligue a chave para usar o USB.'); sincronizar(); return; }
+      if (t.id === 'mtUsb') { ctrl.usb = t.checked; if (ctrl.chave && ctrl.usb) aviso('Cuidado: USB e chave ligados juntos. No real, o computador empurra 5 V para a bateria. Desligue a chave para usar o USB.'); sincronizar(); simPainel(); return; }
+      if (t.wire) return;
+    });
+    raiz.addEventListener('input', e => { if (e.target.id === 'mtVbat') { ctrl.vbat = +e.target.value; q$('#mtVbatV').textContent = ctrl.vbat.toFixed(2).replace('.', ',') + ' V'; sincronizar(); } });
+    // controle virtual
+    const solta = () => { const k = cap(), B = bancadas[k.quadro]; if (apertoBotao >= 0 && B) { const dur = B.t - apertoInicio; if (apertoBotao === 3 && dur >= 3000) { const ch = B.eventos.filter(x => x.tipo === 'choque' && x.t >= apertoInicio && !x.simulado).length; if (ch === 1 && prog) prog.segurouD = true; } SIMU.bancadaSoltar(B); } apertoBotao = -1; document.querySelectorAll('.mtcontrole button.on').forEach(b => b.classList.remove('on')); };
+    raiz.addEventListener('mousedown', e => {
+      const b = e.target.closest('[data-bt]'); const par = e.target.closest('[data-botao]');
+      const k = cap(), B = bancadas[k.quadro];
+      if (b && B) { apertoBotao = +b.dataset.bt; b.classList.add('on'); apertoInicio = B.t; SIMU.bancadaApertar(B, apertoBotao); }
+      if (par && B) { SIMU.bancadaMudar(B, x => { x.botao = true; }); }
+    });
+    window.addEventListener('mouseup', () => { solta(); const k = cap(), B = bancadas[k.quadro]; if (B && B.est.botao) SIMU.bancadaMudar(B, x => { x.botao = false; }); });
+    // placa
+    const area = q$('#mtQuadro');
+    area.addEventListener('mousemove', aoMover);
+    area.addEventListener('mouseleave', () => { hover = null; realcar(null); if (mao) desenhar(); });
+    area.addEventListener('click', aoClicar);
+    area.addEventListener('wheel', e => { const k = cap(); if (!(k.quadro === 'protoboard' || k.quadro === 'placa')) return; e.preventDefault(); zoom = Math.max(1, Math.min(4, zoom * (e.deltaY < 0 ? 1.15 : 1 / 1.15))); if (zoom === 1) pan = [0, 0]; desenhar(); }, { passive: false });
+    let arrasto = null;
+    area.addEventListener('mousedown', e => { if (e.button === 1 || e.shiftKey) { arrasto = [e.clientX, e.clientY, pan[0], pan[1]]; e.preventDefault(); } });
+    window.addEventListener('mousemove', e => { if (!arrasto) return; const svg = q$('#mtSvg'); if (!svg) return; const s = svg.viewBox.baseVal.width / svg.clientWidth; pan = [arrasto[2] - (e.clientX - arrasto[0]) * s, arrasto[3] - (e.clientY - arrasto[1]) * s]; desenhar(); });
+    window.addEventListener('mouseup', () => { arrasto = null; });
+    window.addEventListener('keydown', e => {
+      if (!document.body.classList.contains('modo-montar')) return;
+      if (e.target.closest && e.target.closest('textarea, input')) return;
+      if ((e.key === 'r' || e.key === 'R') && mao) { girar(); e.preventDefault(); }
+      if (e.key === 'Escape' && mao) { mao = null; render(); }
+      if (e.code === 'Space' && tr && passoAtual().tipo === 'treino') { tr.estanho = true; e.preventDefault(); }
+    });
+    window.addEventListener('keyup', e => { if (e.code === 'Space' && tr) tr.estanho = false; });
+    let ult = performance.now();
+    setInterval(() => { const a = performance.now(); const dt = (a - ult) / 1000; ult = a; laco(); if (tr && passoAtual().tipo === 'treino' && document.body.classList.contains('modo-montar')) treinoPasso(dt); }, 33);
+  }
+  function rotInicial(p) { const lay = L[p.cap.quadro].pecas[p.peca]; const forma = lay.forma; return (forma === 'to92' || forma === 'to220' || forma === 'buzzer' || forma === 'esp') ? (lay.rot + 180) % 360 : lay.rot; }
+  function girar() { if (!mao) return; mao.rot = (mao.rot + 90) % 360; desenhar(); }
+  function navegar(d) {
+    const k = cap(), p = passoAtual(), i = k.passos.indexOf(p);
+    if (i + d >= 0 && i + d < k.passos.length) st().passo = k.passos[i + d].id;
+    else if (d > 0) { const ci = CAPITULOS.indexOf(k); if (ci < CAPITULOS.length - 1) { st().cap = CAPITULOS[ci + 1].id; st().passo = null; } }
+    save(); render();
+    q$('#mtCard').scrollIntoView({ block: 'nearest' });
+  }
+
+  // ---------- início ----------
+  function iniciar() {
+    ligarEventos(); render();
+  }
+  function abrirPasso(id) { const p = PASSOS.find(x => x.id === id); if (!p) return; st().cap = p.cap.id; st().passo = id; save(); render(); }
+  // para os testes automáticos: resolve o passo atual do jeito certo
+  function resolverPasso() {
+    const p = passoAtual(), k = p.cap, lay = L[k.quadro];
+    if (feito(p)) return 'já feito';
+    switch (p.tipo) {
+      case 'ver': case 'ver3d': case 'encaixar': (q$('[data-ok]') || q$('[data-encaixar]')).click(); break;
+      case 'explorar': ['a10', 'f20', 'T+5'].forEach(f => { prog.tiras.add(CIR.tiraDoFuro(f)); }); concluir(); break;
+      case 'quiz': q$(`[data-quiz="${p.certa}"]`).click(); break;
+      case 'checklist': p.itens.forEach((_, i) => { const c = q$(`[data-chk="${i}"]`); if (!c.checked) c.click(); }); break;
+      case 'colocar': mao = { peca: p.peca, rot: lay.pecas[p.peca].rot }; colocar(lay.pecas[p.peca].ancora); break;
+      case 'pernas': p.pecas.forEach(id => { if (prog.pecas.includes(id)) return; prog.selecionada = id; const pp = lay.pecas[id].pernas, ks = Object.keys(pp); pernas(pp[ks[0]]); pernas(pp[ks[1]]); }); break;
+      case 'jumper': p.jumpers.forEach(id => { if (prog.jumpers.includes(id)) return; const j = lay.jumpers.find(x => x.id === id); ligar(j.de); ligar(j.para); }); break;
+      case 'fio': p.fios.forEach(id => { if (prog.fios.includes(id)) return; const j = lay.fios.find(x => x.id === id); ligar(j.de); ligar(j.para); }); break;
+      case 'soldar': vista = 'baixo'; furosASoldar(p).forEach(f => soldar(f)); break;
+      case 'ponte': vista = 'baixo'; p.pontes.forEach(id => lay.pontes.find(x => x.id === id).furos.forEach(f => { if (!feito(p)) pontear(f); })); break;
+      case 'treino': prog.boas = p.n; concluir(); break;
+      default: return 'manual';
+    }
+    return feito(p) ? 'ok' : 'falta';
+  }
+  return { iniciar, render, totais, proximoGeral, abrirPasso, resolverPasso, passoAtual, feito, PASSOS, ctrl, pontas, sincronizar, bancadas, simPainel, conteudo, get prog() { return prog; } };
+})();
+
+
 /* ===== app.js ===== */
 /* ---------- estado ---------- */
 const KEY='coleira-site-v1';
@@ -1088,6 +2887,8 @@ function go(t){
   document.querySelectorAll('nav.tabs button').forEach(b=>b.setAttribute('aria-selected',b.dataset.tab===t));
   document.querySelectorAll('section.tab').forEach(s=>s.classList.toggle('on',s.id==='t-'+t));
   document.body.classList.toggle('modo-projeto',t==='projeto');
+  document.body.classList.toggle('modo-montar',t==='montar');
+  if(t==='montar'&&window.MT) MT.render();
   medirAbas();
   if(t==='projeto'){
     // o 3D só carrega na primeira vez que a aba abre
@@ -1152,22 +2953,8 @@ $('#buyList').addEventListener('click',e=>{
 $('#showOpt').addEventListener('change',e=>{S.opt=e.target.checked;save();renderBuy();});
 
 /* ---------- montar ---------- */
-function curStep(){for(let i=0;i<STEPS.length;i++) if(!S.steps[i]) return i; return -1;}
-function renderSteps(){
-  const cur=curStep();
-  const openIdx = S.open===null||S.open===undefined ? cur : S.open;
-  $('#steps').innerHTML=STEPS.map((st,i)=>{
-    const done=!!S.steps[i];
-    return `<details class="step ${done?'done':''} ${i===cur?'cur':''}" data-i="${i}" ${i===openIdx?'open':''}>
-      <summary><span class="num">${done?'✓':i+1}</span><span class="st"><b>Etapa ${i+1}: ${st.t}</b><span>${st.s}</span></span><span class="chev">›</span></summary>
-      <div class="body">${st.html}
-        <div class="stepbtns">${done
-          ?`<button class="btn ghost" data-undo="${i}">Desmarcar</button>`
-          :`<button class="btn ok" data-pass="${i}">Passou ✓</button>`}</div>
-      </div></details>`;
-  }).join('');
-  const wt=$('#wireTable'); if(wt) wt.innerHTML=wireTable();
-}
+// A aba Montar é feita por montagem-ui.js (MT). Aqui só a tabela de ligações,
+// que aparece no capítulo da placa ilhada.
 // A tabela sai de LIGACOES (circuito.js), a mesma fonte da bancada simulada.
 function wireTable(){
   const rows=LIGACOES.filter(l=>l.n), n=rows.length, d=rows.filter(l=>S.wires[l.n]).length;
@@ -1179,20 +2966,12 @@ function wireTable(){
   });
   return h+'</tbody></table>';
 }
-$('#steps').addEventListener('click',e=>{
-  const p=e.target.closest('[data-pass]'), u=e.target.closest('[data-undo]');
-  if(p){S.steps[p.dataset.pass]=1; S.open=null; save(); renderAll(); const c=curStep(); const el=document.querySelector(`.step[data-i="${c}"]`); if(el) el.scrollIntoView({behavior:'smooth',block:'start'});}
-  if(u){delete S.steps[u.dataset.undo]; save(); renderAll();}
-});
-$('#steps').addEventListener('change',e=>{
+function renderSteps(){ if(window.MT && document.getElementById('mtCard')) MT.render(); }
+document.getElementById('t-montar').addEventListener('change',e=>{
   const w=e.target.closest('[data-w]'); if(!w) return;
   if(w.checked) S.wires[w.dataset.w]=1; else delete S.wires[w.dataset.w];
-  save(); $('#wireTable').innerHTML=wireTable(); renderTop();
+  save(); const t=document.getElementById('wireTable'); if(t) t.innerHTML=wireTable(); renderTop();
 });
-$('#steps').addEventListener('toggle',e=>{
-  const d=e.target; if(!d.matches||!d.matches('details.step')) return;
-  if(d.open){S.open=+d.dataset.i; save();}
-},true);
 
 /* ---------- testar ---------- */
 function renderTests(){
@@ -1243,20 +3022,20 @@ $('#fwRoteiro').addEventListener('change',e=>{
 function progress(){
   const b=buyStats();
   const buyP=b.arrived/b.n;
-  const stepP=Object.keys(S.steps).length/STEPS.length;
+  const mt=MT.totais(), stepP=mt.n/mt.t;
   const testP=(Object.keys(S.tests).length+Object.keys(S.final).length)/(TESTS.length+FINAL.length);
   return {b,buyP,stepP,testP,total:(buyP*0.25+stepP*0.5+testP*0.25)};
 }
 function renderTop(){
   const p=progress(), pct=Math.round(p.total*100);
   $('#topPct').textContent=pct+'%'; $('#topBar').style.width=pct+'%';
-  const ns=Object.keys(S.steps).length, nt=Object.keys(S.tests).length;
+  const mt=MT.totais(), nt=Object.keys(S.tests).length;
   const cb=$('#cntBuy'); cb.textContent=p.b.arrived+'/'+p.b.n; cb.classList.toggle('done',p.b.arrived===p.b.n);
-  const cs=$('#cntBuild'); cs.textContent=ns+'/'+STEPS.length; cs.classList.toggle('done',ns===STEPS.length);
+  const cs=$('#cntBuild'); cs.textContent=mt.n+'/'+mt.t; cs.classList.toggle('done',mt.n===mt.t);
   const ct=$('#cntTest'); ct.textContent=nt+'/'+TESTS.length; ct.classList.toggle('done',nt===TESTS.length);
 }
 function renderHome(){
-  const p=progress(), b=p.b, cur=curStep();
+  const p=progress(), b=p.b, prox=MT.proximoGeral();
   const notBought=req().filter(i=>!S.buy[i.id]);
   const waiting=req().filter(i=>S.buy[i.id]==='bought');
   const aeLeft=notBought.filter(i=>i.g==='ae').length;
@@ -1265,19 +3044,19 @@ function renderHome(){
     stage=0; k='Agora'; t='Fazer as compras';
     d=aeLeft?`Faltam ${notBought.length} itens (${brl0(b.left)}). Comece pelos ${aeLeft} do AliExpress, que demoram de 2 a 4 semanas para chegar.`:`Faltam ${notBought.length} itens do Mercado Livre e da bancada (${brl0(b.left)}).`;
     btn='Abrir lista de compras'; tab='comprar';
-  } else if(waiting.length && cur<=0){
+  } else if(waiting.length && MT.totais().n===0){
     stage=0; k='Esperando chegar'; t=`${waiting.length} ${waiting.length>1?'itens a caminho':'item a caminho'}`;
-    d='Enquanto isso, dá para imprimir as peças 3D (Etapa 3) e testar sozinha cada peça que já chegou (Etapa 1).';
-    btn='Ver etapas'; tab='montar';
-  } else if(cur!==-1){
-    stage=1; k='Próxima etapa'; t=`Etapa ${cur+1}: ${STEPS[cur].t}`; d=STEPS[cur].s+'.'; btn='Abrir etapa'; tab='montar';
+    d='Enquanto isso, dá para fazer na tela os capítulos 0, 1 e 4 da aba Montar (protoboard, peças e treino de solda) e imprimir as peças 3D.';
+    btn='Abrir Montar'; tab='montar';
+  } else if(prox){
+    stage=1; k='Próximo passo'; t=`${prox.cap.t}: ${prox.t}`; d=prox.cap.s+'.'; btn='Abrir passo'; tab='montar';
   } else if(Object.keys(S.tests).length<TESTS.length||Object.keys(S.final).length<FINAL.length){
     stage=2; k='Agora'; t='Testar antes de entregar'; d=`Faltam ${TESTS.length-Object.keys(S.tests).length} testes e ${FINAL.length-Object.keys(S.final).length} itens do checklist.`; btn='Abrir testes'; tab='testar';
   } else {
     stage=3; k='Pronto'; t='Coleira pronta para entregar'; d='Combine a entrega e o retorno com o comprador. O roteiro de perguntas está em "Para depois", no fim do Início.'; btn='Abrir Para depois'; tab='depois';
   }
-  $('#nextCard').innerHTML=`<div class="k">${k}</div><h3>${t}</h3><p>${d}</p><button class="btn" data-go="${tab}">${btn} →</button>`;
-  const st=[['Comprar',p.buyP,`${b.arrived}/${b.n}`,'comprar'],['Montar',p.stepP,`${Object.keys(S.steps).length}/${STEPS.length}`,'montar'],['Testar',p.testP,`${Object.keys(S.tests).length}/${TESTS.length}`,'testar'],['Entregar',stage===3?1:0,stage===3?'pronto':'—','depois']];
+  $('#nextCard').innerHTML=`<div class="k">${k}</div><h3>${t}</h3><p>${d}</p><button class="btn" data-go="${tab}" ${prox&&tab==='montar'?`data-passo-inicio="${prox.id}"`:''}>${btn} →</button>`;
+  const st=[['Comprar',p.buyP,`${b.arrived}/${b.n}`,'comprar'],['Montar',p.stepP,`${MT.totais().n}/${MT.totais().t}`,'montar'],['Testar',p.testP,`${Object.keys(S.tests).length}/${TESTS.length}`,'testar'],['Entregar',stage===3?1:0,stage===3?'pronto':'—','depois']];
   $('#stages').innerHTML=st.map((s,i)=>`<button class="stage ${i===stage?'cur':''}" data-go="${s[3]}"><div class="t">${s[0]}<span>${s[2]}</span></div><div class="bar"><i style="width:${Math.round(s[1]*100)}%"></i></div></button>`).join('');
   $('#facts').innerHTML=`
     <div class="fact"><div class="v">${brl0(b.coleira)}</div><div class="l">compras da coleira (sem bancada nem frete)</div></div>
@@ -1285,7 +3064,7 @@ function renderHome(){
     <div class="fact"><div class="v">~6 semanas</div><div class="l">do pedido até a coleira chegar ao comprador</div></div>
     <div class="fact"><div class="v">Firmware v0.1</div><div class="l">pronto e testado em simulação. Falta a bancada (Etapa 2)</div></div>`;
 }
-document.body.addEventListener('click',e=>{const g=e.target.closest('[data-go]'); if(g) go(g.dataset.go);});
+document.body.addEventListener('click',e=>{const g=e.target.closest('[data-go]'); if(g){ if(g.dataset.passoInicio) MT.abrirPasso(g.dataset.passoInicio); go(g.dataset.go);} });
 
 $('#resetBtn').addEventListener('click',()=>{
   if(!S._confirm){S._confirm=1;$('#resetBtn').textContent='Clique de novo para apagar';setTimeout(()=>{delete S._confirm;$('#resetBtn').textContent='Apagar tudo o que marquei';},4000);return;}
@@ -1295,7 +3074,7 @@ $('#resetBtn').addEventListener('click',()=>{
 function renderAll(){renderBuy();renderSteps();renderTests();renderFirmware();renderHome();renderTop();}
 renderAll();
 function fromHash(){const h=(location.hash||'').slice(1); if(ABAS.includes(h)||h==='depois') go(h);}
-medirAbas(); fromHash(); window.addEventListener('hashchange',fromHash);
+MT.iniciar(); medirAbas(); fromHash(); window.addEventListener('hashchange',fromHash);
 
 // Confere a tabela de ligações contra o esquema (aparece no console se algo não bater).
 (function(){const p=conferirCircuito(); if(p.length) console.warn('Circuito:',p);})();
@@ -1309,7 +3088,8 @@ import { RoundedBoxGeometry } from 'three/addons/geometries/RoundedBoxGeometry.j
 import { CSS2DRenderer, CSS2DObject } from 'three/addons/renderers/CSS2DRenderer.js';
 
 // O 3D só começa quando a aba "Projeto 3D" é aberta pela primeira vez.
-let iniciado = false;
+let iniciado = false, pronto = false, fila = null, aplicarAcao = null;
+function mostrar(a) { fila = a; if (pronto && aplicarAcao) { aplicarAcao(fila); fila = null; } else iniciar(); }
 async function iniciar() {
   if (iniciado) { window.dispatchEvent(new Event('resize')); return; }
   iniciado = true;
@@ -1692,6 +3472,26 @@ const PIN_X = [-0.2, 3.8], PIN_Z = 3.6;
 
 // ---------- placa de controle (v2) ----------
 const BW = 7, BD = 9, BY = 3.2, TOP = 3.28;
+// A placa do 3D sai do mesmo desenho furo a furo da aba Montar (LAYOUT.placa em circuito.js).
+const CIRC = window.CIRCUITO, LP = CIRC && CIRC.LAYOUT && CIRC.LAYOUT.placa;
+const PASSO = 0.254;
+const furo3 = f => { const [c, r] = f.split(',').map(Number); return [(c - 11.5) * PASSO, (r - 14.5) * PASSO]; };
+function centro3(id, def) {
+  if (!LP || !LP.pecas[id]) return def;
+  const ps = Object.values(CIRC.pinosDaPeca(LP, id)).filter(Boolean).map(furo3);
+  return [ps.reduce((a, p) => a + p[0], 0) / ps.length, ps.reduce((a, p) => a + p[1], 0) / ps.length];
+}
+const pinoDe = (id, n, def) => (LP && LP.pecas[id]) ? furo3(CIRC.pinosDaPeca(LP, id)[n]) : def;
+const POS = {
+  esp32: centro3('esp', [-2.2, 0.2]),
+  rxb6: (() => { const [x, z] = centro3('rx', [-0.05, -2.9]); return [x - 1.35, z]; })(),
+  tp4056: (() => { const [x, z] = centro3('tp', [-0.75, 2.6]); return [x - 1.15, z]; })(),
+  mosfetA: (() => { const [x, z] = pinoDe('ma', 'D', [1.18, 0]); return [x + 1.17, z]; })(),
+  mosfetB: (() => { const [x, z] = pinoDe('mb', 'D', [1.18, 1.4]); return [x + 1.17, z]; })(),
+  buzzer: centro3('bz', [2.3, -2.9]),
+};
+POS.antena = [POS.rxb6[0] - 1.36, POS.rxb6[1]];
+const pad3 = n => LP ? furo3(LP.pontos[n]) : null;
 const bxz = (x, z) => [(x + BW / 2) * PX, (z + BD / 2) * PX];
 const TRACES = [
   ['#d7262e', 22, [[0.3, -1.6], [0.3, 1.4]]],
@@ -1718,38 +3518,39 @@ const TRACES = [
   const g = new THREE.Group();
   const tex = canvasTex(BW * PX, BD * PX, (c, w, h) => {
     c.fillStyle = '#c9a46a'; c.fillRect(0, 0, w, h);
-    for (let x = 16; x < w; x += 32) for (let y = 16; y < h; y += 32) { c.fillStyle = '#b07a3c'; c.beginPath(); c.arc(x, y, 9, 0, 7); c.fill(); c.fillStyle = '#5a4126'; c.beginPath(); c.arc(x, y, 3, 0, 7); c.fill(); }
     c.lineCap = 'round'; c.lineJoin = 'round';
-    TRACES.forEach(([col, wd, pts]) => {
-      const path = () => { c.beginPath(); pts.forEach(([x, z], i) => { const [px, py] = bxz(x, z); if (i) c.lineTo(px, py); else c.moveTo(px, py); }); };
-      path(); c.strokeStyle = 'rgba(244,232,206,.95)'; c.lineWidth = wd + 10; c.stroke();
-      path(); c.strokeStyle = col; c.lineWidth = wd; c.stroke();
-    });
-    const hole = (x, z, r) => { const [px, py] = bxz(x, z); c.fillStyle = '#d9b45a'; c.beginPath(); c.arc(px, py, r + 8, 0, 7); c.fill(); c.fillStyle = '#2a2016'; c.beginPath(); c.arc(px, py, r, 0, 7); c.fill(); };
-    hole(-0.38, 1.95, 13); hole(-0.38, 2.38, 13);
-    const padAt = (x, z, s) => { const [px, py] = bxz(x, z); pad(c, px, py, s); };
-    padAt(0.3, -0.2, 40); padAt(3.3, -1.6, 40);
-    const T = (s, x, z, px, col = '#3b2a17') => { const [a, b] = bxz(x, z); txt(c, s, a, b, px, col, 'center', 600); };
-    T('+', 0.3, -1.98, 34, '#8a1212'); T('−', 0.85, -3.35, 34, '#111');
-    T('AT+', 3.3, -2.0, 20); T('CHAVE', 0.3, -0.58, 17); T('BAT', -0.38, 1.6, 17);
-    T('PLACA DE CONTROLE', 1.95, 3.55, 24, '#4a3520'); T('v2 · 7 × 9 cm', 1.95, 3.95, 20, '#5a4126');
+    const P = (f) => bxz(...furo3(f));
+    if (LP) {
+      // fios por baixo (aparecem por transparência, para mostrar as ligações)
+      LP.fios.forEach(fi => { const [ax, ay] = P(fi.de), [bx, by] = P(fi.para); c.globalAlpha = 0.85;
+        c.beginPath(); c.moveTo(ax, ay); c.lineTo(bx, by); c.strokeStyle = 'rgba(244,232,206,.95)'; c.lineWidth = 14; c.stroke();
+        c.beginPath(); c.moveTo(ax, ay); c.lineTo(bx, by); c.strokeStyle = fi.cor; c.lineWidth = 7; c.stroke(); c.globalAlpha = 1; });
+      LP.pontes.forEach(po => { c.strokeStyle = '#d9dde2'; c.lineWidth = po.grossa ? 16 : 10;
+        po.furos.forEach((f, i) => { if (!i) return; const pts = po.furos.slice(0, i).map(P), [x, y] = P(f); let m = pts[0], d = 1e9; pts.forEach(p => { const dd = (p[0] - x) ** 2 + (p[1] - y) ** 2; if (dd < d) { d = dd; m = p; } }); c.beginPath(); c.moveTo(m[0], m[1]); c.lineTo(x, y); c.stroke(); }); });
+      for (let r = 0; r < 30; r++) for (let col = 0; col < 24; col++) { const [x, y] = P(col + ',' + r); c.fillStyle = '#b07a3c'; c.beginPath(); c.arc(x, y, 9, 0, 7); c.fill(); c.fillStyle = '#5a4126'; c.beginPath(); c.arc(x, y, 3, 0, 7); c.fill(); }
+      const T = (s2, f, px, col = '#3b2a17', dy = 0) => { const [a, b] = P(f); txt(c, s2, a, b + dy, px, col, 'center', 600); };
+      T('CHAVE', LP.pontos['placa.CHAVE'], 15, '#3b2a17', 22); T('AT+', LP.pontos['placa.AT+'], 17, '#3b2a17', 22);
+      T('+', '15,28', 26, '#8a1212', 24); T('−', '18,26', 26, '#111', -22);
+      txt(c, 'PLACA DE CONTROLE · v2 · 7 × 9 cm', w / 2, h - 18, 18, '#4a3520', 'center', 600);
+    }
   });
   g.add(board(BW, 0.16, BD, 0xc9a46a, tex, 0, BY, 0));
   const cap = new THREE.Group();
   cap.add(cyl(0.5, 1.8, M(0x1c2a52, { roughness: 0.35, clearcoat: 0.6 }), 0, 0.9, 0, 32));
   cap.add(cyl(0.5, 0.03, tin(), 0, 1.81, 0, 32));
   cap.add(box(0.12, 1.75, 0.2, M(0xc9ccd4, { roughness: 0.5 }), 0.46, 0.9, 0));
-  cap.position.set(-0.55, TOP, 1.0); g.add(cap);
+  { const [x, z] = centro3('cap', [-0.55, 1.0]); cap.position.set(x, TOP, z); } g.add(cap);
   const to92 = new THREE.Mesh(new THREE.CylinderGeometry(0.22, 0.22, 0.45, 20, 1, false, 0, Math.PI), M(0x111214, { roughness: 0.4 }));
-  to92.position.set(1.55, TOP + 0.24, -2.3); g.add(to92);
+  { const [x, z] = centro3('q', [1.55, -2.3]); to92.position.set(x, TOP + 0.24, z); } g.add(to92);
   const res = (x, z, axis, warm) => {
     g.add(cyl(0.09, 0.42, M(warm ? 0xd8c39a : 0x6fa8dc, { roughness: 0.5 }), x, TOP + 0.13, z, 12, axis));
     [-0.1, 0.0, 0.1].forEach((o, i) => g.add(cyl(0.096, 0.035, M([0x8b1a1a, 0x111111, 0xc59a2b][i], { roughness: 0.5 }), x + (axis === 'x' ? o : 0), TOP + 0.13, z + (axis === 'z' ? o : 0), 12, axis)));
   };
-  res(-0.85, 0.34, 'x', true); res(2.2, 2.2, 'z', true); res(1.05, -0.25, 'x'); res(1.05, 1.15, 'x');
-  res(0.6, -2.3, 'x', true); res(0.05, -1.25, 'x'); res(0.55, -1.25, 'x');
-  g.add(box(0.62, 0.32, 0.62, M(0x2b2d31, { roughness: 0.4 }), -0.35, TOP + 0.16, -1.8));
-  g.add(cyl(0.18, 0.12, M(0x111214, { roughness: 0.5 }), -0.35, TOP + 0.38, -1.8, 16));
+  if (LP) ['rd2', 'rd1', 'rb', 'rga', 'rpa', 'rgb', 'rpb'].forEach(id => { const pp = Object.values(LP.pecas[id].pernas).map(furo3); const [x, z] = centro3(id); res(x, z, Math.abs(pp[0][1] - pp[1][1]) < 0.01 ? 'x' : 'z', CIRC.PECAS[id].valor >= 10000); });
+  else { res(-0.85, 0.34, 'x', true); res(2.2, 2.2, 'z', true); res(1.05, -0.25, 'x'); res(1.05, 1.15, 'x'); res(0.6, -2.3, 'x', true); res(0.05, -1.25, 'x'); res(0.55, -1.25, 'x'); }
+  { const [x, z] = centro3('bt', [-0.35, -1.8]);
+    g.add(box(0.62, 0.32, 0.62, M(0x2b2d31, { roughness: 0.4 }), x, TOP + 0.16, z));
+    g.add(cyl(0.18, 0.12, M(0x111214, { roughness: 0.5 }), x, TOP + 0.38, z, 16)); }
   reg('placa', g, { name: 'Placa de controle (7 × 9 cm)', what: 'Junta tudo numa peça só: ESP32, receptor, carregador, os 2 MOSFETs, o buzzer e os componentes pequenos (capacitor, resistores, transistor e botão de pareamento). As linhas coloridas mostram as ligações feitas por baixo da placa. Com ela, sobram só 10 fios soltos dentro da caixa.', cost: 'R$ 19 a placa + miúdos', side: 'dentro', label: V(2.0, 3.6, 3.75), explode: V(0, 4.8, 0),
     traces: [['#d7262e', 'Barramento + (depois da chave)'], ['#2b2c30', 'Barramento −'], ['#1c2a52', 'Capacitor de 1.000 µF entre o 5V e o GND do ESP32'], ['#f4f4ef', 'Divisor de 2 resistores de 100 kΩ que mede a bateria'], ['#8a9097', 'Botão de pareamento']] });
 }
@@ -1765,7 +3566,7 @@ function to220(id, name, z, info) {
   g.add(box(0.6, 0.12, 1.0, tin(), 0.72, 0.06, 0));
   g.add(cyl(0.17, 0.13, M(0x2a2016, { roughness: 0.6 }), 0.78, 0.06, 0, 20));
   [-0.25, 0, 0.25].forEach(dz => { g.add(box(0.75, 0.05, 0.09, tin(), -0.82, 0.1, dz)); g.add(box(0.06, 0.16, 0.09, tin(), -1.17, 0.03, dz)); });
-  g.position.set(2.35, TOP, z);
+  const pz = POS[id] || [2.35, z]; g.position.set(pz[0], TOP, pz[1]);
   return reg(id, g, info);
 }
 to220('mosfetA', 'A', 0.0, { name: 'MOSFET A (IRLZ44N)', what: 'Primeira chave do choque, deitada na placa. O ESP32 liga pelo GPIO 4, por um resistor de 100 Ω. É ela que faz os pulsos do B e do C. A aba de metal é o dreno: recebe o negativo do módulo de alta tensão.', cost: 'R$ 28,90 o pacote com 3 (um é reserva)', side: 'dentro', label: V(2.4, 4.05, -0.2), explode: V(0, 4.8, 0),
@@ -1804,8 +3605,8 @@ to220('mosfetB', 'B', 1.4, { name: 'MOSFET B (IRLZ44N)', what: 'Segunda chave, e
   g.add(cyl(0.07, 0.05, M(0x111111), -0.5, 0.22, 0.55, 12)); g.add(cyl(0.07, 0.05, M(0x111111), 0.5, 0.22, 0.55, 12));
   g.add(box(0.12, 0.06, 0.08, M(0x2b6cff, { emissive: new THREE.Color(0x1d4fd0), emissiveIntensity: 1.2 }), 0.45, 0.1, 0.2));
   [-0.94, -0.67, -0.4, -0.13, 0.14, 0.41, 0.68, 0.95].forEach(zz => { g.add(box(0.06, 0.2, 0.06, gold(), 0.8, -0.13, zz)); g.add(box(0.06, 0.2, 0.06, gold(), -0.8, -0.13, zz)); });
-  g.position.set(-2.2, TOP + 0.2, 0.2);
-  reg('esp32', g, { name: 'ESP32-C3 SuperMini', what: 'O cérebro, soldado direto na placa. Confere se o código veio de um controle pareado, respeita os limites de tempo, faz o choque fraco em pulsos e decide quando sai o choque. O LED azul aparece pela tampa transparente.', cost: 'R$ 16,14 no AliExpress', side: 'dentro', label: V(-2.4, 4.15, 0.3), explode: V(0, 4.8, 0),
+  g.position.set(POS.esp32[0], TOP + 0.2, POS.esp32[1]);
+  reg('esp32', g, { name: 'ESP32-C3 SuperMini', what: 'O cérebro, soldado direto na placa. Confere se o código veio de um controle pareado, respeita os limites de tempo, faz o choque fraco em pulsos e decide quando sai o choque. O LED azul aparece pela tampa transparente.', cost: 'R$ 16,14 no AliExpress', side: 'dentro', label: V(POS.esp32[0] - 0.2, 4.15, POS.esp32[1] + 0.1), explode: V(0, 4.8, 0),
     traces: [['#d7262e', '5V ← barramento +'], ['#2b2c30', 'GND → barramento −'], ['#e6b800', 'GPIO 3 ← dados do RXB6'], ['#1f9a4f', 'GPIO 4 → MOSFET A; GPIO 6 → MOSFET B'], ['#2f6fd6', 'GPIO 5 → 1 kΩ → BC547 → buzzer'], ['#f4f4ef', 'GPIO 0 ← divisor que mede a bateria'], ['#8a9097', 'GPIO 1 ← botão de pareamento'], ['#f08a24', '3V3 → RXB6 e buzzer']] });
 }
 
@@ -1823,8 +3624,8 @@ to220('mosfetB', 'B', 1.4, { name: 'MOSFET B (IRLZ44N)', what: 'Segunda chave, e
   g.add(cyl(0.12, 0.25, M(0x2f7d4a, { roughness: 0.4 }), -0.9, 0.17, 0.2, 14));
   [-0.41, -0.14, 0.13, 0.39].forEach(zz => g.add(box(0.06, 0.32, 0.06, gold(), 1.35, -0.16, zz)));
   g.add(box(0.06, 0.32, 0.06, gold(), -1.36, -0.16, 0));
-  g.position.set(-1.4, TOP + 0.3, -2.9);
-  reg('rxb6', g, { name: 'Receptor RXB6 433 MHz', what: 'Escuta o rádio do controle e passa o código para o ESP32. Soldado direto na placa, alimentado pelos 3,3 V do ESP32.', cost: 'R$ 10,30 no AliExpress (1 por pessoa nesse preço)', side: 'dentro', label: V(-1.0, 4.1, -3.4), explode: V(0, 4.8, 0),
+  g.position.set(POS.rxb6[0], TOP + 0.3, POS.rxb6[1]);
+  reg('rxb6', g, { name: 'Receptor RXB6 433 MHz', what: 'Escuta o rádio do controle e passa o código para o ESP32. Soldado direto na placa, alimentado pelos 3,3 V do ESP32.', cost: 'R$ 10,30 no AliExpress (1 por pessoa nesse preço)', side: 'dentro', label: V(POS.rxb6[0] + 0.4, 4.1, POS.rxb6[1] - 0.5), explode: V(0, 4.8, 0),
     traces: [['#f08a24', 'VCC ← 3V3 do ESP32'], ['#e6b800', 'DATA → GPIO 3'], ['#2b2c30', 'GND → barramento −']] });
 }
 {
@@ -1833,8 +3634,8 @@ to220('mosfetB', 'B', 1.4, { name: 'MOSFET B (IRLZ44N)', what: 'Segunda chave, e
   const copper = M(0xc8a24a, { metalness: 1, roughness: 0.28 });
   const hx = new THREE.Mesh(new THREE.TubeGeometry(new Helix(), 360, 0.035, 6, false), copper); hx.position.y = 0.18; g.add(hx);
   g.add(cyl(0.035, 0.2, copper, 0.2, 0.09, 0, 8));
-  g.position.set(-2.76, TOP + 0.36, -2.9);
-  reg('antena', g, { name: 'Antena em mola 433 MHz', what: 'Uma mola pequena soldada no pino ANT do receptor. Substitui o fio de 17,3 cm que dava a volta na caixa. Se o alcance ficar curto no teste do galão, volte para o fio.', cost: 'R$ 13,44', side: 'dentro', label: V(-2.76, 5.0, -2.9), explode: V(0, 4.8, 0) });
+  g.position.set(POS.antena[0], TOP + 0.36, POS.antena[1]);
+  reg('antena', g, { name: 'Antena em mola 433 MHz', what: 'Uma mola pequena soldada no pino ANT do receptor. Substitui o fio de 17,3 cm que dava a volta na caixa. Se o alcance ficar curto no teste do galão, volte para o fio.', cost: 'R$ 13,44', side: 'dentro', label: V(POS.antena[0], 5.0, POS.antena[1]), explode: V(0, 4.8, 0) });
 }
 
 // ---------- TP4056 ----------
@@ -1853,8 +3654,8 @@ to220('mosfetB', 'B', 1.4, { name: 'MOSFET B (IRLZ44N)', what: 'Segunda chave, e
   g.add(box(0.12, 0.07, 0.08, M(0xff3b30, { emissive: new THREE.Color(0xa00000), emissiveIntensity: 0.6 }), 0.0, 0.09, -0.4));
   g.add(box(0.12, 0.07, 0.08, M(0x2b6cff), 0.25, 0.09, -0.4));
   [[1.15, -0.6], [1.15, -0.31], [1.15, 0.31], [1.15, 0.6], [-1.15, -0.44], [-1.15, 0.44]].forEach(([x, z]) => g.add(box(0.06, 0.2, 0.06, gold(), x, -0.12, z)));
-  g.position.set(-1.9, TOP + 0.14, 2.6);
-  reg('tp4056', g, { name: 'Carregador TP4056', what: 'Carrega a bateria pelo USB-C e corta a energia se a bateria descarregar demais ou der curto. As luzes (vermelha carregando, azul cheia) aparecem pela tampa transparente.', cost: 'R$ 12,08 o pacote com 5', side: 'dentro', label: V(-2.1, 4.0, 2.9), explode: V(0, 4.8, 0),
+  g.position.set(POS.tp4056[0], TOP + 0.14, POS.tp4056[1]);
+  reg('tp4056', g, { name: 'Carregador TP4056', what: 'Carrega a bateria pelo USB-C e corta a energia se a bateria descarregar demais ou der curto. As luzes (vermelha carregando, azul cheia) aparecem pela tampa transparente.', cost: 'R$ 12,08 o pacote com 5', side: 'dentro', label: V(POS.tp4056[0] - 0.2, 4.0, POS.tp4056[1] + 0.3), explode: V(0, 4.8, 0),
     traces: [['#2b2c30', 'OUT− → barramento −']] });
 }
 
@@ -1865,8 +3666,8 @@ to220('mosfetB', 'B', 1.4, { name: 'MOSFET B (IRLZ44N)', what: 'Segunda chave, e
   g.add(cyl(0.12, 0.05, M(0x2a2c30), 0, 0.44, 0, 16));
   const t = canvasTex(128, 128, (c, w, h) => { c.fillStyle = '#121315'; c.fillRect(0, 0, w, h); txt(c, '+', 30, 64, 30, '#ddd'); });
   const top = new THREE.Mesh(new THREE.CircleGeometry(0.58, 32), M(0xffffff, { map: t, roughness: 0.5 })); top.rotation.x = -Math.PI / 2; top.position.y = 0.43; g.add(top);
-  g.position.set(2.3, TOP + 0.43, -2.9);
-  reg('buzzer', g, { name: 'Buzzer', what: 'Bipa antes de todo choque, para o boi associar o som. Também avisa por bipes: bateria fraca, pareamento feito.', cost: 'R$ 11,71 o pacote com 10', side: 'dentro', label: V(2.3, 4.6, -2.9), explode: V(0, 4.8, 0),
+  g.position.set(POS.buzzer[0], TOP + 0.43, POS.buzzer[1]);
+  reg('buzzer', g, { name: 'Buzzer', what: 'Bipa antes de todo choque, para o boi associar o som. Também avisa por bipes: bateria fraca, pareamento feito.', cost: 'R$ 11,71 o pacote com 10', side: 'dentro', label: V(POS.buzzer[0], 4.6, POS.buzzer[1]), explode: V(0, 4.8, 0),
     traces: [['#f08a24', '+ ← 3V3'], ['#2f6fd6', '− → coletor do BC547']] });
 }
 
@@ -1906,14 +3707,14 @@ const C = { red: 0xd7262e, black: 0x1f2024, green: 0x1f9a4f, yellow: 0xf2c418, o
 const R = { thin: 0.042, thick: 0.066, hv: 0.088 };
 const wires = [];
 function W(id, ca, pa, cb, pb, color, kind, label, h, via) { wires.push({ id, a: { c: ca, w: V(...pa) }, b: { c: cb, w: V(...pb) }, color, kind, label, h, via: (via || []).map(([c, p]) => ({ c, w: V(...p) })) }); }
-W('w_usbp', 'usbc', [-2.8, 3.95, 3.62], 'tp4056', [-3.05, 3.48, 2.16], C.red, 'thin', 'USB-C + → TP4056 IN+', 0.3);
-W('w_usbn', 'usbc', [-2.6, 3.95, 3.62], 'tp4056', [-3.05, 3.48, 3.04], C.black, 'thin', 'USB-C − → TP4056 IN−', 0.3);
-W('w_bp', 'bateria', [3.85, 1.0, -2.45], 'tp4056', [-0.75, 3.48, 2.0], C.red, 'thin', 'Bateria + → TP4056 B+ (por baixo da placa, sobe pelo furo)', 0, [['bateria', [3.75, 2.45, -1.7]], ['placa', [1.4, 2.95, -1.0]], ['placa', [-0.38, 2.95, 1.95]], ['placa', [-0.38, 3.52, 1.95]]]);
-W('w_bn', 'bateria', [-3.85, 1.0, -2.45], 'tp4056', [-0.75, 3.48, 2.29], C.black, 'thin', 'Bateria − → TP4056 B− (por baixo da placa, sobe pelo furo)', 0, [['bateria', [-3.75, 2.45, -1.7]], ['placa', [-2.4, 2.95, 0.4]], ['placa', [-0.38, 2.95, 2.38]], ['placa', [-0.38, 3.52, 2.38]]]);
-W('w_out', 'tp4056', [-0.75, 3.48, 2.91], 'chave', [-3.5, 3.95, 0.5], C.red, 'thick', 'TP4056 OUT+ → chave');
-W('w_sw', 'chave', [-3.5, 4.45, 0.5], 'placa', [0.3, 3.3, -0.2], C.red, 'thick', 'Chave → barramento + da placa');
-W('w_hvp', 'moduloAT', [3.45, 1.25, 1.05], 'placa', [3.3, 3.3, -1.6], C.red, 'thick', 'Barramento + (pad AT+) → alta tensão, entrada +', 0.35);
-W('w_hvn', 'moduloAT', [3.45, 1.25, 1.45], 'mosfetA', [3.13, 3.42, 0.0], C.black, 'thick', 'Alta tensão, entrada − → aba (dreno) do MOSFET A', 0.5);
+W('w_usbp', 'usbc', [-2.8, 3.95, 3.62], 'tp4056', [POS.tp4056[0] - 1.15, 3.48, POS.tp4056[1] - 0.44], C.red, 'thin', 'USB-C + → TP4056 IN+', 0.3);
+W('w_usbn', 'usbc', [-2.6, 3.95, 3.62], 'tp4056', [POS.tp4056[0] - 1.15, 3.48, POS.tp4056[1] + 0.44], C.black, 'thin', 'USB-C − → TP4056 IN−', 0.3);
+W('w_bp', 'bateria', [3.85, 1.0, -2.45], 'tp4056', [POS.tp4056[0] + 1.15, 3.48, POS.tp4056[1] - 0.6], C.red, 'thin', 'Bateria + → perna B+ do TP4056 (soldado por baixo da placa)', 0, [['bateria', [3.75, 2.45, -1.7]], ['placa', [1.4, 2.95, -1.0]], ['placa', [POS.tp4056[0] + 1.15, 2.95, POS.tp4056[1] - 0.6]]]);
+W('w_bn', 'bateria', [-3.85, 1.0, -2.45], 'tp4056', [POS.tp4056[0] + 1.15, 3.48, POS.tp4056[1] - 0.31], C.black, 'thin', 'Bateria − → perna B− do TP4056 (soldado por baixo da placa)', 0, [['bateria', [-3.75, 2.45, -1.7]], ['placa', [-2.4, 2.95, 0.4]], ['placa', [POS.tp4056[0] + 1.15, 2.95, POS.tp4056[1] - 0.31]]]);
+W('w_out', 'tp4056', [POS.tp4056[0] + 1.15, 3.48, POS.tp4056[1] + 0.31], 'chave', [-3.5, 3.95, 0.5], C.red, 'thick', 'TP4056 OUT+ → chave');
+W('w_sw', 'chave', [-3.5, 4.45, 0.5], 'placa', [...(pad3('placa.CHAVE') || [0.3, -0.2])].flatMap((v, i) => i ? [3.3, v] : [v]), C.red, 'thick', 'Chave → pad CHAVE do barramento +');
+W('w_hvp', 'moduloAT', [3.45, 1.25, 1.05], 'placa', [...(pad3('placa.AT+') || [3.3, -1.6])].flatMap((v, i) => i ? [3.3, v] : [v]), C.red, 'thick', 'Barramento + (pad AT+) → alta tensão, entrada +', 0.35);
+W('w_hvn', 'moduloAT', [3.45, 1.25, 1.45], 'mosfetA', [POS.mosfetA[0] + 0.78, 3.42, POS.mosfetA[1]], C.black, 'thick', 'Alta tensão, entrada − → aba (dreno) do MOSFET A', 0.5);
 W('w_hv1', 'moduloAT', [-3.5, 1.6, 1.05], 'pinos', [-0.2, 0.45, 3.6], C.hv, 'hv', 'Alta tensão (saída) → pino de inox 1', 0, [['moduloAT', [-4.1, 0.7, 2.6]]]);
 W('w_hv2', 'moduloAT', [-3.5, 1.6, 1.45], 'pinos', [3.8, 0.45, 3.6], C.hv, 'hv', 'Alta tensão (saída) → pino de inox 2', 0, [['moduloAT', [-3.9, 0.6, 3.0]], ['moduloAT', [1.5, 0.5, 3.1]]]);
 
@@ -2778,8 +4579,11 @@ if (stage.clientWidth < 760) { HOME.pos.multiplyScalar(1.25); HOME.target.set(0,
 msg.remove();
 frame();
 openLesson();
+aplicarAcao = a => { if (lsOpen) closeLesson(); applyAct(a); };
+pronto = true;
+if (fila) { aplicarAcao(fila); fila = null; }
 }
-window.Projeto3D = { iniciar };
+window.Projeto3D = { iniciar, mostrar };
 if (window.projeto3dPedido) iniciar();
 
 </script>

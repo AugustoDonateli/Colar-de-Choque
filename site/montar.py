@@ -13,7 +13,7 @@ AQUI = Path(__file__).resolve().parent
 SRC = AQUI / 'src'
 
 # Ordem importa: os dados vêm antes do app.js, que usa todos eles.
-JS_SITE = ['dados-compras.js', 'circuito.js', 'dados-montagem.js', 'dados-testes.js', 'dados-firmware.js', 'app.js']
+JS_SITE = ['dados-compras.js', 'circuito.js', 'dados-montagem.js', 'dados-testes.js', 'dados-firmware.js', 'montagem-sim.js', 'montagem-pecas.js', 'montagem-passos.js', 'montagem-ui.js', 'app.js']
 CSS = ['estilo.css', 'projeto3d.css']
 
 def ler(p):

@@ -5,7 +5,8 @@ import { RoundedBoxGeometry } from 'three/addons/geometries/RoundedBoxGeometry.j
 import { CSS2DRenderer, CSS2DObject } from 'three/addons/renderers/CSS2DRenderer.js';
 
 // O 3D só começa quando a aba "Projeto 3D" é aberta pela primeira vez.
-let iniciado = false;
+let iniciado = false, pronto = false, fila = null, aplicarAcao = null;
+function mostrar(a) { fila = a; if (pronto && aplicarAcao) { aplicarAcao(fila); fila = null; } else iniciar(); }
 async function iniciar() {
   if (iniciado) { window.dispatchEvent(new Event('resize')); return; }
   iniciado = true;
@@ -388,6 +389,26 @@ const PIN_X = [-0.2, 3.8], PIN_Z = 3.6;
 
 // ---------- placa de controle (v2) ----------
 const BW = 7, BD = 9, BY = 3.2, TOP = 3.28;
+// A placa do 3D sai do mesmo desenho furo a furo da aba Montar (LAYOUT.placa em circuito.js).
+const CIRC = window.CIRCUITO, LP = CIRC && CIRC.LAYOUT && CIRC.LAYOUT.placa;
+const PASSO = 0.254;
+const furo3 = f => { const [c, r] = f.split(',').map(Number); return [(c - 11.5) * PASSO, (r - 14.5) * PASSO]; };
+function centro3(id, def) {
+  if (!LP || !LP.pecas[id]) return def;
+  const ps = Object.values(CIRC.pinosDaPeca(LP, id)).filter(Boolean).map(furo3);
+  return [ps.reduce((a, p) => a + p[0], 0) / ps.length, ps.reduce((a, p) => a + p[1], 0) / ps.length];
+}
+const pinoDe = (id, n, def) => (LP && LP.pecas[id]) ? furo3(CIRC.pinosDaPeca(LP, id)[n]) : def;
+const POS = {
+  esp32: centro3('esp', [-2.2, 0.2]),
+  rxb6: (() => { const [x, z] = centro3('rx', [-0.05, -2.9]); return [x - 1.35, z]; })(),
+  tp4056: (() => { const [x, z] = centro3('tp', [-0.75, 2.6]); return [x - 1.15, z]; })(),
+  mosfetA: (() => { const [x, z] = pinoDe('ma', 'D', [1.18, 0]); return [x + 1.17, z]; })(),
+  mosfetB: (() => { const [x, z] = pinoDe('mb', 'D', [1.18, 1.4]); return [x + 1.17, z]; })(),
+  buzzer: centro3('bz', [2.3, -2.9]),
+};
+POS.antena = [POS.rxb6[0] - 1.36, POS.rxb6[1]];
+const pad3 = n => LP ? furo3(LP.pontos[n]) : null;
 const bxz = (x, z) => [(x + BW / 2) * PX, (z + BD / 2) * PX];
 const TRACES = [
   ['#d7262e', 22, [[0.3, -1.6], [0.3, 1.4]]],
@@ -414,38 +435,39 @@ const TRACES = [
   const g = new THREE.Group();
   const tex = canvasTex(BW * PX, BD * PX, (c, w, h) => {
     c.fillStyle = '#c9a46a'; c.fillRect(0, 0, w, h);
-    for (let x = 16; x < w; x += 32) for (let y = 16; y < h; y += 32) { c.fillStyle = '#b07a3c'; c.beginPath(); c.arc(x, y, 9, 0, 7); c.fill(); c.fillStyle = '#5a4126'; c.beginPath(); c.arc(x, y, 3, 0, 7); c.fill(); }
     c.lineCap = 'round'; c.lineJoin = 'round';
-    TRACES.forEach(([col, wd, pts]) => {
-      const path = () => { c.beginPath(); pts.forEach(([x, z], i) => { const [px, py] = bxz(x, z); if (i) c.lineTo(px, py); else c.moveTo(px, py); }); };
-      path(); c.strokeStyle = 'rgba(244,232,206,.95)'; c.lineWidth = wd + 10; c.stroke();
-      path(); c.strokeStyle = col; c.lineWidth = wd; c.stroke();
-    });
-    const hole = (x, z, r) => { const [px, py] = bxz(x, z); c.fillStyle = '#d9b45a'; c.beginPath(); c.arc(px, py, r + 8, 0, 7); c.fill(); c.fillStyle = '#2a2016'; c.beginPath(); c.arc(px, py, r, 0, 7); c.fill(); };
-    hole(-0.38, 1.95, 13); hole(-0.38, 2.38, 13);
-    const padAt = (x, z, s) => { const [px, py] = bxz(x, z); pad(c, px, py, s); };
-    padAt(0.3, -0.2, 40); padAt(3.3, -1.6, 40);
-    const T = (s, x, z, px, col = '#3b2a17') => { const [a, b] = bxz(x, z); txt(c, s, a, b, px, col, 'center', 600); };
-    T('+', 0.3, -1.98, 34, '#8a1212'); T('−', 0.85, -3.35, 34, '#111');
-    T('AT+', 3.3, -2.0, 20); T('CHAVE', 0.3, -0.58, 17); T('BAT', -0.38, 1.6, 17);
-    T('PLACA DE CONTROLE', 1.95, 3.55, 24, '#4a3520'); T('v2 · 7 × 9 cm', 1.95, 3.95, 20, '#5a4126');
+    const P = (f) => bxz(...furo3(f));
+    if (LP) {
+      // fios por baixo (aparecem por transparência, para mostrar as ligações)
+      LP.fios.forEach(fi => { const [ax, ay] = P(fi.de), [bx, by] = P(fi.para); c.globalAlpha = 0.85;
+        c.beginPath(); c.moveTo(ax, ay); c.lineTo(bx, by); c.strokeStyle = 'rgba(244,232,206,.95)'; c.lineWidth = 14; c.stroke();
+        c.beginPath(); c.moveTo(ax, ay); c.lineTo(bx, by); c.strokeStyle = fi.cor; c.lineWidth = 7; c.stroke(); c.globalAlpha = 1; });
+      LP.pontes.forEach(po => { c.strokeStyle = '#d9dde2'; c.lineWidth = po.grossa ? 16 : 10;
+        po.furos.forEach((f, i) => { if (!i) return; const pts = po.furos.slice(0, i).map(P), [x, y] = P(f); let m = pts[0], d = 1e9; pts.forEach(p => { const dd = (p[0] - x) ** 2 + (p[1] - y) ** 2; if (dd < d) { d = dd; m = p; } }); c.beginPath(); c.moveTo(m[0], m[1]); c.lineTo(x, y); c.stroke(); }); });
+      for (let r = 0; r < 30; r++) for (let col = 0; col < 24; col++) { const [x, y] = P(col + ',' + r); c.fillStyle = '#b07a3c'; c.beginPath(); c.arc(x, y, 9, 0, 7); c.fill(); c.fillStyle = '#5a4126'; c.beginPath(); c.arc(x, y, 3, 0, 7); c.fill(); }
+      const T = (s2, f, px, col = '#3b2a17', dy = 0) => { const [a, b] = P(f); txt(c, s2, a, b + dy, px, col, 'center', 600); };
+      T('CHAVE', LP.pontos['placa.CHAVE'], 15, '#3b2a17', 22); T('AT+', LP.pontos['placa.AT+'], 17, '#3b2a17', 22);
+      T('+', '15,28', 26, '#8a1212', 24); T('−', '18,26', 26, '#111', -22);
+      txt(c, 'PLACA DE CONTROLE · v2 · 7 × 9 cm', w / 2, h - 18, 18, '#4a3520', 'center', 600);
+    }
   });
   g.add(board(BW, 0.16, BD, 0xc9a46a, tex, 0, BY, 0));
   const cap = new THREE.Group();
   cap.add(cyl(0.5, 1.8, M(0x1c2a52, { roughness: 0.35, clearcoat: 0.6 }), 0, 0.9, 0, 32));
   cap.add(cyl(0.5, 0.03, tin(), 0, 1.81, 0, 32));
   cap.add(box(0.12, 1.75, 0.2, M(0xc9ccd4, { roughness: 0.5 }), 0.46, 0.9, 0));
-  cap.position.set(-0.55, TOP, 1.0); g.add(cap);
+  { const [x, z] = centro3('cap', [-0.55, 1.0]); cap.position.set(x, TOP, z); } g.add(cap);
   const to92 = new THREE.Mesh(new THREE.CylinderGeometry(0.22, 0.22, 0.45, 20, 1, false, 0, Math.PI), M(0x111214, { roughness: 0.4 }));
-  to92.position.set(1.55, TOP + 0.24, -2.3); g.add(to92);
+  { const [x, z] = centro3('q', [1.55, -2.3]); to92.position.set(x, TOP + 0.24, z); } g.add(to92);
   const res = (x, z, axis, warm) => {
     g.add(cyl(0.09, 0.42, M(warm ? 0xd8c39a : 0x6fa8dc, { roughness: 0.5 }), x, TOP + 0.13, z, 12, axis));
     [-0.1, 0.0, 0.1].forEach((o, i) => g.add(cyl(0.096, 0.035, M([0x8b1a1a, 0x111111, 0xc59a2b][i], { roughness: 0.5 }), x + (axis === 'x' ? o : 0), TOP + 0.13, z + (axis === 'z' ? o : 0), 12, axis)));
   };
-  res(-0.85, 0.34, 'x', true); res(2.2, 2.2, 'z', true); res(1.05, -0.25, 'x'); res(1.05, 1.15, 'x');
-  res(0.6, -2.3, 'x', true); res(0.05, -1.25, 'x'); res(0.55, -1.25, 'x');
-  g.add(box(0.62, 0.32, 0.62, M(0x2b2d31, { roughness: 0.4 }), -0.35, TOP + 0.16, -1.8));
-  g.add(cyl(0.18, 0.12, M(0x111214, { roughness: 0.5 }), -0.35, TOP + 0.38, -1.8, 16));
+  if (LP) ['rd2', 'rd1', 'rb', 'rga', 'rpa', 'rgb', 'rpb'].forEach(id => { const pp = Object.values(LP.pecas[id].pernas).map(furo3); const [x, z] = centro3(id); res(x, z, Math.abs(pp[0][1] - pp[1][1]) < 0.01 ? 'x' : 'z', CIRC.PECAS[id].valor >= 10000); });
+  else { res(-0.85, 0.34, 'x', true); res(2.2, 2.2, 'z', true); res(1.05, -0.25, 'x'); res(1.05, 1.15, 'x'); res(0.6, -2.3, 'x', true); res(0.05, -1.25, 'x'); res(0.55, -1.25, 'x'); }
+  { const [x, z] = centro3('bt', [-0.35, -1.8]);
+    g.add(box(0.62, 0.32, 0.62, M(0x2b2d31, { roughness: 0.4 }), x, TOP + 0.16, z));
+    g.add(cyl(0.18, 0.12, M(0x111214, { roughness: 0.5 }), x, TOP + 0.38, z, 16)); }
   reg('placa', g, { name: 'Placa de controle (7 × 9 cm)', what: 'Junta tudo numa peça só: ESP32, receptor, carregador, os 2 MOSFETs, o buzzer e os componentes pequenos (capacitor, resistores, transistor e botão de pareamento). As linhas coloridas mostram as ligações feitas por baixo da placa. Com ela, sobram só 10 fios soltos dentro da caixa.', cost: 'R$ 19 a placa + miúdos', side: 'dentro', label: V(2.0, 3.6, 3.75), explode: V(0, 4.8, 0),
     traces: [['#d7262e', 'Barramento + (depois da chave)'], ['#2b2c30', 'Barramento −'], ['#1c2a52', 'Capacitor de 1.000 µF entre o 5V e o GND do ESP32'], ['#f4f4ef', 'Divisor de 2 resistores de 100 kΩ que mede a bateria'], ['#8a9097', 'Botão de pareamento']] });
 }
@@ -461,7 +483,7 @@ function to220(id, name, z, info) {
   g.add(box(0.6, 0.12, 1.0, tin(), 0.72, 0.06, 0));
   g.add(cyl(0.17, 0.13, M(0x2a2016, { roughness: 0.6 }), 0.78, 0.06, 0, 20));
   [-0.25, 0, 0.25].forEach(dz => { g.add(box(0.75, 0.05, 0.09, tin(), -0.82, 0.1, dz)); g.add(box(0.06, 0.16, 0.09, tin(), -1.17, 0.03, dz)); });
-  g.position.set(2.35, TOP, z);
+  const pz = POS[id] || [2.35, z]; g.position.set(pz[0], TOP, pz[1]);
   return reg(id, g, info);
 }
 to220('mosfetA', 'A', 0.0, { name: 'MOSFET A (IRLZ44N)', what: 'Primeira chave do choque, deitada na placa. O ESP32 liga pelo GPIO 4, por um resistor de 100 Ω. É ela que faz os pulsos do B e do C. A aba de metal é o dreno: recebe o negativo do módulo de alta tensão.', cost: 'R$ 28,90 o pacote com 3 (um é reserva)', side: 'dentro', label: V(2.4, 4.05, -0.2), explode: V(0, 4.8, 0),
@@ -500,8 +522,8 @@ to220('mosfetB', 'B', 1.4, { name: 'MOSFET B (IRLZ44N)', what: 'Segunda chave, e
   g.add(cyl(0.07, 0.05, M(0x111111), -0.5, 0.22, 0.55, 12)); g.add(cyl(0.07, 0.05, M(0x111111), 0.5, 0.22, 0.55, 12));
   g.add(box(0.12, 0.06, 0.08, M(0x2b6cff, { emissive: new THREE.Color(0x1d4fd0), emissiveIntensity: 1.2 }), 0.45, 0.1, 0.2));
   [-0.94, -0.67, -0.4, -0.13, 0.14, 0.41, 0.68, 0.95].forEach(zz => { g.add(box(0.06, 0.2, 0.06, gold(), 0.8, -0.13, zz)); g.add(box(0.06, 0.2, 0.06, gold(), -0.8, -0.13, zz)); });
-  g.position.set(-2.2, TOP + 0.2, 0.2);
-  reg('esp32', g, { name: 'ESP32-C3 SuperMini', what: 'O cérebro, soldado direto na placa. Confere se o código veio de um controle pareado, respeita os limites de tempo, faz o choque fraco em pulsos e decide quando sai o choque. O LED azul aparece pela tampa transparente.', cost: 'R$ 16,14 no AliExpress', side: 'dentro', label: V(-2.4, 4.15, 0.3), explode: V(0, 4.8, 0),
+  g.position.set(POS.esp32[0], TOP + 0.2, POS.esp32[1]);
+  reg('esp32', g, { name: 'ESP32-C3 SuperMini', what: 'O cérebro, soldado direto na placa. Confere se o código veio de um controle pareado, respeita os limites de tempo, faz o choque fraco em pulsos e decide quando sai o choque. O LED azul aparece pela tampa transparente.', cost: 'R$ 16,14 no AliExpress', side: 'dentro', label: V(POS.esp32[0] - 0.2, 4.15, POS.esp32[1] + 0.1), explode: V(0, 4.8, 0),
     traces: [['#d7262e', '5V ← barramento +'], ['#2b2c30', 'GND → barramento −'], ['#e6b800', 'GPIO 3 ← dados do RXB6'], ['#1f9a4f', 'GPIO 4 → MOSFET A; GPIO 6 → MOSFET B'], ['#2f6fd6', 'GPIO 5 → 1 kΩ → BC547 → buzzer'], ['#f4f4ef', 'GPIO 0 ← divisor que mede a bateria'], ['#8a9097', 'GPIO 1 ← botão de pareamento'], ['#f08a24', '3V3 → RXB6 e buzzer']] });
 }
 
@@ -519,8 +541,8 @@ to220('mosfetB', 'B', 1.4, { name: 'MOSFET B (IRLZ44N)', what: 'Segunda chave, e
   g.add(cyl(0.12, 0.25, M(0x2f7d4a, { roughness: 0.4 }), -0.9, 0.17, 0.2, 14));
   [-0.41, -0.14, 0.13, 0.39].forEach(zz => g.add(box(0.06, 0.32, 0.06, gold(), 1.35, -0.16, zz)));
   g.add(box(0.06, 0.32, 0.06, gold(), -1.36, -0.16, 0));
-  g.position.set(-1.4, TOP + 0.3, -2.9);
-  reg('rxb6', g, { name: 'Receptor RXB6 433 MHz', what: 'Escuta o rádio do controle e passa o código para o ESP32. Soldado direto na placa, alimentado pelos 3,3 V do ESP32.', cost: 'R$ 10,30 no AliExpress (1 por pessoa nesse preço)', side: 'dentro', label: V(-1.0, 4.1, -3.4), explode: V(0, 4.8, 0),
+  g.position.set(POS.rxb6[0], TOP + 0.3, POS.rxb6[1]);
+  reg('rxb6', g, { name: 'Receptor RXB6 433 MHz', what: 'Escuta o rádio do controle e passa o código para o ESP32. Soldado direto na placa, alimentado pelos 3,3 V do ESP32.', cost: 'R$ 10,30 no AliExpress (1 por pessoa nesse preço)', side: 'dentro', label: V(POS.rxb6[0] + 0.4, 4.1, POS.rxb6[1] - 0.5), explode: V(0, 4.8, 0),
     traces: [['#f08a24', 'VCC ← 3V3 do ESP32'], ['#e6b800', 'DATA → GPIO 3'], ['#2b2c30', 'GND → barramento −']] });
 }
 {
@@ -529,8 +551,8 @@ to220('mosfetB', 'B', 1.4, { name: 'MOSFET B (IRLZ44N)', what: 'Segunda chave, e
   const copper = M(0xc8a24a, { metalness: 1, roughness: 0.28 });
   const hx = new THREE.Mesh(new THREE.TubeGeometry(new Helix(), 360, 0.035, 6, false), copper); hx.position.y = 0.18; g.add(hx);
   g.add(cyl(0.035, 0.2, copper, 0.2, 0.09, 0, 8));
-  g.position.set(-2.76, TOP + 0.36, -2.9);
-  reg('antena', g, { name: 'Antena em mola 433 MHz', what: 'Uma mola pequena soldada no pino ANT do receptor. Substitui o fio de 17,3 cm que dava a volta na caixa. Se o alcance ficar curto no teste do galão, volte para o fio.', cost: 'R$ 13,44', side: 'dentro', label: V(-2.76, 5.0, -2.9), explode: V(0, 4.8, 0) });
+  g.position.set(POS.antena[0], TOP + 0.36, POS.antena[1]);
+  reg('antena', g, { name: 'Antena em mola 433 MHz', what: 'Uma mola pequena soldada no pino ANT do receptor. Substitui o fio de 17,3 cm que dava a volta na caixa. Se o alcance ficar curto no teste do galão, volte para o fio.', cost: 'R$ 13,44', side: 'dentro', label: V(POS.antena[0], 5.0, POS.antena[1]), explode: V(0, 4.8, 0) });
 }
 
 // ---------- TP4056 ----------
@@ -549,8 +571,8 @@ to220('mosfetB', 'B', 1.4, { name: 'MOSFET B (IRLZ44N)', what: 'Segunda chave, e
   g.add(box(0.12, 0.07, 0.08, M(0xff3b30, { emissive: new THREE.Color(0xa00000), emissiveIntensity: 0.6 }), 0.0, 0.09, -0.4));
   g.add(box(0.12, 0.07, 0.08, M(0x2b6cff), 0.25, 0.09, -0.4));
   [[1.15, -0.6], [1.15, -0.31], [1.15, 0.31], [1.15, 0.6], [-1.15, -0.44], [-1.15, 0.44]].forEach(([x, z]) => g.add(box(0.06, 0.2, 0.06, gold(), x, -0.12, z)));
-  g.position.set(-1.9, TOP + 0.14, 2.6);
-  reg('tp4056', g, { name: 'Carregador TP4056', what: 'Carrega a bateria pelo USB-C e corta a energia se a bateria descarregar demais ou der curto. As luzes (vermelha carregando, azul cheia) aparecem pela tampa transparente.', cost: 'R$ 12,08 o pacote com 5', side: 'dentro', label: V(-2.1, 4.0, 2.9), explode: V(0, 4.8, 0),
+  g.position.set(POS.tp4056[0], TOP + 0.14, POS.tp4056[1]);
+  reg('tp4056', g, { name: 'Carregador TP4056', what: 'Carrega a bateria pelo USB-C e corta a energia se a bateria descarregar demais ou der curto. As luzes (vermelha carregando, azul cheia) aparecem pela tampa transparente.', cost: 'R$ 12,08 o pacote com 5', side: 'dentro', label: V(POS.tp4056[0] - 0.2, 4.0, POS.tp4056[1] + 0.3), explode: V(0, 4.8, 0),
     traces: [['#2b2c30', 'OUT− → barramento −']] });
 }
 
@@ -561,8 +583,8 @@ to220('mosfetB', 'B', 1.4, { name: 'MOSFET B (IRLZ44N)', what: 'Segunda chave, e
   g.add(cyl(0.12, 0.05, M(0x2a2c30), 0, 0.44, 0, 16));
   const t = canvasTex(128, 128, (c, w, h) => { c.fillStyle = '#121315'; c.fillRect(0, 0, w, h); txt(c, '+', 30, 64, 30, '#ddd'); });
   const top = new THREE.Mesh(new THREE.CircleGeometry(0.58, 32), M(0xffffff, { map: t, roughness: 0.5 })); top.rotation.x = -Math.PI / 2; top.position.y = 0.43; g.add(top);
-  g.position.set(2.3, TOP + 0.43, -2.9);
-  reg('buzzer', g, { name: 'Buzzer', what: 'Bipa antes de todo choque, para o boi associar o som. Também avisa por bipes: bateria fraca, pareamento feito.', cost: 'R$ 11,71 o pacote com 10', side: 'dentro', label: V(2.3, 4.6, -2.9), explode: V(0, 4.8, 0),
+  g.position.set(POS.buzzer[0], TOP + 0.43, POS.buzzer[1]);
+  reg('buzzer', g, { name: 'Buzzer', what: 'Bipa antes de todo choque, para o boi associar o som. Também avisa por bipes: bateria fraca, pareamento feito.', cost: 'R$ 11,71 o pacote com 10', side: 'dentro', label: V(POS.buzzer[0], 4.6, POS.buzzer[1]), explode: V(0, 4.8, 0),
     traces: [['#f08a24', '+ ← 3V3'], ['#2f6fd6', '− → coletor do BC547']] });
 }
 
@@ -602,14 +624,14 @@ const C = { red: 0xd7262e, black: 0x1f2024, green: 0x1f9a4f, yellow: 0xf2c418, o
 const R = { thin: 0.042, thick: 0.066, hv: 0.088 };
 const wires = [];
 function W(id, ca, pa, cb, pb, color, kind, label, h, via) { wires.push({ id, a: { c: ca, w: V(...pa) }, b: { c: cb, w: V(...pb) }, color, kind, label, h, via: (via || []).map(([c, p]) => ({ c, w: V(...p) })) }); }
-W('w_usbp', 'usbc', [-2.8, 3.95, 3.62], 'tp4056', [-3.05, 3.48, 2.16], C.red, 'thin', 'USB-C + → TP4056 IN+', 0.3);
-W('w_usbn', 'usbc', [-2.6, 3.95, 3.62], 'tp4056', [-3.05, 3.48, 3.04], C.black, 'thin', 'USB-C − → TP4056 IN−', 0.3);
-W('w_bp', 'bateria', [3.85, 1.0, -2.45], 'tp4056', [-0.75, 3.48, 2.0], C.red, 'thin', 'Bateria + → TP4056 B+ (por baixo da placa, sobe pelo furo)', 0, [['bateria', [3.75, 2.45, -1.7]], ['placa', [1.4, 2.95, -1.0]], ['placa', [-0.38, 2.95, 1.95]], ['placa', [-0.38, 3.52, 1.95]]]);
-W('w_bn', 'bateria', [-3.85, 1.0, -2.45], 'tp4056', [-0.75, 3.48, 2.29], C.black, 'thin', 'Bateria − → TP4056 B− (por baixo da placa, sobe pelo furo)', 0, [['bateria', [-3.75, 2.45, -1.7]], ['placa', [-2.4, 2.95, 0.4]], ['placa', [-0.38, 2.95, 2.38]], ['placa', [-0.38, 3.52, 2.38]]]);
-W('w_out', 'tp4056', [-0.75, 3.48, 2.91], 'chave', [-3.5, 3.95, 0.5], C.red, 'thick', 'TP4056 OUT+ → chave');
-W('w_sw', 'chave', [-3.5, 4.45, 0.5], 'placa', [0.3, 3.3, -0.2], C.red, 'thick', 'Chave → barramento + da placa');
-W('w_hvp', 'moduloAT', [3.45, 1.25, 1.05], 'placa', [3.3, 3.3, -1.6], C.red, 'thick', 'Barramento + (pad AT+) → alta tensão, entrada +', 0.35);
-W('w_hvn', 'moduloAT', [3.45, 1.25, 1.45], 'mosfetA', [3.13, 3.42, 0.0], C.black, 'thick', 'Alta tensão, entrada − → aba (dreno) do MOSFET A', 0.5);
+W('w_usbp', 'usbc', [-2.8, 3.95, 3.62], 'tp4056', [POS.tp4056[0] - 1.15, 3.48, POS.tp4056[1] - 0.44], C.red, 'thin', 'USB-C + → TP4056 IN+', 0.3);
+W('w_usbn', 'usbc', [-2.6, 3.95, 3.62], 'tp4056', [POS.tp4056[0] - 1.15, 3.48, POS.tp4056[1] + 0.44], C.black, 'thin', 'USB-C − → TP4056 IN−', 0.3);
+W('w_bp', 'bateria', [3.85, 1.0, -2.45], 'tp4056', [POS.tp4056[0] + 1.15, 3.48, POS.tp4056[1] - 0.6], C.red, 'thin', 'Bateria + → perna B+ do TP4056 (soldado por baixo da placa)', 0, [['bateria', [3.75, 2.45, -1.7]], ['placa', [1.4, 2.95, -1.0]], ['placa', [POS.tp4056[0] + 1.15, 2.95, POS.tp4056[1] - 0.6]]]);
+W('w_bn', 'bateria', [-3.85, 1.0, -2.45], 'tp4056', [POS.tp4056[0] + 1.15, 3.48, POS.tp4056[1] - 0.31], C.black, 'thin', 'Bateria − → perna B− do TP4056 (soldado por baixo da placa)', 0, [['bateria', [-3.75, 2.45, -1.7]], ['placa', [-2.4, 2.95, 0.4]], ['placa', [POS.tp4056[0] + 1.15, 2.95, POS.tp4056[1] - 0.31]]]);
+W('w_out', 'tp4056', [POS.tp4056[0] + 1.15, 3.48, POS.tp4056[1] + 0.31], 'chave', [-3.5, 3.95, 0.5], C.red, 'thick', 'TP4056 OUT+ → chave');
+W('w_sw', 'chave', [-3.5, 4.45, 0.5], 'placa', [...(pad3('placa.CHAVE') || [0.3, -0.2])].flatMap((v, i) => i ? [3.3, v] : [v]), C.red, 'thick', 'Chave → pad CHAVE do barramento +');
+W('w_hvp', 'moduloAT', [3.45, 1.25, 1.05], 'placa', [...(pad3('placa.AT+') || [3.3, -1.6])].flatMap((v, i) => i ? [3.3, v] : [v]), C.red, 'thick', 'Barramento + (pad AT+) → alta tensão, entrada +', 0.35);
+W('w_hvn', 'moduloAT', [3.45, 1.25, 1.45], 'mosfetA', [POS.mosfetA[0] + 0.78, 3.42, POS.mosfetA[1]], C.black, 'thick', 'Alta tensão, entrada − → aba (dreno) do MOSFET A', 0.5);
 W('w_hv1', 'moduloAT', [-3.5, 1.6, 1.05], 'pinos', [-0.2, 0.45, 3.6], C.hv, 'hv', 'Alta tensão (saída) → pino de inox 1', 0, [['moduloAT', [-4.1, 0.7, 2.6]]]);
 W('w_hv2', 'moduloAT', [-3.5, 1.6, 1.45], 'pinos', [3.8, 0.45, 3.6], C.hv, 'hv', 'Alta tensão (saída) → pino de inox 2', 0, [['moduloAT', [-3.9, 0.6, 3.0]], ['moduloAT', [1.5, 0.5, 3.1]]]);
 
@@ -1474,6 +1496,9 @@ if (stage.clientWidth < 760) { HOME.pos.multiplyScalar(1.25); HOME.target.set(0,
 msg.remove();
 frame();
 openLesson();
+aplicarAcao = a => { if (lsOpen) closeLesson(); applyAct(a); };
+pronto = true;
+if (fila) { aplicarAcao(fila); fila = null; }
 }
-window.Projeto3D = { iniciar };
+window.Projeto3D = { iniciar, mostrar };
 if (window.projeto3dPedido) iniciar();

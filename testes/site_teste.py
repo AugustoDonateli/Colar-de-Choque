@@ -83,17 +83,19 @@ async def main():
         conferir('s-bought' in await pg.get_attribute('.item[data-id=ae2]', 'class'), 'marcação nova fica salva depois de recarregar')
         await pg.screenshot(path=str(PRINTS / '2_comprar.png'))
 
-        print('\n3) Montar: tabela de ligações sai do circuito.js')
-        await pg.click('nav.tabs button[data-tab=montar]'); await pg.wait_for_timeout(300)
-        await pg.evaluate("document.querySelectorAll('details.step').forEach(d => { if (d.querySelector('#wireTable')) d.open = true; })")
-        await pg.wait_for_timeout(300)
+        print('\n3) Montar: capítulos e tabela de ligações')
+        await pg.click('nav.tabs button[data-tab=montar]'); await pg.wait_for_timeout(400)
+        caps = await pg.eval_on_selector_all('#mtCaps .mtcap', 'b => b.length')
+        conferir(caps == 7, f'7 capítulos ({caps})')
+        conferir(await pg.is_visible('#mtSvg'), 'protoboard desenhada na tela')
+        await pg.evaluate("MT.abrirPasso('c5.27')"); await pg.wait_for_timeout(400)
         linhas = await pg.eval_on_selector_all('#wireTable tbody tr:not(.grpw)', 'r => r.length')
         conferir(linhas == 24, f'24 ligações na tabela ({linhas})')
         l14 = await pg.get_attribute('#wireTable input[data-w="14"]', 'checked')
         conferir(l14 is not None, 'ligação 14 marcada no site antigo continua marcada')
         prob = await pg.evaluate('conferirCircuito()')
         conferir(prob == [], f'tabela bate com o esquema elétrico {prob}')
-        conferir(await pg.is_visible('.emobra'), 'aviso da bancada simulada aparece')
+        await pg.evaluate("MT.abrirPasso('c0.1')")
         await pg.screenshot(path=str(PRINTS / '3_montar.png'), full_page=False)
 
         print('\n4) Projeto 3D')
@@ -144,8 +146,9 @@ async def main():
         topo, rolou, maximo = await pg.evaluate("[document.getElementById('depois').getBoundingClientRect().top, scrollY, document.documentElement.scrollHeight - innerHeight]")
         conferir(abs(topo) < 120 or abs(rolou - maximo) < 2, f'#depois abre o Início rolado até "Para depois" (topo {topo:.0f}, rolou {rolou:.0f} de {maximo})')
         await pg.click('nav.tabs button[data-tab=montar]'); await pg.wait_for_timeout(200)
-        await pg.click('#t-montar a[data-go=projeto]'); await pg.wait_for_timeout(1500)
-        conferir(await pg.evaluate("document.body.classList.contains('modo-projeto')"), 'link "Projeto 3D" da Montar abre o 3D')
+        await pg.evaluate("MT.abrirPasso('c6.1')"); await pg.wait_for_timeout(300)
+        await pg.click('[data-3d]'); await pg.wait_for_timeout(2500)
+        conferir(await pg.evaluate("document.body.classList.contains('modo-projeto')"), 'botão "Ver no 3D" da Montar abre o 3D')
 
         print('\n8) Celular (390 px)')
         cel = await nav.new_context(viewport={'width': 390, 'height': 800}, is_mobile=True, has_touch=True)
@@ -167,4 +170,5 @@ async def main():
     print(f'\nResultado: {ok} OK, {falhas} falhas. Prints em {PRINTS}')
     sys.exit(1 if falhas else 0)
 
-asyncio.run(main())
+if __name__ == '__main__':
+    asyncio.run(main())

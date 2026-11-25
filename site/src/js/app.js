@@ -21,6 +21,8 @@ function go(t){
   document.querySelectorAll('nav.tabs button').forEach(b=>b.setAttribute('aria-selected',b.dataset.tab===t));
   document.querySelectorAll('section.tab').forEach(s=>s.classList.toggle('on',s.id==='t-'+t));
   document.body.classList.toggle('modo-projeto',t==='projeto');
+  document.body.classList.toggle('modo-montar',t==='montar');
+  if(t==='montar'&&window.MT) MT.render();
   medirAbas();
   if(t==='projeto'){
     // o 3D só carrega na primeira vez que a aba abre
@@ -85,22 +87,8 @@ $('#buyList').addEventListener('click',e=>{
 $('#showOpt').addEventListener('change',e=>{S.opt=e.target.checked;save();renderBuy();});
 
 /* ---------- montar ---------- */
-function curStep(){for(let i=0;i<STEPS.length;i++) if(!S.steps[i]) return i; return -1;}
-function renderSteps(){
-  const cur=curStep();
-  const openIdx = S.open===null||S.open===undefined ? cur : S.open;
-  $('#steps').innerHTML=STEPS.map((st,i)=>{
-    const done=!!S.steps[i];
-    return `<details class="step ${done?'done':''} ${i===cur?'cur':''}" data-i="${i}" ${i===openIdx?'open':''}>
-      <summary><span class="num">${done?'✓':i+1}</span><span class="st"><b>Etapa ${i+1}: ${st.t}</b><span>${st.s}</span></span><span class="chev">›</span></summary>
-      <div class="body">${st.html}
-        <div class="stepbtns">${done
-          ?`<button class="btn ghost" data-undo="${i}">Desmarcar</button>`
-          :`<button class="btn ok" data-pass="${i}">Passou ✓</button>`}</div>
-      </div></details>`;
-  }).join('');
-  const wt=$('#wireTable'); if(wt) wt.innerHTML=wireTable();
-}
+// A aba Montar é feita por montagem-ui.js (MT). Aqui só a tabela de ligações,
+// que aparece no capítulo da placa ilhada.
 // A tabela sai de LIGACOES (circuito.js), a mesma fonte da bancada simulada.
 function wireTable(){
   const rows=LIGACOES.filter(l=>l.n), n=rows.length, d=rows.filter(l=>S.wires[l.n]).length;
@@ -112,20 +100,12 @@ function wireTable(){
   });
   return h+'</tbody></table>';
 }
-$('#steps').addEventListener('click',e=>{
-  const p=e.target.closest('[data-pass]'), u=e.target.closest('[data-undo]');
-  if(p){S.steps[p.dataset.pass]=1; S.open=null; save(); renderAll(); const c=curStep(); const el=document.querySelector(`.step[data-i="${c}"]`); if(el) el.scrollIntoView({behavior:'smooth',block:'start'});}
-  if(u){delete S.steps[u.dataset.undo]; save(); renderAll();}
-});
-$('#steps').addEventListener('change',e=>{
+function renderSteps(){ if(window.MT && document.getElementById('mtCard')) MT.render(); }
+document.getElementById('t-montar').addEventListener('change',e=>{
   const w=e.target.closest('[data-w]'); if(!w) return;
   if(w.checked) S.wires[w.dataset.w]=1; else delete S.wires[w.dataset.w];
-  save(); $('#wireTable').innerHTML=wireTable(); renderTop();
+  save(); const t=document.getElementById('wireTable'); if(t) t.innerHTML=wireTable(); renderTop();
 });
-$('#steps').addEventListener('toggle',e=>{
-  const d=e.target; if(!d.matches||!d.matches('details.step')) return;
-  if(d.open){S.open=+d.dataset.i; save();}
-},true);
 
 /* ---------- testar ---------- */
 function renderTests(){
@@ -176,20 +156,20 @@ $('#fwRoteiro').addEventListener('change',e=>{
 function progress(){
   const b=buyStats();
   const buyP=b.arrived/b.n;
-  const stepP=Object.keys(S.steps).length/STEPS.length;
+  const mt=MT.totais(), stepP=mt.n/mt.t;
   const testP=(Object.keys(S.tests).length+Object.keys(S.final).length)/(TESTS.length+FINAL.length);
   return {b,buyP,stepP,testP,total:(buyP*0.25+stepP*0.5+testP*0.25)};
 }
 function renderTop(){
   const p=progress(), pct=Math.round(p.total*100);
   $('#topPct').textContent=pct+'%'; $('#topBar').style.width=pct+'%';
-  const ns=Object.keys(S.steps).length, nt=Object.keys(S.tests).length;
+  const mt=MT.totais(), nt=Object.keys(S.tests).length;
   const cb=$('#cntBuy'); cb.textContent=p.b.arrived+'/'+p.b.n; cb.classList.toggle('done',p.b.arrived===p.b.n);
-  const cs=$('#cntBuild'); cs.textContent=ns+'/'+STEPS.length; cs.classList.toggle('done',ns===STEPS.length);
+  const cs=$('#cntBuild'); cs.textContent=mt.n+'/'+mt.t; cs.classList.toggle('done',mt.n===mt.t);
   const ct=$('#cntTest'); ct.textContent=nt+'/'+TESTS.length; ct.classList.toggle('done',nt===TESTS.length);
 }
 function renderHome(){
-  const p=progress(), b=p.b, cur=curStep();
+  const p=progress(), b=p.b, prox=MT.proximoGeral();
   const notBought=req().filter(i=>!S.buy[i.id]);
   const waiting=req().filter(i=>S.buy[i.id]==='bought');
   const aeLeft=notBought.filter(i=>i.g==='ae').length;
@@ -198,19 +178,19 @@ function renderHome(){
     stage=0; k='Agora'; t='Fazer as compras';
     d=aeLeft?`Faltam ${notBought.length} itens (${brl0(b.left)}). Comece pelos ${aeLeft} do AliExpress, que demoram de 2 a 4 semanas para chegar.`:`Faltam ${notBought.length} itens do Mercado Livre e da bancada (${brl0(b.left)}).`;
     btn='Abrir lista de compras'; tab='comprar';
-  } else if(waiting.length && cur<=0){
+  } else if(waiting.length && MT.totais().n===0){
     stage=0; k='Esperando chegar'; t=`${waiting.length} ${waiting.length>1?'itens a caminho':'item a caminho'}`;
-    d='Enquanto isso, dá para imprimir as peças 3D (Etapa 3) e testar sozinha cada peça que já chegou (Etapa 1).';
-    btn='Ver etapas'; tab='montar';
-  } else if(cur!==-1){
-    stage=1; k='Próxima etapa'; t=`Etapa ${cur+1}: ${STEPS[cur].t}`; d=STEPS[cur].s+'.'; btn='Abrir etapa'; tab='montar';
+    d='Enquanto isso, dá para fazer na tela os capítulos 0, 1 e 4 da aba Montar (protoboard, peças e treino de solda) e imprimir as peças 3D.';
+    btn='Abrir Montar'; tab='montar';
+  } else if(prox){
+    stage=1; k='Próximo passo'; t=`${prox.cap.t}: ${prox.t}`; d=prox.cap.s+'.'; btn='Abrir passo'; tab='montar';
   } else if(Object.keys(S.tests).length<TESTS.length||Object.keys(S.final).length<FINAL.length){
     stage=2; k='Agora'; t='Testar antes de entregar'; d=`Faltam ${TESTS.length-Object.keys(S.tests).length} testes e ${FINAL.length-Object.keys(S.final).length} itens do checklist.`; btn='Abrir testes'; tab='testar';
   } else {
     stage=3; k='Pronto'; t='Coleira pronta para entregar'; d='Combine a entrega e o retorno com o comprador. O roteiro de perguntas está em "Para depois", no fim do Início.'; btn='Abrir Para depois'; tab='depois';
   }
-  $('#nextCard').innerHTML=`<div class="k">${k}</div><h3>${t}</h3><p>${d}</p><button class="btn" data-go="${tab}">${btn} →</button>`;
-  const st=[['Comprar',p.buyP,`${b.arrived}/${b.n}`,'comprar'],['Montar',p.stepP,`${Object.keys(S.steps).length}/${STEPS.length}`,'montar'],['Testar',p.testP,`${Object.keys(S.tests).length}/${TESTS.length}`,'testar'],['Entregar',stage===3?1:0,stage===3?'pronto':'—','depois']];
+  $('#nextCard').innerHTML=`<div class="k">${k}</div><h3>${t}</h3><p>${d}</p><button class="btn" data-go="${tab}" ${prox&&tab==='montar'?`data-passo-inicio="${prox.id}"`:''}>${btn} →</button>`;
+  const st=[['Comprar',p.buyP,`${b.arrived}/${b.n}`,'comprar'],['Montar',p.stepP,`${MT.totais().n}/${MT.totais().t}`,'montar'],['Testar',p.testP,`${Object.keys(S.tests).length}/${TESTS.length}`,'testar'],['Entregar',stage===3?1:0,stage===3?'pronto':'—','depois']];
   $('#stages').innerHTML=st.map((s,i)=>`<button class="stage ${i===stage?'cur':''}" data-go="${s[3]}"><div class="t">${s[0]}<span>${s[2]}</span></div><div class="bar"><i style="width:${Math.round(s[1]*100)}%"></i></div></button>`).join('');
   $('#facts').innerHTML=`
     <div class="fact"><div class="v">${brl0(b.coleira)}</div><div class="l">compras da coleira (sem bancada nem frete)</div></div>
@@ -218,7 +198,7 @@ function renderHome(){
     <div class="fact"><div class="v">~6 semanas</div><div class="l">do pedido até a coleira chegar ao comprador</div></div>
     <div class="fact"><div class="v">Firmware v0.1</div><div class="l">pronto e testado em simulação. Falta a bancada (Etapa 2)</div></div>`;
 }
-document.body.addEventListener('click',e=>{const g=e.target.closest('[data-go]'); if(g) go(g.dataset.go);});
+document.body.addEventListener('click',e=>{const g=e.target.closest('[data-go]'); if(g){ if(g.dataset.passoInicio) MT.abrirPasso(g.dataset.passoInicio); go(g.dataset.go);} });
 
 $('#resetBtn').addEventListener('click',()=>{
   if(!S._confirm){S._confirm=1;$('#resetBtn').textContent='Clique de novo para apagar';setTimeout(()=>{delete S._confirm;$('#resetBtn').textContent='Apagar tudo o que marquei';},4000);return;}
@@ -228,7 +208,7 @@ $('#resetBtn').addEventListener('click',()=>{
 function renderAll(){renderBuy();renderSteps();renderTests();renderFirmware();renderHome();renderTop();}
 renderAll();
 function fromHash(){const h=(location.hash||'').slice(1); if(ABAS.includes(h)||h==='depois') go(h);}
-medirAbas(); fromHash(); window.addEventListener('hashchange',fromHash);
+MT.iniciar(); medirAbas(); fromHash(); window.addEventListener('hashchange',fromHash);
 
 // Confere a tabela de ligações contra o esquema (aparece no console se algo não bater).
 (function(){const p=conferirCircuito(); if(p.length) console.warn('Circuito:',p);})();

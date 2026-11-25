@@ -44,6 +44,7 @@ const ITEMS = [
   {id:'lj8',g:'loja',est:1,alt:1,n:'Terminal olhal M4',d:'Prende o fio de alta tensão no parafuso de inox.',q:'2',p:2,pt:'≈ R$ 1 cada',u:ML+'terminal-olhal-azul-pre-isolado-15mm-a-25mm-m4-100-pecas/p/MLB27727822'},
   {id:'lj9',g:'loja',est:1,alt:1,n:'Arruela de borracha M4',d:'Veda o furo dos pinos por fora. Tem em loja de ferragens.',q:'2',p:2,pt:'≈ R$ 1 cada',u:ML+'arruela-vedacao-vedante-pvc-flexivel-14-x-5-x-4mm-10un/up/MLBU1962551645'},
   {id:'lj10',g:'loja',est:1,n:'Pilha A23 de 12 V',d:'Do controle principal, que vem sem pilha. É a pilha de controle de portão: tem em loja de eletrônica, chaveiro e mercado.',q:'1',p:6,pt:'≈ R$ 6',u:''},
+  {id:'lj11',g:'loja',est:1,alt:1,n:'Barra de pinos fêmea 1 × 40 (2,54 mm)',d:'Vira os soquetes do ESP32 e do RXB6 na placa (corte 2 pedaços de 8 e 1 de 4). O ferro não esquenta os módulos e dá para trocar um queimado sem dessoldar.',q:'1',p:4,pt:'≈ R$ 4',u:'https://lista.mercadolivre.com.br/barra-de-pinos-femea-1x40'},
   // casa / selaria
   {id:'cs1',g:'casa',est:1,alt:1,n:'Fita de poliéster 50 mm, 1,5 m',d:'Na selaria ou no armarinho. No Mercado Livre só vem rolo de 10 m.',q:'1,5 m',p:10,pt:'≈ R$ 10',u:ML+'fita-slackline-poliester-cinta-50mm-preta-cadarco-10mts/up/MLBU1441211367'},
   {id:'cs2',g:'casa',est:1,alt:1,n:'Velcro de costura 50 mm, 10 cm',d:'O elo fraco. A selaria que costurar costuma ter.',q:'10 cm',p:3,pt:'≈ R$ 3',u:ML+'velcro-fecho-hook-loop-preto-50mm-1m-costura-nao-adesivo/p/MLB26802684'},
@@ -55,6 +56,7 @@ const ITEMS = [
   {id:'b2',g:'banc',n:'Multímetro digital Exbom MD-180L',d:'Mede tensão, corrente e curto.',q:'1',p:39.90,pt:'R$ 39,90',u:ML+'multimetro-digital-portatil-md-180l-exbom/up/MLBU4092522745'},
   {id:'b3',g:'banc',n:'Protoboard 830 pontos + 40 jumpers',d:'Para montar e testar antes de soldar.',q:'1',p:25.99,pt:'R$ 25,99',u:ML+'protoboard-breadboard-830-pontos-furos-com-jumper-mxf-40-pcs/p/MLB2130976768'},
   {id:'b4',g:'banc',n:'Estanho + pasta de solda Cobix',d:'Você já tem o ferro.',q:'1',p:29.45,pt:'R$ 29,45',u:ML+'kit-de-solda-estanho-cobix-63x37-e-pasta-para-soldar-eletronica/p/MLB27509228'},
+  {id:'b5',g:'banc',est:1,alt:1,n:'Sugador de solda',d:'Para desfazer uma solda errada: esquenta, encosta o sugador e aperta o botão. Ajuda muito quem está começando.',q:'1',p:20,pt:'≈ R$ 20',u:'https://lista.mercadolivre.com.br/sugador-de-solda'},
   // opcionais
   {id:'o1',g:'opt',opt:1,n:'ESP32-C3 no Mercado Livre',d:'Para começar o firmware antes do AliExpress chegar. Comprando este, compre só 1 ESP32 no AliExpress.',q:'1',p:32.49,pt:'R$ 32,49',u:ML+'placa-super-mini-esp32-c3-wifi-e-bluetooth/up/MLBU5819724594'},
   {id:'o2',g:'opt',opt:1,n:'RXB6 no Mercado Livre',d:'Para começar antes do AliExpress chegar, ou como reserva se o do AliExpress queimar.',q:'1',p:29.04,pt:'R$ 29,04',u:ML+'receptor-de-radiofrequencia-rxb6-cristal-433-mhz-gfhgf/p/MLB2087207229'},
