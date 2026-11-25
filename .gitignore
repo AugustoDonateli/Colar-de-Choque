@@ -1,0 +1,16 @@
+# compilação
+build/
+*.o
+*.elf
+*.bin
+firmware/teste-no-pc/teste
+firmware/teste-no-pc/teste.exe
+
+# Python e testes
+__pycache__/
+*.pyc
+prints/
+
+# sistema
+.DS_Store
+Thumbs.db

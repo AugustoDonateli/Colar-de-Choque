@@ -1,0 +1,54 @@
+<div id="stage" aria-label="Modelo 3D da coleira de choque"></div>
+<div id="msg">Carregando o modelo 3D...</div>
+
+<section class="panel" id="controls" aria-label="Controles">
+  <h1>Coleira de choque · protótipo 1, versão 2</h1>
+  <p class="sub">Caixa de 10 × 10 × 7 cm no pescoço do boi. Tampa transparente só no protótipo; medidas aproximadas. Arraste para girar, role para aproximar e clique numa peça.</p>
+  <div class="btns">
+    <button id="bLid" aria-pressed="false">Abrir tampa</button>
+    <button id="bExplode" aria-pressed="false">Vista explodida</button>
+    <button id="bXray" aria-pressed="false">Raio-X</button>
+    <button id="bHome">Voltar à vista</button>
+    <button id="bLesson" class="lesson" aria-pressed="false">Aula: entender a coleira</button>
+    <button id="bSim" class="primary">Simulação em câmera lenta</button>
+  </div>
+  <div class="toggles">
+    <label><input type="checkbox" id="tWires" checked> Fios</label>
+    <label><input type="checkbox" id="tLabels" checked> Nomes</label>
+    <label><input type="checkbox" id="tSpin"> Girar sozinho</label>
+  </div>
+  <details>
+    <summary>Cores dos fios</summary>
+    <ul class="legend" id="legend"></ul>
+  </details>
+</section>
+
+<aside class="panel" id="info" aria-live="polite"></aside>
+<aside class="panel" id="lesson" hidden aria-label="Aula sobre a coleira">
+  <header class="ls-head">
+    <div><div class="ls-k">Aula</div><select id="lsChap" aria-label="Capítulo"></select></div>
+    <button id="lsClose" type="button">Explorar livre</button>
+  </header>
+  <div class="ls-log" id="lsLog" aria-live="polite"></div>
+  <div class="ls-actions" id="lsActs"></div>
+  <form class="ls-ask" id="lsAsk" hidden><input id="lsQ" placeholder="Pergunte qualquer coisa sobre a coleira" maxlength="400" autocomplete="off" aria-label="Pergunta"><button type="submit">Enviar</button></form>
+</aside>
+<div class="panel" id="simbar" hidden aria-live="polite">
+  <div class="sb-top">
+    <span id="simTitle">Simulação</span>
+    <div class="seg" role="group" aria-label="Botão do controle"><button type="button" data-btn="A">A</button><button type="button" data-btn="B">B</button><button type="button" data-btn="C">C</button><button type="button" data-btn="D">D</button></div>
+    <select id="simScen" aria-label="Caso"><option value="normal">Normal</option><option value="vizinho">Controle do vizinho</option><option value="duas">Duas vezes seguidas</option><option value="segurar">Segurar o botão</option><option value="fraca">Bateria fraca</option></select>
+    <button type="button" id="simClose" aria-label="Fechar a simulação">✕</button>
+  </div>
+  <div class="sb-text"><b id="simN">1/1</b><span id="simS"></span></div>
+  <div class="sb-num" id="simNum"></div>
+  <div id="simGraph"></div>
+  <div class="sb-ctl">
+    <button type="button" id="simPrev">◀ Voltar</button>
+    <button type="button" id="simPlay">⏸ Pausar</button>
+    <button type="button" id="simNext">Avançar ▶</button>
+    <label><input type="checkbox" id="simSlow"> Mais devagar</label>
+    <div class="sbar"><i id="simProg"></i></div>
+  </div>
+</div>
+<div id="tip"></div>

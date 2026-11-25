@@ -1,0 +1,77 @@
+  <div class="card next" id="nextCard"></div>
+  <div class="stages" id="stages"></div>
+  <div class="facts" id="facts"></div>
+  <div class="links">
+    <button class="btn ghost" data-go="projeto">Ver a coleira em 3D e a aula</button>
+    <a class="btn ghost" href="https://claude.ai/artifact/VWSWbtT3iCA23SdHiCLQGa" target="_blank" rel="noopener">Plano completo (doc) ↗</a>
+    <a class="btn ghost" href="https://github.com/AugustoDonateli/Colar-de-Choque" target="_blank" rel="noopener">Repositório no GitHub ↗</a>
+  </div>
+  <div class="note bad" style="margin-top:18px"><b>Segurança:</b> nunca teste o choque em pessoas, nunca encoste nas saídas do módulo de alta tensão e desligue tudo antes de mexer em fio.</div>
+
+  <h2 id="depois" style="margin-top:30px">Para depois</h2>
+  <p class="lead">O que não é para agora. Abra quando chegar a hora.</p>
+
+  <details class="acc"><summary>Entrega e retorno do comprador</summary><div class="in">
+    <p><b>O que vai na caixa:</b> a coleira montada, 2 controles pareados (um é reserva), 1 cabo USB-C e o manual de uso de 1 página.</p>
+    <p><b>O que o manual de uso diz:</b></p>
+    <ul>
+      <li>Como ligar, carregar e o que cada piscada do LED significa.</li>
+      <li>O que faz cada botão.</li>
+      <li>Comece pelo bipe. Use o choque só quando o boi parar, e comece pelo nível mais fraco.</li>
+      <li>Tire a coleira depois do treino, olhe a pele embaixo dos pinos e confira o elo fraco.</li>
+      <li>Desligue a coleira para colocar, tirar ou mexer no boi. Nunca aperte o controle com alguém encostando na coleira.</li>
+      <li>Carregue com a coleira desligada, fora do sol e longe de coisas que pegam fogo.</li>
+      <li>Uso só para treino na propriedade. Proibido em provas e eventos.</li>
+    </ul>
+    <p><b>Perguntas depois de 2 a 3 semanas de uso:</b></p>
+    <ol>
+      <li>O alcance foi suficiente? Em que distância falhou?</li>
+      <li>Qual nível você mais usou? Algum ficou fraco ou forte demais?</li>
+      <li>Qual controle foi melhor na mão: o branco comprido ou o de chaveiro?</li>
+      <li>Depois de quantos dias o boi passou a reagir só ao bipe?</li>
+      <li>A coleira ficou firme? Assou ou machucou o pescoço?</li>
+      <li>A bateria durou quantos treinos?</li>
+      <li>Entrou água ou poeira? Algo quebrou ou soltou?</li>
+      <li>Gostaria de controlar 2 bois com o mesmo controle?</li>
+      <li>O que você mudaria?</li>
+      <li>Quanto pagaria pela versão final?</li>
+    </ol>
+    <p class="small">Quando a coleira voltar, leia o contador de choques pelo USB e compare com o que ele respondeu.</p>
+  </div></details>
+
+  <details class="acc"><summary>Custos e preço</summary><div class="in">
+    <table class="simple">
+      <tr><td>Primeira compra da coleira (lista de compras, sem bancada)</td><td id="costColeira">—</td></tr>
+      <tr><td>Bancada (bastão, multímetro, protoboard, solda)</td><td id="costBanc">—</td></tr>
+      <tr><td>Peças que vão de fato numa coleira</td><td>cerca de R$ 200</td></tr>
+      <tr><td>Peças por coleira em lote de 20 ou mais (estimativa)</td><td>cerca de R$ 130</td></tr>
+      <tr><td>Preço sugerido da coleira de teste</td><td>R$ 500 a 700</td></tr>
+      <tr><td>Preço final (palpite, a confirmar com o comprador)</td><td>R$ 1.200 a 1.800</td></tr>
+      <tr><td>Importado (Steer Saver, entregue no Brasil)</td><td>cerca de R$ 4.400</td></tr>
+    </table>
+    <p class="small">A primeira compra sai mais cara que uma coleira porque os kits sobram para as próximas. Fora da conta: o imposto de importação do AliExpress (perto de R$ 40), suas horas, frete, imposto da nota e garantia. Combine com o amigo do seu pai como você ganha: por unidade ou pelo desenvolvimento.</p>
+  </div></details>
+
+  <details class="acc"><summary>Escala: montar várias para vender</summary><div class="in">
+    <p>O projeto atual serve para a coleira de teste e as primeiras unidades. Para vender em quantidade, quatro coisas precisam mudar, depois do retorno do comprador:</p>
+    <ol>
+      <li><b>Placa de circuito impressa de fábrica</b> (EasyEDA + JLCPCB) no lugar da placa ilhada soldada à mão. Cerca de 1 hora por coleira (estimativa).</li>
+      <li><b>Módulo de alta tensão testado um por um</b> na tábua de pregos, comprado de 2 vendedores, ou a placa de um fabricante nacional de bastão.</li>
+      <li><b>Controle de portão nacional já homologado</b> na Anatel (433,92 MHz, HT6P20B) no lugar do chaveiro do AliExpress.</li>
+      <li><b>Firmware gravado por script</b>, com número de série em cada coleira.</li>
+    </ol>
+    <p><b>Tampa:</b> a transparente é só do protótipo, para ver os LEDs nos testes e mostrar o miolo para o comprador. Na versão de venda a tampa é cinza, fechada, e a luz de carga vai para um LED vedado ao lado do USB-C. Os avisos de pareamento e bateria fraca já saem pelos bipes.</p>
+    <p><b>Faça já na coleira de teste:</b> conectores JST nos fios que saem da placa, 1 controle Hombrus para testar o pareamento (estão nos opcionais da lista), anotar o tempo de cada etapa e salvar o firmware com número de versão.</p>
+    <p><b>Envio:</b> Correios só por via terrestre e com a bateria instalada. Bateria avulsa não pode.</p>
+    <p class="small">Detalhes na seção "Escala" do plano completo.</p>
+  </div></details>
+
+  <details class="acc"><summary>Leis e cuidados</summary><div class="in">
+    <table class="simple law">
+      <tr><td><b>Anatel</b></td><td>Controle remoto precisa de homologação para ser vendido. Na versão final, usar um controle nacional já homologado e perguntar a um laboratório se a coleira (que tem o ESP32) também precisa.</td></tr>
+      <tr><td><b>Lei 10.519/2002, art. 4º</b></td><td>Proíbe aparelho de choque em rodeios. Vender para treino na propriedade e escrever no manual que é proibido em provas.</td></tr>
+      <tr><td><b>Lei 9.605/1998, art. 32</b></td><td>Maus-tratos a animais é crime. Manter os limites do firmware e as instruções de uso.</td></tr>
+      <tr><td><b>Marca</b></td><td>Steer Saver é nome de outra empresa. Usar nome próprio e buscar no INPI antes.</td></tr>
+    </table>
+    <p class="small">Isto não é orientação jurídica. Antes de vender em escala, fale com um advogado.</p>
+  </div></details>

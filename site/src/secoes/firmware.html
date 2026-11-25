@@ -1,0 +1,14 @@
+<h2>Firmware</h2>
+<p class="lead">O programa que roda no ESP32: recebe o controle, faz o bipe e o choque com as regras de segurança, mede a bateria e conta o uso.</p>
+<div class="card fwtopo" id="fwTopo"></div>
+
+<details class="acc" open><summary>Como gravar na placa</summary><div class="in"><ol id="fwGravar"></ol></div></details>
+<details class="acc"><summary>O que cada botão do controle faz</summary><div class="in"><table class="simple law" id="fwBotoes"></table></div></details>
+<details class="acc"><summary>Regras que o programa não deixa passar</summary><div class="in"><ul id="fwRegras"></ul><p class="small"><b>Camadas que desligam o choque:</b></p><ol id="fwCamadas"></ol></div></details>
+<details class="acc"><summary>O que os bipes e o LED querem dizer</summary><div class="in"><table class="simple law" id="fwBipes"></table><p class="small" style="margin-top:12px"><b>LED azul da placa</b></p><table class="simple law" id="fwLed"></table><p class="small">A coleira não fica apitando de tempos em tempos com bateria baixa, porque o boi aprenderia que bipe sem choque é normal. O aviso de carga sai ao ligar.</p></div></details>
+<details class="acc"><summary>Comandos do Monitor Serial</summary><div class="in"><table class="simple law cmds" id="fwComandos"></table><p class="small">Nenhum comando dá choque. Choque só sai pelo botão de um controle pareado.</p></div></details>
+
+<h3 style="margin:24px 0 4px">Roteiro de teste, em ordem</h3>
+<p class="muted" style="margin:0 0 10px">Marque cada item. Se algum falhar, pare e mande a mensagem do Monitor Serial no chat.</p>
+<div id="fwRoteiro"></div>
+<div class="note bad" style="margin-top:14px"><b>Segurança nos testes:</b> choque nunca se testa em pessoa. Chave desligada para mexer na coleira, nos pinos ou para ligar o USB. Modo bancada só com LED no lugar do módulo.</div>
